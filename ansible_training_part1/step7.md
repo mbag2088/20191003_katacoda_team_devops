@@ -29,7 +29,7 @@ jumper ansible_port=5555 ansible_host=192.0.2.50
 
 Comme indiqué précédemment, le fichier d'inventaire peux contenir des groupes et des hotes definis comme suit:
 
-![groups and hosts format INI](/samiasamia/scenarios/ansible_training_part1/assets/hosts_and_groups.png)
+![groups and hosts format INI](/devopsteam/scenarios/ansible_training_part1/assets/hosts_and_groups.png)
 
 
 #### Creer votre premier fichier d'inventaire
