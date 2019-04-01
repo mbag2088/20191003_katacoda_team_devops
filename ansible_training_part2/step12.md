@@ -1,26 +1,132 @@
 
-Les modules sont les principaux éléments constitutifs d’Ansible et sont essentiellement des scripts réutilisables utilisés à partir de la ligne de commande ou dans une tâche par les playbooks d’Ansible qu'on verra ulterieurement. 
+Le résultat d'un play peut souvent dépendre de la valeur d'une variable, d'un fact (information sur un système distant) ou du résultat d'une tâche précédente. Dans certains cas, les valeurs des variables peuvent dépendre d'autres variables. 
 
-Il existe une large liste de modules Ansible, mais vous pouvez également écrire les vôtres. Vous devrez l’écrire en Python.
+La première action effectuée par ansible est de récupérer les “facts” des serveurs cibles (via le module setup)
+Cette action permettra d’utiliser de nouvelles variables dynamiques utilisables dans l’ensemble des structures de contrôle
+Ces variables sont accessibles via le nom ansible_$nom_de_la_variable ou ansible_facts_$nom_de_la_variable.
 
-Chaque module prend en charge la prise d'arguments. Presque tous les modules prennent des arguments clé = valeur, délimités par des espaces. 
+Cette rubrique explique comment les conditions sont utilisées dans les playbooks comment les variables fact peuvent êtres utiles.
 
-##### _Syntax:_ 
-ansible $TARGET -m $MODULE -a $MODULE_ARGUMENTS
+#### La condition When
+*Syntax*
 
-Pour Afficher la manuelle d'un module: ansible-doc $MODULE
+when: (condition)
 
-##### _Valeurs de retour_
+Exemple du context: 
+- Ignorer une étape particulière sur un hôte,
+- Ne pas installer un certain paquet si le système d'exploitation correspond à une version particulière, 
+- Procéder à un de nettoyage si un système de fichiers est saturé.
 
-Les modules Ansible renvoient normalement une structure de données qui peut être enregistrée dans une variable ou vue directement lors de la sortie par le programme ansible. Chaque module peut éventuellement documenter ses propres valeurs de retour uniques (visibles via ansible-doc et sur le site officiel.
+##### Exemple1 : Condition sur les variables facts pour gérer des OS hétérogènes
 
-Sur le site officiel ansible vous pouvez par exemple trouver les valeurs de retour du module ["archive"](https://docs.ansible.com/ansible/latest/modules/archive_module.html#archive-module) présenté comme suit:
+<pre class="file">
+name: Installing Apache (RHEL)
+  yum: 
+    name: httpd
+    state: latest
+  when: ansible_os_family == ‘RedHat’
+name: Installing Apache (Debian)
+  apt:
+    name: apache2
+    state: present
+  when: ansible_os_family != ‘RedHat’
+</pre>
 
-![archive_return_value](/samiasamia/scenarios/ansible_training/assets/archive_module_return_value.png)
+On pourra utiliser des multiples conditions avec "et/ou" logique:
+<pre class="file">
+tasks:
+  - name: "shut down CentOS 6 and Debian 7 systems"
+    command: /sbin/shutdown -t now
+    when: (ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version'] == "6") or
+          (ansible_facts['distribution'] == "Debian" and ansible_facts['distribution_major_version'] == "7")
+</pre>
 
-La page disponible dans le lien suivant couvre les valeurs de retour communes à tous les modules:
+Cette syntaxe est aussi possible pour le "et" logique:
+<pre class="file">
+tasks:
+  - name: "shut down CentOS 6 systems"
+    command: /sbin/shutdown -t now
+    when:
+      - ansible_facts['distribution'] == "CentOS"
+      - ansible_facts['distribution_major_version'] == "6"
+</pre>
 
-https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html#common
+##### Exemple2 : Condition sur les variables booleans définsi dans le playbook:
+
+<pre class="file">
+vars:
+  epic: true
+
+tasks:
+    - shell: echo "This certainly is epic!"
+      when: epic
+</pre>
+
+##### Exemple3 : Condition sur les variables "Register"
+ exécuter une action en fonction d’une action précédente via ‘register’
+ 
+Dans un playbook, il peut être utile de stocker le résultat d'une commande donnée dans une variable et d'y accéder ultérieurement. 
+
+Le mot clé "register" détermine la variable dans laquelle enregistrer un résultat. Les variables résultantes peuvent être utilisées dans des modèles, des actions ou des instructions when. 
+
+<pre class="file">
+- name: test play with register
+  hosts: localhost
+
+  tasks:
+      - shell: cat training-files/motd
+        register: motd_contents
+
+      - shell: echo "motd contains the word hi"
+        when: motd_contents.stdout.find('hi') != -1
+</pre>
+
+
+- Dans le playbook précedent, "register" permet de stocker le résultat de l'exécution du module shell dans la variable qu'on a nommé "motd_contents".
+
+- Le playbook affichera "motd contains the word hi" si seulement le fichier  "/etc/motd" contient le caractère "hi", et pour cela nous avons utiliser le condition "when: motd_contents.stdout.find('hi') != -1"
+
+- Afin de comprendre comment nous avons construit cette condition, nous allons afficher le contenu de la variable "motd_contents" en utilisant le module "debug".
+
+Créer un playbook test_register.yml et copier le contenu ci-dessous:
+
+<pre class="file">
+---
+- name: test play with register
+  hosts: web
+
+  tasks:
+    - name: Récuperer le contenu du motd dans un register
+      shell: cat training-files/motd
+      register: motd_contents
+      delegate_to: 127.0.0.1
+    - name: Afficher le contenu du register  
+      debug:
+        var: motd_contents
+    - name: Utiliser la condition when   
+      debug
+        msg: echo "motd contains the word hi"
+      when: motd_contents.stdout.find('hi') != -1
+</pre>
+
+
+Lancer le playbook test_register.yml:
+`ansible-playbook -i hosts.ini test_register.yml`{{execute T1}}
+
+Vous devez avoir le résultat ci-dessous dans le cas où le fichier contient le mot "hi"
+
+<pre style="color: green">
+ok: [managed_node1] => {
+    "msg": "motd contains the word hi"
+}
+</pre>
+
+et le résultat ci-dessous dans le cas où le fichier ne contient pas le mot "hi"
+
+<pre style="color: blue">
+TASK [Utiliser la condition when]
+skipping: [managed_node1]
+</pre>
 
 
 

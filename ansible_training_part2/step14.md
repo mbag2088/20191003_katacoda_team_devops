@@ -1,94 +1,214 @@
- 
-Nous avons vu comment exécuter des tâches à l'aide de modules en ligne de commande, mais que se passe-t-il si vous devez exécuter plusieurs tâches? Les playbooks vous aident à les exécuter de manière scriptée.
 
-Les Playbooks définissent des variables, des configurations, des étapes de déploiement séquentielles effectuant plusieurs tâches. 
+Les rôles sont des fonctionnalités qui peuvent être utilisées indépendamment mais qui doivent être utilisées dans les Playbooks.
+Les rôles sont une façon d’inclure des tâches Ansible au sein d’autres tâches en déclarant des dépendances. 
+Cela permet de décomposer un Playbook complexe en plusieurs fichiers et faciliter sa réutilisation.
 
-Les playbooks sont principalement définis pour orchestrer les étapes sur plusieurs machines et les amener à un état souhaité.
+Chaque rôle est fondamentalement limité à une fonctionnalité particulière ou à la sortie souhaitée, avec toutes les étapes nécessaires pour fournir ce résultat dans ce rôle lui-même ou dans d'autres rôles répertoriés comme dépendances.
 
-Un Playbook est écrit au format YAML avec une extension de fichier ".yml". Il faut être très prudent avec le format et l'alignement, ce qui le rend très sensible.
+#### Utilisation des roles:
+Plusieurs syntaxes sont possibles. Ci-dessous quelques unes: 
 
-Chaque playbook commence par 3 tirets '-'
-
-_Syntax d'utilisation:_
-
-Ansible-playbook [-i $INVENTORY_FILE] playbook.yaml
-
-
-#### Les sections d'un playbook
-
-
-Chaque playbook est composé d’un ou de plusieurs "play" dans une liste. Le but d'un play est de mapper un groupe d'hôtes sur des rôles bien définis, représentés par des tâches et des appels.
-
-1- Section Host:
-
-Définit les machines cibles sur lesquelles le playbook doit être exécuté. Ceci est basé sur le fichier d'inventaire Ansible.
-
-2- Section des variables:
-
-Ceci est facultatif et permet de déclarer toutes les variables nécessaires dans le playbook. 
-
-3- Section Tâches:
-
-Cette section répertorie toutes les tâches à exécuter sur les machines cibles. Chaque task fait appel à un module. Chaque tâche a un nom qui est une petite description de ce qu’elle fera et sera listée pendant l’exécution du playbook.
-
-4- Section handler:
-
-Ceci est facultatif. Ce sont des tâches qui seront exécutés si et seulement si elles sont notifiées.
-
-#### Exemple d'un playbook
-##### _Objectif:_ 
-
-> Installation d’un webserver
-
-> Configuration
-
-> Démarrage
-
-
-Analyser bien les parties de ce playbook et vous allez identifier les sections détaillés précédemments. 
-``` 
----
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  remote_user: root
-  tasks:
-  - name : ensure apache is at the latest version
-    yum:
-      name: httpd
-      state: latest
-  - name: write the apache config file
-    template:
-      src: /srv/httpd.j2
-      dest: /etc/httpd.conf
-    notify:
-    - restart apache
-  - name: ensure apache is running
-    service:
-      name: httpd
-      state: started
-  handlers:
-    - name: restart apache
-      service:
-        name: httpd
-        state: restarted
+```
+--- 
+- hosts: tomcat-node 
+  roles: 
+    - install-tomcat
+    - configure-ldap
 ```
 
-##### *Remarque:* 
+```
+---
+- hosts: webservers
+  tasks:
+  - debug:
+      msg: "before we run our role"
+  - import_role:
+      name: example
+```
 
-- "remote_user" est le compte qui se connecte à la machine cible. Si remote_user n'est pas défini, ansible vas utiliser le nom d'utilisateur qui lance le playbook.
+#### Structure du répertoire des rôles
+Les rôles sont généralement définis dans un répertoire rôles au niveau des playbooks comme ci-dessous. Ainsi, lors de l'appelle des rôles dans le playbook, Ansible saura les chercher sans spécifier le chemin complet. 
 
-La bonne pratique c'est d'utiliser un autre compte que l'utilisateur "root". Si cette utilisateur doit effectuer des tâches en tant que root ou autre, il doit disposer d’autorisations sudo sur la machine cible.
+Ansible recherchera les rôles de la manière suivante:
+- 1 - Le répertoire relatif au fichier playbook "roles/"
+- 2 - "/etc/ansible/roles"
 
-Vous allez comprendre le fonctionnement des utilisateurs dans la prochaine étape. 
+```
+site.yml
+webservers.yml
+fooservers.yml
+roles/
+   common/
+   install-tomcat/
+   configure-ldap/
+   webservers/
+```   
+
+Les rôles ont une arborescence bien spécifique comme suit:
+
+```
+├── README.md
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── tasks
+│   └── main.yml
+├── templates
+└── vars
+    └── main.yml
+```
 
 
-- Dans les étapes suivantes vous allez avoir des exércices sur des playbooks. Lancez les commandes suivantes afin de préparer vos environnements:
+Les rôles s’attendent à ce que les fichiers se trouvent dans certains noms de répertoire.
+Les rôles doivent inclure au moins un de ces répertoires, mais il est parfaitement correct d’exclure ceux qui ne sont pas utilisés. Lorsqu'il est utilisé, chaque répertoire doit contenir un fichier main.yml.
 
-`a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
+- README.md: C'est un fichier pour documenter l’utilisation du rôle
+  default/main.yml: Contient les valeurs par défaut des variables
+  
+- files: Ce dossier regroupe les éventuels fichiers qui seront utilisés dans le rôle
+  
+- handlers/main.yml: Si le rôle utilise des handlers ils seront mis dans ce fichier
+  
+- meta/main.yml: Contient les métadonnées du rôle, créateurs, version…
+  
+- tasks/main.yml: Ce fichier est composé de l’ensemble des tâches qui constituent ce rôle
+  
+- templates: Ce répertoire réservé aux templates
 
-`n1() { docker exec -it managed_node1 bash -c "cd /work_dir; echo 'PS1='\''managed_node1# '\' >> /root/.bashrc; bash"; } && n1`{{execute T2}}
+#### Ansible Galaxy
+L'utilisation des rôles Ansible favorise la réutilisation et le partage. Ainsi il existe un hub qui regroupe une grand nombre de rôles appelé  [Ansible galaxy](https://galaxy.ansible.com/)
 
-`n2() { docker exec -it managed_node2 bash -c "cd /work_dir; echo 'PS1='\''managed_node2# '\' >> /root/.bashrc; bash"; } && n2`{{execute T3}}
+C'est un site gratuit permettant de rechercher, de télécharger, d'évaluer et de revoir toutes sortes de rôles Ansible développés par la communauté. 
+
+Le client ansible-galaxy est inclus dans Ansible. Le client Galaxy vous permet de télécharger des rôles à partir de Ansible Galaxy et constitue également un excellent framework par défaut pour la création de vos propres rôles.
+
+*Initier votre premier rôle "monrole" avec Ansible galaxy:*
+
+Creer le répertoire roles dans votre espace de travail:
+`mkdir /work_dir/roles`{{execute T1}}
+
+Préparer l’arborescence du rôle: La commande est ansible-galaxy init <nom_du_role>
+`ansible-galaxy init roles/monrole`{{execute T1}}
+
+Afficher l'arborescence de votre role:
+`ls -R /work_dir/roles`{{execute T1}}
+
+#### Dépendances des rôles
+
+Les dépendances de rôles vous permettent d’extraire automatiquement d’autres rôles lorsque vous utilisez un rôle. Les dépendances de rôle sont stockées dans le fichier meta/main.yml contenu dans le répertoire de rôle. 
+
+Ce fichier doit contenir une liste de rôles et de paramètres à insérer avant le rôle spécifié.
+
+*Exemple du fichier roles/myapp/meta/main.yml*
+
+```
+---
+dependencies:
+  - role: common
+    vars:
+      some_parameter: 3
+  - role: postgres
+    vars:
+      dbname: blarg
+      other_parameter: 12
+```
+
+> Les rôles dépendants sont toujours exécutés avant les rôles qui en dépendent. En outre, ils ne sont exécutés qu'une seule fois. Si deux rôles sont identiques à ceux de leur dépendance, ils ne sont exécutés que la première fois.
+
+Nous allons faire un test et pour cela on vas creer un playbook test_role_dep.yml qui va appeler 2 roles "role1" et "role2". 
+
+- Créer le playbook
+
+`vim /work_dir/test_role_dep.yml`{{execute T1}}
+
+copier le contenu ci-dessous dans le fichier test_role_dep.yml
+
+```
+---
+- name: test role dependancies
+  hosts: web
+  gather_facts: no
+  roles:
+    - role1
+    - role2
+```
+
+- Créer les 3 répertoires et fichiers associées aux rôles 
+
+`cd  /work_dir && mkdir -p roles/role1/{meta,tasks} roles/role2/{meta,tasks} roles/role3/{meta,tasks}`{{execute T1}}
+
+- Créer les fichiers de metadonnées "meta/main.yml" pour les rôles 1 et 2  (pour déclarer les dépendances):
+
+`vim /work_dir/roles/role1/meta/main.yml`{{execute T1}}
+
+Copier et coller ce contenu dans le fichier ouvert:
+```
+dependencies:
+    - role: role3
+```
+
+`vim /work_dir/roles/role2/meta/main.yml`{{execute T1}}
+
+```
+dependencies:
+    - role: role3
+```
+
+- Créer les fichiers tasks/main.yml pour les 3 rôles
+
+`vim /work_dir/roles/role1/tasks/main.yml`{{execute T1}}
+
+Copier et coller ce contenu dans le fichier ouvert:
+
+```
+---
+- name: Show message
+  debug:
+    msg: "hello from role 1"
+```
+
+`vim /work_dir/roles/role2/tasks/main.yml`{{execute T1}}
+
+Copier et coller ce contenu dans le fichier ouvert:
+
+```
+---
+- name: Show message
+  debug:
+    msg: "hello from role 2"
+```
+
+`vim /work_dir/roles/role3/tasks/main.yml`{{execute T1}}
+
+Copier et coller ce contenu dans le fichier ouvert:
+
+```
+---
+- name: Show message
+  debug:
+    msg: "hello from role 3"
+```
+
+- lancer le playbook: 
+
+`cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
+
+
+Lors de l'exécution du rôle1 et du rôle2 dans le même répertoire (avec le rôle1 appelé avant le rôle2), l'ordre d'exécution serait le suivant:
+
+role3 -> role1 -> role2
+
+Vous pouvez remplacer ce comportement avec la variable allow_duplicates: true dans meta/main.yml de role3.
+
+`echo allow_duplicates: true > /work_dir/roles/role3/meta/main.yml`{{execute T1}}
+
+lancer le playbook de nouveau: `cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
+
+L'ordre d'exécution résultant serait le:
+
+role3 -> role1 -> role3 -> role2
 
