@@ -15,63 +15,63 @@
       },
       {
         "title": "Exercice 1: Utilisation des modules file et copy",
-        "text": "step15.md",
-        "answer": "step15-answer.md"
+        "text": "step3.md",
+        "answer": "step3-answer.md"
       },
       {
         "title": "Ansible: Les utilisateurs et les privileges",
-        "text": "step16.md"
+        "text": "step4.md"
       },
       {
         "title": "Exercice 2: Utilisation des privileges",
-        "text": "step17-save.md",
-        "answer": "step17-save-answer.md"
+        "text": "step5.md",
+        "answer": "step5-answer.md"
       },
       {
         "title": "Exercice 2: Utilisation du module replace",
-        "text": "step17.md",
-        "answer": "step17-answer.md"
+        "text": "step6.md",
+        "answer": "step6-answer.md"
       },
       {
         "title": "Exercice 3: Utilisation des modules yum et service",
-        "text": "step18.md",
-        "answer": "step18-answer.md"
+        "text": "step7.md",
+        "answer": "step7-answer.md"
       },
       {
         "title": "Les Handlers: Exécuter des operations sur changement",
-        "text": "step19.md"
+        "text": "step8.md"
       },
       {
         "title": "Exercice 4: Utilisation des handlers",
-        "text": "step20.md",
-        "answer": "step20-answer.md"
+        "text": "step9.md",
+        "answer": "step9-answer.md"
       },
       {
         "title": "Ansible: Les templates",
-        "text": "step21.md"
+        "text": "step10.md"
       },
       {
         "title": "Exercice 5: Utilisation des templates",
-        "text": "step22.md",
-        "answer": "step22-answer.md"
+        "text": "step11.md",
+        "answer": "step11-answer.md"
       },
       {
         "title": "Ansible: Les conditions",
-        "text": "step23.md"
+        "text": "step12.md"
       },
       {
         "title": "Exercice 6: Utilisation des conditions avec when et register",
-        "text": "step24.md",
-        "answer": "step24-answer.md"
+        "text": "step13.md",
+        "answer": "step13-answer.md"
       },
       {
         "title": "Ansible: Les rôles",
-        "text": "step25.md"
+        "text": "step14.md"
       },
       {
         "title": "Exercice 7: Utilisation des rôles pour installer le service ntp",
-        "text": "step26.md",
-        "answer": "step26-answer.md"
+        "text": "step15.md",
+        "answer": "step15-answer.md"
       }
     ],
     "intro": {
