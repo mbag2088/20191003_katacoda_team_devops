@@ -28,7 +28,7 @@ Un échange de clé est à établir. Le serveur souhaitant se connecter doit avo
 
 L'authentification par clés se fait donc via une paire de clés, le client (le node Ansible) va générer une paire de clés, une publique et une privée. Seul la clé publique sera envoyer aux serveurs SSH (managed_node1 et 2) et sera stocker dans un endroit prévu cet effet.
 
-![echange cle ssl](/samiasamia/scenarios/ansible_training_part1/assets/crypto-images-schemaclepublique.gif)
+![echange cle ssl](/devopsteam/scenarios/ansible_training_part1/assets/crypto-images-schemaclepublique.gif)
 
 
 ##### - Générer les clés publique/privée
