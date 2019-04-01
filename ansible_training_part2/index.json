@@ -1,0 +1,133 @@
+{
+  "noindex": true,
+  "title": "Formation Ansible pour DEVOPS: partie 2",
+  "description": "Utilisation des playbooks, exércices",
+  "time": "50 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": " Sommaire",
+        "text": "step1.md"
+      },
+      {
+        "title": "Les playbooks ansible",
+        "text": "step14.md"
+      },
+      {
+        "title": "Exercice 1: Utilisation des modules file et copy",
+        "text": "step15.md",
+        "answer": "step15-answer.md"
+      },
+      {
+        "title": "Ansible: Les utilisateurs et les privileges",
+        "text": "step16.md"
+      },
+      {
+        "title": "Exercice 2: Utilisation des privileges",
+        "text": "step17-save.md",
+        "answer": "step17-save-answer.md"
+      },
+      {
+        "title": "Exercice 2: Utilisation du module replace",
+        "text": "step17.md",
+        "answer": "step17-answer.md"
+      },
+      {
+        "title": "Exercice 3: Utilisation des modules yum et service",
+        "text": "step18.md",
+        "answer": "step18-answer.md"
+      },
+      {
+        "title": "Les Handlers: Exécuter des operations sur changement",
+        "text": "step19.md"
+      },
+      {
+        "title": "Exercice 4: Utilisation des handlers",
+        "text": "step20.md",
+        "answer": "step20-answer.md"
+      },
+      {
+        "title": "Ansible: Les templates",
+        "text": "step21.md"
+      },
+      {
+        "title": "Exercice 5: Utilisation des templates",
+        "text": "step22.md",
+        "answer": "step22-answer.md"
+      },
+      {
+        "title": "Ansible: Les conditions",
+        "text": "step23.md"
+      },
+      {
+        "title": "Exercice 6: Utilisation des conditions avec when et register",
+        "text": "step24.md",
+        "answer": "step24-answer.md"
+      },
+      {
+        "title": "Ansible: Les rôles",
+        "text": "step25.md"
+      },
+      {
+        "title": "Exercice 7: Utilisation des rôles pour installer le service ntp",
+        "text": "step26.md",
+        "answer": "step26-answer.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData": "env-init.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "config.txt",
+          "target": "~/"
+        },
+        {
+          "file": "apache2.conf",
+          "target": "~/"
+        },
+        {
+          "file": "index.html",
+          "target": "~/"
+        },
+        {
+          "file": "vhost.j2",
+          "target": "~/"
+        },
+        {
+          "file": "exemple_template.j2",
+          "target": "~/"
+        },
+        {
+          "file": "exemple_liste_template.j2",
+          "target": "~/"
+        },
+        {
+          "file": "motd",
+          "target": "~/"
+        },
+        {
+          "file": "hosts.ini",
+          "target": "~/"
+        },
+        {
+          "file": "ntp.conf.j2",
+          "target": "~/"
+        } 
+      ]
+    }
+  },
+  "environment": {
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Docker Host Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "ansible"
+    }
+}

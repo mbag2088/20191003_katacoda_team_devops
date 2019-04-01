@@ -1,0 +1,65 @@
+#### Correction
+
+<pre class="file">
+---
+- name: Copy config file
+  hosts: web
+  vars:
+    remote_dir: /etc/training/training.d
+    source_file_path: /work_dir/training-files/config.txt
+  tasks:
+  - name: Create the remote directory
+    become: yes
+    file:
+      state: directory
+      path: "{{ remote_dir }}"
+  - name: Copy config file to the remote host web
+    become: yes
+    copy:
+      src: "{{ source_file_path }}"
+      dest: "{{ remote_dir }}"
+</pre>
+
+Nous allons **externaliser** les variables d'authentifications et les définir dans le fichier d'inventaire  **hosts.ini**
+
+<pre class="file">
+[myself]
+localhost
+[web]
+managed_node1
+[db]
+managed_node2
+
+[all:vars]
+ansible_user="toto"
+ansible_ssh_pass="toto"
+</pre>
+
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
+
+##### *Remarques*
+
+- Si vous avez une erreur comme ci-dessous, installer le package sshpass
+
+<pre style="color: red">
+fatal: [managed_node1]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+</pre>
+
+`apt-get install sshpass`{{execute T1}}
+
+- Dans le playbook, nous avons besoins d'exécuter les taches avec l'utilisateur root car lors de la première exécution du playbook playbook_ex01.yml, le répertoire /etc/training/training.d a été creer avec cette utilisateur et les droits d'accès par defaut ( droits de lecture,ecriture que pour l'utilisateur root)
+
+- Pour éviter de sauvegarder le mot de passe dans le fichier d'inventaire , 2 possibilitée:
+
+1- Utiliser ansible vault (cette partie n'est pas détaillé dans cette formation). plus d'information dans [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
+
+2- Echange de clé ssh: La clé publique a déja été échangé entre le serveur ansible et les 2 serveurs cible. Tester le playbook avec ce fonctionnement:
+
+  Modifier l'inventaire en supprimant les 2 lignes ansible_user et ansible_ssh_pass
+  
+  Lancer le playbook avec l'utilisateur toto :
+  `chmod 777 /work_dir/*;su toto`{{execute T1}}
+
+  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{execute T1}}
+
+- Dans les prochains exercices, vous allez creer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh.

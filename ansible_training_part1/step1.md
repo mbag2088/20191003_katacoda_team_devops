@@ -1,0 +1,22 @@
+- Présentation d'ansible
+- Architecture,
+- Préparation des environnements,
+- Installation,
+- Configuration,
+- Fichier d'inventaire,
+- Fichier d'inventaire: les variables,
+- Test de connectivité via ansible,
+- Utilisation du SSH: installation/Configuration SSH,
+- Utilisation du SSH: test de connexion,
+- Les modules ansible,
+- Les modules ansible: exemples,
+- Les playbooks ansible
+  - Exercice 1: Utilisation des modules file et copy,
+  - Exercice 2: Utilisation du module replace,
+  - Exercice 3: Utilisation des modules yum et service,
+- Les Handlers: Exécuter des opérations sur changements
+  - Exercice 4: Utilisation des handlers,
+- Ansible: Les templates
+  - Exercice 5: Utilisation des templates,
+- Ansible: Les conditions
+  - Exercice 6: Utilisation des conditions avec when et register
