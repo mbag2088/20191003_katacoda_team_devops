@@ -1,2 +1,9 @@
-Ce cour vous permetera d'acquérir des notions de base Ansible dans le but de vous familiariser avec l'outil.
+#### Objectifs de cette formation:
 
+Connaître les caractéristiques et le fonctionnement d'Ansible,
+
+Comprendre comment tirer parti de la solution pour optimiser le pilotage d’un parc et le déploiement d’applications,
+
+#### Pré-requis
+
+Avoir des bases de connaissance sur l'administration des systèmes Linux ( package linux, commandes ssh, editeur de text,...)
