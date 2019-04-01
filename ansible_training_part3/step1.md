@@ -1,15 +1,3 @@
 
-- Les playbooks ansible
-  - Exercice 1: Utilisation des modules file et copy
-- Ansible: Les utilisateurs et les privileges
-  - Exercice 2: Utilisation des privileges
-  - Exercice 3: Utilisation du module replace
-  - Exercice 4: Utilisation des modules yum et service
-- Les Handlers: Exécuter des opérations sur changements
-  - Exercice 5: Utilisation des handlers
-- Ansible: Les templates
-  - Exercice 6: Utilisation des templates
-- Ansible: Les conditions
-  - Exercice 7: Utilisation des conditions avec when et register
 - Ansible: Les rôles
   - Exercice 8: Utilisation des rôles pour installer le service ntp
