@@ -11,5 +11,3 @@
   - Exercice 6: Utilisation des templates
 - Ansible: Les conditions
   - Exercice 7: Utilisation des conditions avec when et register
-- Ansible: Les rôles
-  - Exercice 8: Utilisation des rôles pour installer le service ntp
