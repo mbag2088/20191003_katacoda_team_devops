@@ -17,7 +17,7 @@ Télécharger le dernier fichier de configuration depuis github afin de connaitr
 
 `wget https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg`{{execute T1}}
 
-Copier ce fichier dans /etc/ansible/ansible.cfg:
+Déplacer ce fichier dans /etc/ansible/ansible.cfg:
 `mkdir -p /etc/ansible/ && mv /work_dir/ansible.cfg /etc/ansible/ansible.cfg`{{execute T1}}
 
 Affiher le contenu du fichier de configuration
