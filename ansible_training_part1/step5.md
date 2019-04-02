@@ -9,16 +9,16 @@ Plusieurs solutions possibles pour l'installation :
 Nous avons choisi dans cette formation l'instalation via la commande "pip"
 
 1.Vérifier que le package python-pip est bien installé
-   `apt list --installed | grep python-pip`{{execute T1}}
+   `apt list --installed python-pip`{{execute T1}}
   
-  Si le package est installé,le résultat de la commande doit contenir les 2 lignes ci-dessous et vous pouvez ignorer l'etape 3:
+Si le package python-pip n'est pas installé, vous allez avoir un résultat comme ci-dessous. Il faut donc installer le package.
+Si ce n'est pas le cas alors sauter l'étape 2 et passer à l'étape 3
 
 ```
-python-pip/xenial-updates,now 8.1.1-2ubuntu0.4 all [installed]
-python-pip-whl/xenial-updates,now 8.1.1-2ubuntu0.4 all [installed,automatic]
+Listing... Done
 ```
 
-2.Sinon installer le package python
+2.Sinon installer le package python-pip
    `apt-get install -y python-pip`{{execute T1}} 
 
 3.Installer Ansible avec la version 2.7.7
@@ -30,17 +30,15 @@ python-pip-whl/xenial-updates,now 8.1.1-2ubuntu0.4 all [installed,automatic]
    
 #### 2) Installer Python sur les serveurs managés
 ##### 1.Vérifier que le package python est bien installé
-- Sur le managed_node1 `apt list --installed  python*`{{execute T2}}
-- Sur le managed_node2 `apt list --installed  python*`{{execute T3}}
+- Sur le managed_node1 `apt list --installed  python2.7`{{execute T2}}
+- Sur le managed_node2 `apt list --installed  python2.7*`{{execute T3}}
 
-Si le package Python est déjà installé: présence de l'une des lignes ci-dessous   -> alors sauter  l'étape 2 et Continuer l'autres step 
-
+Si le package Python n'est pas installé, vous allez avoir un résultat comme ci-dessous. Il faut donc installer le package.
+Si ce n'est pas le cas alors sauter l'étape 2 et Continuer vers la page suivante.
 ```
-python3/xenial,now 3.5.1-3 amd64 [installed,automatic]
-python2.7/xenial-updates,xenial-security,now 2.7.12-1ubuntu0~16.04.4 amd64 [installed,automatic]
-
+Listing... Done
 ```
 
 ##### 2.Installer le package python
-- Sur le managed_node1 `apt-get install -y python`{{execute T2}}
-- Sur le managed_node2 `apt-get install -y python`{{execute T3}}
+- Sur le managed_node1 `apt-get install -y python2.7`{{execute T2}}
+- Sur le managed_node2 `apt-get install -y python2.7`{{execute T3}}
