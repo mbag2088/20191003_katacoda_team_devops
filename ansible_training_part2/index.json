@@ -63,15 +63,6 @@
         "title": "Exercice 6: Utilisation des conditions avec when et register",
         "text": "step13.md",
         "answer": "step13-answer.md"
-      },
-      {
-        "title": "Ansible: Les rôles",
-        "text": "step14.md"
-      },
-      {
-        "title": "Exercice 7: Utilisation des rôles pour installer le service ntp",
-        "text": "step15.md",
-        "answer": "step15-answer.md"
       }
     ],
     "intro": {
