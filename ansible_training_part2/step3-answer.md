@@ -1,60 +1,56 @@
 #### Correction
 
-playbook_ex07.yml
 <pre class="file">
 ---
-- hosts: db
-  roles:
-    - ntp
+- name: Copy config file
+  hosts: web
+  vars:
+    remote_dir: /etc/training/training.d
+    source_file_path: /work_dir/training-files/config.txt
+  tasks:
+  - name: Create the remote directory
+    file:
+      state: directory
+      path: "{{ remote_dir }}"
+  - name: Copy config file to the remote host web
+    copy:
+      src: "{{ source_file_path }}"
+      dest: "{{ remote_dir }}"
 </pre>
 
-roles/ntp/tasks/main.yaml 
+
+
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
+
+
+##### *Remarque:*
+- Dans ce playbook , vous avez remarqué que la valeur de l'option "path" est remplacée par la variable source_file_path définie au debut du playbook.
+
+- Notez que la syntax d'utilisation des variables est "{{ nom_variable }}"
+
+- Lorsque vous lancez le playbook, vous avez une ligne de résultat indiquant que ansible récupère les facts sur le serveur cible. Cette tache prends un peu de temps d'exécution. 
+
+```
+TASK [Gathering Facts] *********************************************
+```
+
+Dans le cas ou vous n'avez pas besoins des valeurs de facts, vous pouvez désactiver la récupération des facts en ajoutant cette ligne dans le playbook:
+
 <pre class="file">
 ---
-# On met le contenu de la clé `tasks` de notre playbook précédent
-# mais on ne met pas la clé `tasks` elle-même (juste le contenu).
-- name: Ensure NTP installation
-  apt:
-    name: ntp
-    state: latest
-- name: Write NTP config file /etc/ntp.conf
-  template:
-    src: ntp.conf.j2
-    dest: /etc/ntp.conf
-    owner: root
-    group: root
-    mode: '0644'
-  notify:
-    - restart ntp
-- name: Ensure ntp is running (and enable it at boot)
-  service:
-    name: ntp
-    state: started
-    enabled: yes
+- name: Copy config file
+  hosts: web
+  vars:
+    remote_dir: /etc/training/training.d
+    source_file_path: /work_dir/training-files/config.txt
+  gather_facts: no
+  tasks:
+  - name: Create the remote directory
+    file:
+      state: directory
+      path: "{{ remote_dir }}"
+  - name: Copy config file to the remote host web
+    copy:
+      src: "{{ source_file_path }}"
+      dest: "{{ remote_dir }}"
 </pre>
-
-roles/ntp/handlers/main.yaml
-<pre class="file">
----
-# Là aussi, on ne met pas la clé `handlers` mais juste le contenu de cette clé.
-- name: restart ntp
-  service:
-    name: ntp
-    state: restarted
-</pre>
-
-roles/ntp/defaults/main.yaml
-<pre class="file">
----
-# Ce fichier correspond au contenu de la clé `vars` dans
-# notre playbook précédent mais là encore sans la clé `vars`
-# elle-même.
-ntp_servers:
-  - '0.debian.pool.ntp.org'
-  - '1.debian.pool.ntp.org'
-  - '2.debian.pool.ntp.org'
-</pre>
-
-roles/ntp/templates/ contient le fichier jinja ntp.conf.j2 copié depuis /work_dir/training-files/ 
-
-Lancement du playbook `ansible-playbook -i hosts.ini playbook_ex07.yml`{{copy}}
