@@ -47,7 +47,7 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
 
   Donc si vous changez le fichier de configuration apache2.conf sur le serveur source et relancez le playbook, vous allez remarquer que le seul changement est au niveau du module copy. Le service httpd ne sera pas redémaré.
   
-  Pour la plupart des logiciels, toute modification apportée à leurs fichiers de configurations n’aura d’effet qu’au redémarrage du service. Il faut donc utiliser le module service avec le state=restarted
+  Pour la plupart des logiciels, toute modification apportée à leurs fichiers de configurations n’aura d’effet qu’au redémarrage du service. Il faut donc utiliser le module service avec l'option  **state=restarted**
 
 <pre class="file">  
     - name: Start httpd service
@@ -58,6 +58,6 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
         enabled: yes
  </pre>
 
-  Si vous rexécutez à plusieurs reprises le playbook "playbook_ex04.yml" avec la nouvelle valeur de l'option "state", le service redémarrera à chaque exécution même si aucune modification n'est effectué sur les fichiers de configuration, ce qui n'est pas fiable pour une application.
+  Si vous rexécutez à plusieurs reprises le playbook "playbook_ex04.yml" avec la nouvelle valeur de l'option "state", le service redémarrera à chaque exécution **même si aucune modification n'est effectué sur les fichiers de configuration**, ce qui n'est pas fiable pour une application.
 
-  Le service doit donc être configuré pour redémarrer seulement après chaque modification de fichier de conf. Pour cela on vas utiliser les "handlers"
+  Le service doit donc être configuré pour redémarrer **seulement après chaque modification de fichier de conf**. Pour cela on vas utiliser les **"handlers"**
