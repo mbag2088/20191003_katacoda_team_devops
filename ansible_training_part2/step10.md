@@ -39,7 +39,8 @@ Le contenue du fichier jinja exemple_template.j2 est
 
 <pre class="file">
 {{ variable1 }}
-Cette ligne ne changera pas
+Bonjour tout le monde
+Ce fichier est un exemple d'un template
 La mémoire disponible actuelement est : {{ ansible_memfree_mb }} MBs.
 </pre>
 
@@ -76,7 +77,7 @@ Creer un playbook template_exemple2.yml et copier le contenu ci-dessous:
 Le contenue du fichier jinja exemple_liste_template.j2 est 
 
 <pre class="file">
-This is an example of template module loop with a list.
+Ceci est un exemple de boucle de module de modèle avec une liste.
 {% for item in list1 %}
   {{ item }}
 {% endfor %}
@@ -89,7 +90,7 @@ Vérifier le contenu du fichier exemple_liste_template.txt (sur le serveur cible
 
 Le résultat doit ressembler à celui ci-dessous:
 <pre class="file">
-This is an example of using with_items in template module loop with a list.
+Ceci est un exemple de boucle de module de modèle avec une liste.
 première iteration
 deuxième iteration
 troixième iteration
