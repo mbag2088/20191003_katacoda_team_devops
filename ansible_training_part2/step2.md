@@ -83,6 +83,7 @@ La bonne pratique c'est d'utiliser un autre compte que l'utilisateur "root". Si 
 
 Vous allez comprendre le fonctionnement des utilisateurs dans la prochaine étape. 
 
+---
 
 - Dans les étapes suivantes vous allez avoir des exércices sur des playbooks. Lancez les commandes suivantes afin de préparer vos environnements:
 
