@@ -1,5 +1,6 @@
 #### Correction
 
+playbook_ex03.yml
 <pre class="file">
 ---
 - name: Learn how to use condition
@@ -14,6 +15,7 @@
     when: stat_result.stat.exists == true and stat_result.stat.isdir == true
 </pre>
 
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex03.yml`{{copy}}
 
 ##### *Remarque
 
