@@ -1,7 +1,7 @@
 
 
 
-> **Modifier** le playbook **"playbook_ex01.yml"** de **l'exercice précédent** de sorte qu'il se connecte sur la machine cible avec l'utilisateur **"toto"**.  Changer les privilèges dans le besoin 
+> **Modifier** le playbook **"playbook_ex01.yml"** de **l'exercice précédent** de sorte qu'il se connecte sur la machine cible avec l'utilisateur **"toto"**.  Utiliser l'élévations de privilège dans le besoin 
 
 > Cette utilisateur est déja créé et configuré sur la machine cible. Le mot de passe est le meme que le nom d'utilisateur
 
@@ -10,5 +10,3 @@
 > Le but de cette modification c'est de déclancer la 2ème tache du playbook qui permet de copier le fichier (si le fichier n'a pas été modifié, le module copy ne vas pas recopier le fichier) 
 
 > Lancer le playbook avec l'utilisateur root
-
-
