@@ -1,13 +1,15 @@
 
-La gestion des configurations de plusieurs serveurs et environnements est l’une des utilisations majeures d’Ansible. Mais ces fichiers de configuration peuvent varier pour chaque serveur distant ou chaque cluster. Mais à part quelques paramètres, tous les autres paramètres seront les mêmes. La création de fichiers statiques pour chacune de ces configurations n’est pas une solution efficace, cela prendra beaucoup plus de temps et chaque fois qu’un nouveau cluster sera ajouté, vous devrez utiliser plus de fichiers. C'est ici qu'intervient le module template Ansible.
+La gestion des configurations de plusieurs serveurs et environnements est l’une des utilisations majeures d’Ansible. Mais ces fichiers de configuration peuvent **varier** pour chaque serveur distant ou chaque cluster. Mais à part quelques paramètres, tous les autres paramètres seront les mêmes. 
 
-Les templates sont traités par le langage de modèle Jinja2. La documentation sur le formatage des modèles est disponible dans [la documentation du concepteur de modèles](http://jinja.pocoo.org/docs/templates).
+La création de fichiers statiques pour chacune de ces configurations n’est pas une solution efficace, cela prendra beaucoup plus de temps et chaque fois qu’un nouveau cluster sera ajouté, vous devrez utiliser plus de fichiers. C'est ici qu'intervient le module **template Ansible**.
 
-Les templates sont de simples fichiers texte avec l'extension .j2  que nous utilisons dans Ansible et qui contiennent tous vos paramètres de configuration. Lors de l'exécution du playbook, les variables seront remplacées par les valeurs appropriées, en fonction de certaines conditions comme le nom du serveur sur lequelle l'opération s'exécute. 
+Les templates sont traités par le langage de modèle **Jinja2**. La documentation sur le formatage des modèles est disponible dans [la documentation du concepteur de modèles](http://jinja.pocoo.org/docs/templates).
+
+Les templates sont de simples fichiers texte avec l'extension ".j2"  que nous utilisons dans Ansible et qui contiennent tous vos paramètres de configuration. Lors de l'exécution du playbook, les variables seront remplacées par les valeurs appropriées, en fonction de certaines conditions comme le nom du serveur sur lequelle l'opération s'exécute. 
 
 Nous pouvons faire beaucoup plus que remplacer les variables à l’aide de templates Jinj2. Nous pouvons avoir des instructions conditionnelles, des boucles, des filtres pour transformer les données, ...etc.
 
-Les variables dans un fichier modèle seront indiquées par les doubles accolades, "{{variables}}"
+Les variables dans un fichier modèle seront indiquées par les doubles accolades, **"{{variables}}"**
   
 
 #### Utilisation des templates
@@ -29,8 +31,8 @@ Créer un playbook template_exemple1.yml et copier le contenu ci-dessous:
   tasks:
     - name: Ansible Template Example
       template:
-        src: training-files/exemple_template.j2
-        dest: /work_dir/exemple_template.txt
+        **src**: training-files/exemple_template.j2
+        **dest**: /work_dir/exemple_template.txt
 </pre>
 
 Le contenue du fichier jinja exemple_template.j2 est 
