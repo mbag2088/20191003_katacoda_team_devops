@@ -85,7 +85,7 @@ This is an example of template module loop with a list.
 lancer le playbook: `ansible-playbook -i hosts.ini template_exemple2.yml`{{execute T1}}
 
 Vérifier le contenu du fichier exemple_liste_template.txt (sur le serveur cible) après exécution du playbook:
-`cat /work_dir/exemple_liste_template.txt`{{execute T1}}
+`cat /work_dir/exemple_liste_template.txt`{{execute T2}}
 
 Le résultat doit ressembler à celui ci-dessous:
 <pre class="file">
