@@ -57,4 +57,4 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
   `ansible-playbook -i hosts.ini playbook_ex01.yml`{{execute T1}}
 
-- **Dans les prochains exercices, vous allez creer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh.
+**Dans les prochains exercices, vous allez creer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh**.
