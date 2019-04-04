@@ -1,7 +1,7 @@
 
-> Créer un fichier playbook_ex07.yml dans votre espace de travail /work_dir de la machine Ansible
+> En tant que utilisateur "toto" ,créer un fichier playbook_ex03.yml dans votre espace de travail /work_dir de la machine Ansible
 
-> Caracteristiques du playbook "playbook_ex07.yml:
+> Caracteristiques du playbook "playbook_ex02.yml:
 
 > Le groupe sur lequel s'exécuteront les taches: web
 
