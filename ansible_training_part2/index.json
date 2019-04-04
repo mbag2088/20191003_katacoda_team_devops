@@ -28,12 +28,12 @@
         "answer": "step5-answer.md"
       },
       {
-        "title": "Exercice 2: Utilisation du module replace",
+        "title": "Exercice 3: Utilisation du module replace",
         "text": "step6.md",
         "answer": "step6-answer.md"
       },
       {
-        "title": "Exercice 3: Utilisation des modules yum et service",
+        "title": "Exercice 4: Utilisation des modules yum et service",
         "text": "step7.md",
         "answer": "step7-answer.md"
       },
@@ -42,7 +42,7 @@
         "text": "step8.md"
       },
       {
-        "title": "Exercice 4: Utilisation des handlers",
+        "title": "Exercice 5: Utilisation des handlers",
         "text": "step9.md",
         "answer": "step9-answer.md"
       },
@@ -51,7 +51,7 @@
         "text": "step10.md"
       },
       {
-        "title": "Exercice 5: Utilisation des templates",
+        "title": "Exercice 6: Utilisation des templates",
         "text": "step11.md",
         "answer": "step11-answer.md"
       },
@@ -60,7 +60,7 @@
         "text": "step12.md"
       },
       {
-        "title": "Exercice 6: Utilisation des conditions avec when et register",
+        "title": "Exercice 7: Utilisation des conditions avec when et register",
         "text": "step13.md",
         "answer": "step13-answer.md"
       }
