@@ -47,7 +47,7 @@ lancer le playbook: `ansible-playbook -i hosts.ini template_exemple1.yml`{{execu
 
 Verifier le contenu du fichier exemple_template.txt (sur le serveur cible) après exécution du playbook:
 
-`cat /work_dir/exemple_template.txt`{{execute T1}}
+`cat /work_dir/exemple_template.txt`{{execute T2}}
 
 Le résultat doit ressembler à celui ci-dessous:
 <pre class="file">
