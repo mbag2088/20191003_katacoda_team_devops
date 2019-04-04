@@ -1,5 +1,6 @@
 #### Correction
 
+playbook_ex01.yml 
 <pre class="file">
 ---
 - name: Copy config file
