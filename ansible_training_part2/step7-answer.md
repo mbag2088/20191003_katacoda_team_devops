@@ -35,6 +35,8 @@ playbook_ex04.yml
 </pre>
 
 
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
+
 ##### *Remarque:*
 
 - Dans ce playbook, vous pouvez remarquer qu'on pourra concatener une variable avec une chaine de caractère comme ci-dessous:
