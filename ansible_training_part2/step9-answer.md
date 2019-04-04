@@ -1,5 +1,6 @@
 #### Correction
 
+playbook_ex04.yml
 <pre class="file">
 ---
 - name: Install package
@@ -46,8 +47,10 @@
         state: restarted
 </pre>
   
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
 
 ###### *Remarques*
+
 - Vous pouvez tester le fonctionnement des handlers en modifiant un des fichiers de configuration par exepmle et relancer le playbook pour déclancer le handler  
 
 - Dans ce playbook, nous avons utilisé le fichier de configuration "apache2.conf" qu'on a copié sur le serveur web sans adaptation du contenu de ce fichier. 
