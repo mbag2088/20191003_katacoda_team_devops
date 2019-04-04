@@ -16,8 +16,8 @@ Les variables dans un fichier modèle seront indiquées par les doubles accolade
 
 Au minimum, vous devez avoir deux paramètres lorsque vous utilisez le module Ansible.
 
-- Src: Chemin d’un modèle au format Jinja2 sur le contrôleur Ansible.
-- Dest : Emplacement du fichier résultat du modèle sur la machine distante
+- **src**: Chemin d’un modèle au format Jinja2 sur le contrôleur Ansible.
+- **dest** : Emplacement du fichier résultat du modèle sur la machine distante
 
 Dans la tâche suivante. On utilise le module template et le fichier hello_world.j2. Les doubles accolades couvrent les variables.
 
@@ -31,8 +31,8 @@ Créer un playbook template_exemple1.yml et copier le contenu ci-dessous:
   tasks:
     - name: Ansible Template Example
       template:
-        **src**: training-files/exemple_template.j2
-        **dest**: /work_dir/exemple_template.txt
+        src: training-files/exemple_template.j2
+        dest: /work_dir/exemple_template.txt
 </pre>
 
 Le contenue du fichier jinja exemple_template.j2 est 
