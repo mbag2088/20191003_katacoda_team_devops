@@ -49,7 +49,7 @@ Verifier le contenu du fichier exemple_template.txt (sur le serveur cible) aprè
 
 `cat /work_dir/exemple_template.txt`{{execute T2}}
 
-Le résultat doit ressembler à celui ci-dessous:
+Le résultat doit ressembler à celui ci-dessous (seule la valeur 200 MBs qui varie en  fonction de votre serveur):
 <pre class="file">
 Bonjour tout le monde
 Ce fichier est un exemple d'un template
