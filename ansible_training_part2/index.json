@@ -36,33 +36,6 @@
         "title": "Exercice 4: Utilisation des modules yum et service",
         "text": "step7.md",
         "answer": "step7-answer.md"
-      },
-      {
-        "title": "Les Handlers: Exécuter des operations sur changement",
-        "text": "step8.md"
-      },
-      {
-        "title": "Exercice 5: Utilisation des handlers",
-        "text": "step9.md",
-        "answer": "step9-answer.md"
-      },
-      {
-        "title": "Ansible: Les templates",
-        "text": "step10.md"
-      },
-      {
-        "title": "Exercice 6: Utilisation des templates",
-        "text": "step11.md",
-        "answer": "step11-answer.md"
-      },
-      {
-        "title": "Ansible: Les conditions",
-        "text": "step12.md"
-      },
-      {
-        "title": "Exercice 7: Utilisation des conditions avec when et register",
-        "text": "step13.md",
-        "answer": "step13-answer.md"
       }
     ],
     "intro": {
@@ -89,14 +62,6 @@
         },
         {
           "file": "vhost.j2",
-          "target": "~/"
-        },
-        {
-          "file": "exemple_template.j2",
-          "target": "~/"
-        },
-        {
-          "file": "exemple_liste_template.j2",
           "target": "~/"
         },
         {
