@@ -1,6 +1,6 @@
 #### Correction
 
-playbook_ex04.yml
+playbook_ex01.yml
 <pre class="file">
 ---
 - name: Install package
@@ -47,7 +47,7 @@ playbook_ex04.yml
         state: restarted
 </pre>
   
-lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
 ###### *Remarques*
 
