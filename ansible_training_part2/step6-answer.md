@@ -1,3 +1,5 @@
+#### Correction
+
 playbook_ex03.yml
 <pre class="file">
 ---
@@ -16,6 +18,7 @@ playbook_ex03.yml
       backup: yes
 </pre>
 
+lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex03.yml`{{copy}}
 
 Vérifier si la modification a été bien éffectuée sur le serveur cible et que l'on a bien un fichier sauvegardé:
 
