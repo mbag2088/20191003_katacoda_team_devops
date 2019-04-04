@@ -1,8 +1,9 @@
 
-Comme nous l’avons mentionné, les modules doivent être idempotents et s'exécutent lorsqu’ils ont effectué un changement sur le hote distant.
-Les Playbooks disposent d'un système d'événements de base pouvant êtres utilisés pour réagir aux changements.
+Comme nous l’avons mentionné précédemment, la plupart des modules sont idempotents et s'exécutent lorsqu’ils ont effectué un changement sur le hôte distant.
 
-les actions ‘notifié’ sont déclenchées à la fin de chaque play et ne seront déclenchées qu’une seule fois, même si elles sont notifiées par plusieurs tâches différentes.
+Les Playbooks disposent d'un système **d'événements de base** pouvant êtres utilisés pour réagir aux changements.
+
+les actions **notifié** sont déclenchées **à la fin de chaque play et ne seront déclenchées qu’une seule fois**, même si elles sont notifiées par plusieurs tâches différentes.
 
 Par exemple, plusieurs ressources peuvent indiquer qu'apache doit être redémarré car elles ont modifié un fichier de configuration, mais Apache ne sera redémaré qu'une seule fois afin d'éviter des redémarrages inutiles.
 
