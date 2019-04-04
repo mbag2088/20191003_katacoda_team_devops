@@ -1,5 +1,6 @@
 #### Correction
 
+playbook_ex01.yml
 <pre class="file">
 ---
 - name: Copy config file
@@ -21,8 +22,9 @@
       dest: "{{ remote_dir }}"
 </pre>
 
-Nous allons **externaliser** les variables d'authentifications et les définir dans le fichier d'inventaire  **hosts.ini**
+Nous allons **externaliser** les variables d'authentifications et les définir dans le fichier d'inventaire  hosts.ini
 
+/work_dir/hosts.ini
 <pre class="file">
 [myself]
 localhost
@@ -40,21 +42,13 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
 ##### *Remarques*
 
-- Si vous avez une erreur comme ci-dessous, installer le package sshpass
-
-<pre style="color: red">
-fatal: [managed_node1]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
-</pre>
-
-`apt-get install sshpass`{{execute T1}}
-
-- Dans le playbook, nous avons besoins d'exécuter les taches avec l'utilisateur root car lors de la première exécution du playbook playbook_ex01.yml, le répertoire /etc/training/training.d a été creer avec cette utilisateur et les droits d'accès par defaut ( droits de lecture,ecriture que pour l'utilisateur root)
+- Dans le playbook, nous avons besoins d'exécuter les tâches avec l'utilisateur root car lors de la première exécution du playbook playbook_ex01.yml, le répertoire /etc/training/training.d a été créé avec cette utilisateur et les droits d'accès par defaut ( droits de lecture,ecriture que pour l'utilisateur root)
 
 - Pour éviter de sauvegarder le mot de passe dans le fichier d'inventaire , 2 possibilitée:
 
 1- Utiliser ansible vault (cette partie n'est pas détaillé dans cette formation). plus d'information dans [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
 
-2- Echange de clé ssh: La clé publique a déja été échangé entre le serveur ansible et les 2 serveurs cible. Tester le playbook avec ce fonctionnement:
+2- Echange de clé ssh: La clé publique a déja été échangée entre le serveur ansible et les 2 serveurs cibles. Tester le playbook avec ce fonctionnement:
 
   Modifier l'inventaire en supprimant les 2 lignes ansible_user et ansible_ssh_pass
   
@@ -63,4 +57,4 @@ fatal: [managed_node1]: FAILED! => {"msg": "to use the 'ssh' connection type wit
 
   `ansible-playbook -i hosts.ini playbook_ex01.yml`{{execute T1}}
 
-- Dans les prochains exercices, vous allez creer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh.
+- **Dans les prochains exercices, vous allez creer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh.
