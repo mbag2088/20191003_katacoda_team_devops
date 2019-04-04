@@ -48,10 +48,6 @@
     "assets": {
       "host01": [
         {
-          "file": "config.txt",
-          "target": "~/"
-        },
-        {
           "file": "apache2.conf",
           "target": "~/"
         },
