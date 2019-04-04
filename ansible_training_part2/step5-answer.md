@@ -48,11 +48,11 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
 1- Utiliser ansible vault (cette partie n'est pas détaillé dans cette formation). plus d'information dans [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
 
-2- Echange de clé ssh: La clé publique a déja été échangée entre le serveur ansible et les 2 serveurs cibles. Tester le playbook avec ce fonctionnement:
+2- Echange de clé ssh: La clé publique de l'utilisateur "toto" a déja été échangée entre le serveur ansible et les 2 serveurs cibles. Tester le playbook avec ce fonctionnement:
 
   Modifier l'inventaire en supprimant les 2 lignes ansible_user et ansible_ssh_pass
   
-  Lancer le playbook avec l'utilisateur toto :
+  Lancer le playbook avec l'utilisateur "toto" :
   `chmod 777 /work_dir/*;su toto`{{execute T1}}
 
   `ansible-playbook -i hosts.ini playbook_ex01.yml`{{execute T1}}
