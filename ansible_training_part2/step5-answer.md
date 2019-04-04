@@ -7,6 +7,7 @@
   vars:
     remote_dir: /etc/training/training.d
     source_file_path: /work_dir/training-files/config.txt
+  gather_facts: no
   tasks:
   - name: Create the remote directory
     become: yes
