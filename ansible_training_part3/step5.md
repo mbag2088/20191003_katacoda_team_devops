@@ -1,5 +1,5 @@
 
-> Modifier le playbook de l'exercice 5 (Installation, configuration et redémarage du service apache2)
+> Modifier le playbook de l'exercice 1 (Installation, configuration et redémarage du service apache2)
 > En plus de l'installation et configuraion du serveur apache, nous allons configurer un site apache
 
 >- Configurer [le vhost apache](https://www.linuxtricks.fr/wiki/virtual-hosts-avec-apache-vhosts): Utiliser le module template afin de créer le fichier de configuration apache /etc/apache2/sites-available/monsite.conf sur la machine cible.
