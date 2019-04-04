@@ -1,7 +1,7 @@
 {
   "noindex": true,
-  "title": "Formation Ansible pour DEVOPS: partie 2",
-  "description": "Utilisation des playbooks, exercices",
+  "title": "Formation Ansible pour DEVOPS: partie 3",
+  "description": "Les handlers et les templates, exercices",
   "time": "50 minutes",
   "details": {
     "steps": [
