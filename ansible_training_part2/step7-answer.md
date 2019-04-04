@@ -43,7 +43,7 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
 
   "{{ httpd_source_path }}.httpd.conf"
 
-- L'option utilisé dans le module "service" est state=started. L'action started est idempotent c'est à dire qu'elle ne s'éxécute pas si le service est déja démarré.
+- L'option utilisé dans le module "service" est state=started. L'action started est **idempotent** c'est à dire qu'elle ne s'éxécute pas si le service est déja démarré.
 
   Donc si vous changez le fichier de configuration apache2.conf sur le serveur source et relancez le playbook, vous allez remarquer que le seul changement est au niveau du module copy. Le service httpd ne sera pas redémaré.
   
