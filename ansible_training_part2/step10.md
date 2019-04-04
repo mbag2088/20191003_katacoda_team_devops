@@ -39,7 +39,7 @@ Le contenue du fichier jinja exemple_template.j2 est
 
 <pre class="file">
 {{ variable1 }}
-This line won't be changed
+Cette ligne ne changera pas
 La mémoire disponible actuelement est : {{ ansible_memfree_mb }} MBs.
 </pre>
 
