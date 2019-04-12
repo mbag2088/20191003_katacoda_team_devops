@@ -40,3 +40,12 @@ handlers:
         state: restarted
 </pre>        
 
+---
+
+- Dans les étapes suivantes vous allez traiter des exércices sur les handlers, templates et les conditions. Lancez les commandes suivantes afin de préparer vos environnements:
+
+`a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
+
+`n1() { docker exec -it managed_node1 bash -c "cd /work_dir; echo 'PS1='\''managed_node1# '\' >> /root/.bashrc; bash"; } && n1`{{execute T2}}
+
+`n2() { docker exec -it managed_node2 bash -c "cd /work_dir; echo 'PS1='\''managed_node2# '\' >> /root/.bashrc; bash"; } && n2`{{execute T3}}
