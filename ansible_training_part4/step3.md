@@ -1,8 +1,8 @@
-> Utilisez l'utilisateur "toto" pour creer et lancer le playbook
+> Utilisez l'utilisateur "toto" pour créer et lancer le playbook
 
 > Créer un fichier playbook_ex08.yml dans votre espace de travail /work_dir de la machine Ansible
 
-> Caracteristiques du playbook "playbook_ex08.yml:
+> Caractéristiques du playbook "playbook_ex08.yml:
 
 > Le groupe sur lequel s'exécuteront les taches: db
 
