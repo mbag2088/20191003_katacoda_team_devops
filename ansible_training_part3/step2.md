@@ -42,7 +42,7 @@ handlers:
 
 ---
 
-- Dans les étapes suivantes vous allez traiter des exércices sur les handlers, templates et les conditions. Lancez les commandes suivantes afin de préparer vos environnements:
+- Dans les étapes suivantes vous allez traiter des exercices sur les handlers, templates et les conditions. Lancez les commandes suivantes afin de préparer vos environnements:
 
 `a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
 
