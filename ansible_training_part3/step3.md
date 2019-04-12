@@ -1,7 +1,7 @@
 
 L'objectif est d'installer et de configurer un serveur apache, puis de **redémarer** le service apache **si seulement si la configuration a été changé**
 
-Vous devriez déja vus et traité un exércice sur l'installation du package apache dans la formation "Ansible pour le DEVOPS: partie 2" "exércice 4 de step7".
+Vous avez déja vus et traité un exercice sur l'installation du package apache dans la formation "Ansible pour le DEVOPS: partie 2" "exercice 4 de step7".
 
 En tant que utilisateur "toto" : 
 
