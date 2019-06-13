@@ -30,8 +30,8 @@ Listing... Done
    
 #### 2) Installer Python sur les serveurs managés
 ##### 1.Vérifier que le package python est bien installé
-- Sur le managed_node1 `apt list --installed  python2.7`{{execute T2}}
-- Sur le managed_node2 `apt list --installed  python2.7`{{execute T3}}
+- Sur le managed_node1 `apt list --installed  python`{{execute T2}}
+- Sur le managed_node2 `apt list --installed  python`{{execute T3}}
 
 Si le package Python n'est pas installé, vous allez avoir un résultat comme ci-dessous. Il faut donc installer le package.
 Si ce n'est pas le cas alors sauter l'étape 2 et Continuer vers la page suivante.
@@ -40,5 +40,5 @@ Listing... Done
 ```
 
 ##### 2.Installer le package python
-- Sur le managed_node1 `apt-get install -y python2.7`{{execute T2}}
-- Sur le managed_node2 `apt-get install -y python2.7`{{execute T3}}
+- Sur le managed_node1 `apt-get install -y python`{{execute T2}}
+- Sur le managed_node2 `apt-get install -y python`{{execute T3}}
