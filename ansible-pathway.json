@@ -1,19 +1,27 @@
 {
-    "title": "Formations Ansible pour le DEVOPS",
-    "description": "Formation ansible étape par étape pour les débutants. L'essentiel pour devenir expert en automatisation!",
-    "icon": "fa-katacoda",
-    "courses": [
-      {
-        "course_id": "ansible_training_part1"
-      },
-      {
-        "course_id": "ansible_training_part2"
-      },
-      {
-        "course_id": "ansible_training_part3"
-      },
-      {
-        "course_id": "ansible_training_part4"
-      }
-    ]
+  "title": "Formations Ansible pour le DEVOPS",
+  "description": "Formation ansible étape par étape pour les débutants. L'essentiel pour devenir expert en automatisation!",
+  "icon": "fa-katacoda",
+  "courses": [
+    {
+      "course_id": "ansible_training_part1",
+      "title": "Formation Ansible pour le DEVOPS: partie 1",
+      "description": "Les principes d'Ansible"
+    },
+    {
+      "course_id": "ansible_training_part2",
+      "title": "Formation Ansible pour le DEVOPS: partie 2",
+      "description": "Utilisation des playbooks, exercices"
+    },
+    {
+      "course_id": "ansible_training_part3",
+      "title": "Formation Ansible pour le DEVOPS: partie 3",
+      "description": "Les handlers et les templates, exercices"
+    },
+    {
+      "course_id": "ansible_training_part4",
+      "title": "Formation Ansible pour le DEVOPS: partie 4",
+      "description": "Les rôles, exercices"
+    }
+  ]
 }
