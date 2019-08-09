@@ -1,0 +1,19 @@
+{
+    "title": "Formations Ansible pour le DEVOPS",
+    "description": "Formation ansible étape par étape pour les débutants. L'essentiel pour devenir expert en automatisation!",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "ansible_training_part1"
+      },
+      {
+        "course_id": "ansible_training_part2"
+      },
+      {
+        "course_id": "ansible_training_part3"
+      },
+      {
+        "course_id": "ansible_training_part4"
+      }
+    ]
+}
