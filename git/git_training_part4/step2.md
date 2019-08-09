@@ -5,6 +5,9 @@
 
 ![git_users_archi](/testgitessai/scenarios/git_training_part1/assets/git_users_archi.png)
 
+
+![git_central3](/devopsteam/scenarios/git_training_part4/assets/git-central3.png)
+
 ##### *Remarque:*
 Cette approche décentralisée, apporte un plus par rapport au autres solutions.
 
