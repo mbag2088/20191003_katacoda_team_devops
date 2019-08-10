@@ -57,13 +57,13 @@ Hooks and filters directory? [/home/git/.git/hooks]
   
   
  
- #### (VM1) Constater que le développement (script n°2) n'a pas encore été "pushé" sur le `Repository Central`  
- Constater que la branche feature est bien centralisé
+ #### (VM1) Constater que la branche feature est bien centralisésur le `Repository Central`  
+
  `git branch`{{execute T1}}
 
 
 
-#### `Equipe 2` développe sur son Repository Local le script n°3  (VM3)
+#### `Equipe 2` Devouvre et track le git Flow 'Feature'de  autre equipe (VM3)
 
 Initialiser le Git Flow
  `git flow init`{{execute T3}}
@@ -89,12 +89,4 @@ Importer la feature
 
 
 
-
-  
-  Lancer un Raffraichissement `push` sur le repo Distant (Central)
-   `git push origin master`{{execute T2}}
-  
-  **Sur la VM1 `Repo Central` vérifier le raffraîchissement 
-  Vérifier que les commits des deux équipe sont tous présent et dans le bon ordre
- `git log --oneline`{{execute T2}}
  
