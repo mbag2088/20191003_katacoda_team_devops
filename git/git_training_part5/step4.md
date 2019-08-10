@@ -63,7 +63,7 @@ Hooks and filters directory? [/home/git/.git/hooks]
 
 
 
-#### `Equipe 2` Devouvre et track le git Flow 'Feature'de  autre equipe (VM3)
+#### (VM3) `Equipe 2` Track le git Flow 'Feature' de l'autre equipe 
 
 Initialiser le Git Flow
  `git flow init`{{execute T3}}
