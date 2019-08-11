@@ -10,14 +10,14 @@
 Initialiser le Git Flow
  `git flow init`{{execute T2}}
  ```
-How to name your supporting branch prefixes?
-Feature branches? [feature/]
-Bugfix branches? [bugfix/]
-Release branches? [release/]
-Hotfix branches? [hotfix/]
-Support branches? [support/]
-Version tag prefix? []
-Hooks and filters directory? [/home/git/.git/hooks]
+> How to name your supporting branch prefixes?
+> Feature branches? [feature/]
+> Bugfix branches? [bugfix/]
+> Release branches? [release/]
+> Hotfix branches? [hotfix/]
+> Support branches? [support/]
+> Version tag prefix? []
+> Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
  
  Démarrer le Work Flow pour les featues
@@ -46,9 +46,12 @@ Hooks and filters directory? [/home/git/.git/hooks]
  Publier le Git Flow 
  `git flow feature publish featureform`{{execute T2}}
  
- > NB: s'il vous le demande, le mot de passe du user git est 'git'
+ 
  ```
- _Répondre: yes
+                         _Répondre: yes
+  
+  NB: s'il vous le demande, le mot de passe du user git est 'git'
+  
   ```
  
  Regarder les logs 
@@ -69,14 +72,15 @@ Hooks and filters directory? [/home/git/.git/hooks]
 Initialiser le Git Flow
  `git flow init`{{execute T3}}
  ```
-How to name your supporting branch prefixes?
-Feature branches? [feature/]
-Bugfix branches? [bugfix/]
-Release branches? [release/]
-Hotfix branches? [hotfix/]
-Support branches? [support/]
-Version tag prefix? []
-Hooks and filters directory? [/home/git/.git/hooks]
+> How to name your supporting branch prefixes?
+> Feature branches? [feature/]
+> Bugfix branches? [bugfix/]
+> Release branches? [release/]
+> Hotfix branches? [hotfix/]
+> Support branches? [support/]
+> Version tag prefix? []
+> Hooks and filters directory? [/home/git/.git/hooks]
+ ``` 
  ``` 
 
 Importer la feature
