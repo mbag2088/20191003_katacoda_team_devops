@@ -46,6 +46,7 @@ Hooks and filters directory? [/home/git/.git/hooks]
  Publier le Git Flow 
  `git flow feature publish featureform`{{execute T2}}
  
+ > NB: s'il vous le demande, le mot de passe du user git est 'git'
  ```
  _Répondre: yes
   ```
@@ -79,11 +80,11 @@ Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
 
 Importer la feature
-  `git flow feature track featureform`{{execute T2}}
+  `git flow feature track featureform`{{execute T3}}
 
  
  Regarder les logs 
-  `git flow log`{{execute T2}}
+  `git flow log`{{execute T3}}
 
 
 
