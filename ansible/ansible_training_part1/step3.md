@@ -5,7 +5,7 @@
   Sur ces machines, un serveur SSH est requis pour effectuer la communication avec le controleur Ansible.
   Vous avez également besoin de Python 2 (version 2.6 ou ultérieure) ou de Python 3 (version 3.5 ou ultérieure).
 
-![ansible architecture](/devopsteam/scenarios/ansible_training_part1/assets/ansible_architecture.png)
+![ansible architecture](/devopsteam/courses/ansible/ansible_training_part1/assets/ansible_architecture.png)
 
 #### Architecture utilisée durant la formation
 Afin d'optimiser les ressources nous avons choisi d'utiliser des images docker avec un système Ubuntu. 
