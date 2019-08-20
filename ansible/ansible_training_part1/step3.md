@@ -7,6 +7,8 @@
 
 ![ansible architecture](/devopsteam/scenarios/ansible_training_part1/assets/ansible_architecture.png)
 
+![ansible architecture](/samiasamia/scenarios/ansible_training_part1/assets/ansible_architecture.png)
+
 #### Architecture utilisée durant la formation
 Afin d'optimiser les ressources nous avons choisi d'utiliser des images docker avec un système Ubuntu. 
 Nous avons créé 3 conteneurs docker. Chaque conteneur porte un rôle d'une VM Ubuntu.
