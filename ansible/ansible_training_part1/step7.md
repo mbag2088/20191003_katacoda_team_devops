@@ -2,7 +2,7 @@
 I'Inventaire fournit la liste des hôtes (serveurs managés) sur lesquels Ansible exécutera les tâches.
 Ansible fonctionne en se basant sur cette liste de machines qui est définie par défaut dans le fichier /etc/ansible/hosts. Ce chemin par defaut peut être modifié dans le fichier de configuration ansible.cfg.
 
-Vous pouvez spécifier aussi un fichier d'inventaire différent à l'aide de l'option -i <chemin> sur la ligne de commande. 
+Vous pouvez spécifier aussi un fichier d'inventaire différent à l'aide de l'option -i <chemin> sur la ligne de commande.
 
 
 Dans un inventaire, on trouve :
@@ -29,7 +29,7 @@ jumper ansible_port=5555 ansible_host=192.0.2.50
 
 Comme indiqué précédemment, le fichier d'inventaire peux contenir des groupes et des hotes definis comme suit:
 
-![groups and hosts format INI](/devopsteam/scenarios/ansible_training_part1/assets/hosts_and_groups.png)
+![groups and hosts format INI](/devopsteam/courses/ansible/ansible_training_part1/assets/hosts_and_groups.png)
 
 
 #### Creer votre premier fichier d'inventaire
@@ -53,4 +53,3 @@ managed_node2
 ##### _Remarque:
 
 Pour sauvegarder le fichier, utiliser les touches :wq! de votre clavier
-

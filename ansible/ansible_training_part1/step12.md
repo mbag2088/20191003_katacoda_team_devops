@@ -16,7 +16,7 @@ Les modules Ansible renvoient normalement une structure de données qui peut êt
 
 Sur le site officiel ansible vous pouvez par exemple trouver les valeurs de retour du module ["archive"](https://docs.ansible.com/ansible/latest/modules/archive_module.html#archive-module) présenté comme suit:
 
-![archive_return_value](/devopsteam/scenarios/ansible_training_part1/assets/archive_module_return_value.png)
+![archive_return_value](/devopsteam/courses/ansible/ansible_training_part1/assets/archive_module_return_value.png)
 
 La page disponible dans le lien suivant couvre les valeurs de retour communes à tous les modules:
 
