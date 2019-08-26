@@ -16,6 +16,9 @@ Le prompt ansible#, managed_node1# et managed_node2# vous aidera à repèrer la 
 
 Si toutes fois vous êtes sortie l'aide de la commande 'exit' , vous pouvez taper les commandes suivantes:
 
-#a  suvi d'Enter => Pour se connecter à la VM ansible_node.
+#a  suvi d'Enter => Pour se connecter à la VM ansible_node. 
+
 #n1 suvi d'Enter => Pour se connecter à la VM managed_node1.
+
 #n2 suvi d'Enter => Pour se connecter à la VM managed_node2. 
+
