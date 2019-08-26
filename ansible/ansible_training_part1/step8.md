@@ -1,8 +1,8 @@
 
 
-#### 1) Les variables d'hote
+#### 1) Les variables d'hôte
 
-Comme décrit ci-dessus, les variables peuvent êtres définies pour chaque hote comme suit:
+Comme décrit ci-dessus, les variables peuvent êtres définies pour chaque hôte comme suit:
 
 *fichier .INI*
 ```
@@ -25,18 +25,18 @@ atlanta:
     proxy: proxy.atlanta.example.com
 ```
 
-#### 3) Le groupe par defaut
+#### 3) Le groupe par défaut
 
 Il existe deux groupes par défaut:
 
-- all: contient tout les hotes
+- all: contient tout les hôtes
 - ungrouped:  contient tous les hôtes qui n’ont pas d’autre groupe en dehors de tous
 
 #### 4) Organisation des inventaires
 
-Les variables d’hôte et de groupe  peuvent être définies dans le fichier d’inventaire, mais il est recommandé de les externaliser dans des fichiers séparés.  
+Les variables d’hôte et de groupe peuvent être définies dans le fichier d’inventaire, mais il est recommandé de les externaliser dans des fichiers séparés.  
 
-Ces fichiers de variables sont au format YAML. Les extensions de fichier valides incluent «.yml», «.yaml», «.json» ou aucune extension de fichier. (de préference spécifier l'extention).
+Ces fichiers de variables sont au format YAML. Les extensions de fichier, valides, incluent «.yml», «.yaml», «.json» ou aucune extension de fichier. (de préference spécifier l'extention).
 
 Chaque groupe et hôte aura son propre fichier. Pour cela il faut d’abord créer deux répertoires
 
@@ -44,7 +44,7 @@ Chaque groupe et hôte aura son propre fichier. Pour cela il faut d’abord cré
 - host_vars : pour les variables d’hôte.
 
 Ces 2 répertoires peuvent se situer :
--	soit au même endroit que le fichier d’inventaire (Ceci est particulièrement utile si vos group_vars /host_vars n’ont pas beaucoup en commun dans des environnements différents).
+-	soit au même endroit que le fichier d’inventaire 
 -	soit à l’intérieur du répertoire contenant le Playbook (qu'on verra plus tard).
 
 La mise en page pourrait ressembler à cette arborescence :
@@ -98,5 +98,5 @@ Path_env: /opt/app_name
 ```
 
 ##### _Remarque:_
-- Utilisez des noms de variables descriptifs, uniques et significatifs.
-- L’arborescence proposée dessus est particulièrement adaptée aux environnements ayant un grand nombre de nœuds. D'autres arborescences sont detaillés sur le site officiel d'ansible. Vous trouvez touts les liens à la fin de formation.
+- Utilisez des noms descriptifs de variables, uniques et significatifs.
+- L’arborescence proposée ci-dessus est particulièrement adaptée aux environnements ayant un grand nombre de nœuds. D'autres arborescences sont detaillées sur le site officiel d'Ansible. Vous trouvez tous les liens à la fin de cette formation.
