@@ -1,7 +1,7 @@
 
 #### setup
 
-Ce module récupère des informations utiles sur les hôtes distants sous forme de variables (appelées ansible_facts). Il est automatiquement appelé par les playbooks Ansible qu'on vas détailler plus tard.
+Ce module 'setup' récupère des informations utiles sur les hôtes distants sous forme de variables (appelées ansible_facts). Il est automatiquement appelé par les playbooks Ansible qu'on va détailler plus tard.
 
 Il peut également être exécuté directement par la commande ansible afin de vérifier -par exemple- la disponibilitée et la valeur des variables pour un hôte.
 
