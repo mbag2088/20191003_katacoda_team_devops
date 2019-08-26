@@ -18,4 +18,4 @@ Si toutes fois vous êtes sortie l'aide de la commande 'exit' , vous pouvez tape
 
 #a  suvi d'Enter => Pour se connecter à la VM ansible_node.
 #n1 suvi d'Enter => Pour se connecter à la VM managed_node1.
-#n2 suvi d'Enter => Pour se connecter à la VM managed_node2.
+#n2 suvi d'Enter => Pour se connecter à la VM managed_node2. 
