@@ -1,12 +1,12 @@
 
-#### 1) Installer Ansible sur la machine de controle: host 1
+#### 1) Installer Ansible sur la machine de contrôle: host 1
 
 Plusieurs solutions possibles pour l'installation :
 
-- via l'utilisation de package rpm
-- via l'utilisation de pip install
+- solution1: utilisation de package rpm
+- solution2: l'utilisation de pip install   (gestionnaire des packages/librairie Python où Ansible est pré-packagé)
 
-Nous avons choisi dans cette formation l'instalation via la commande "pip"
+Nous avons choisi dans cette formation l'installation via la commande "pip"
 
 1.Vérifier que le package python-pip est bien installé
    `apt list --installed python-pip`{{execute T1}}
