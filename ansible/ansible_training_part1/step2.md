@@ -1,9 +1,9 @@
 
-Ansible permet d'automatiser simplement et efficacement la mise en place d'infrastructures complexes, le déploiement d'applications, l’orchestration de services ainsi que beaucoup d’autres fonctionnalités
+Ansible permet d'automatiser simplement et efficacement la mise en place d'infrastructures complexes, le déploiement d'applications, l'orchestration des services ainsi que beaucoup d'autres fonctionnalités
 
-C’est un logiciel open source développé en langage Python. 
+C'est un logiciel open source développé en langage Python.
 
-Ansible permet d'appliquer une configuration sur différents serveurs au travers des fichiers écrites en YAML appelé "playbook". Ces fichiers contiennent une série de taches qui seront lancées les unes après les autres. 
+Ansible permet d'appliquer une configuration sur différents serveurs au travers des fichiers écrits en YAML appelés "playbooks". Ces fichiers contiennent une série de taches qui seront lancées les unes après les autres.
 
 Les taches utilisent des modules internes à Ansible qui permettent de décrire les opérations à effectuer et les conditions de lancement.
 
