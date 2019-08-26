@@ -37,7 +37,7 @@ Créer un fichier hosts.ini dans votre home directory
 
 `vim /work_dir/hosts.ini`{{execute T1}}
 
-
+Créer les trois groupes myself, web, db. Pour cela :
 Appuyer sur la touche i de votre clavier puis copier le contenu ci-dessous (_Pour copier faite juste un clic sur le text_)
 
 `
