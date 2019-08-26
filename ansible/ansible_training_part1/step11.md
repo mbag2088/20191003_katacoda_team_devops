@@ -1,8 +1,8 @@
 
 
-Maintenant, puisque les hotes cibles connaissent la clé SSH publique de l'hôte Ansible, nous sommes prêts à établir une connexion SSH.
+Maintenant, puisque les h^tes cibles connaissent la clé SSH publique de l'hôte Ansible, nous sommes prêts à établir une connexion SSH.
 
-Nous allons retester le module ping et cette fois ci vous devriez avoir une réponse "pong"
+Nous allons retester le module ping, cette fois ci vous devriez avoir une réponse "pong"
 
 `ansible web -i hosts.ini -m ping`{{execute T1}}
 
@@ -18,7 +18,7 @@ managed_node1 | SUCCESS => {
 
 ##### _Notes:
 
-Vous pouvez utiliser l'option -v pour afficher plus de debug lors du lancement de la commande Ansible(option avec plus de v=plus de debug)
+Vous pouvez utiliser l'option -v pour afficher plus de debug lors du lancement de la commande Ansible
 
 Exemple :
 
