@@ -10,8 +10,8 @@ Ansible traitera la liste ci-dessus et utilisera le premier fichier trouvé.
 * /etc/ansible/ansible.cfg
 
 ##### _Note_:
-    - Si vous installez ansible à partir d’un gestionnaire de paquets, le dernier fichier ansible.cfg doit figurer dans /etc/ansible,
-    - Si vous avez installé depuis pip, vous pouvez créer ce fichier afin de remplacer les paramètres par défaut dans Ansible.
+    - Si vous installez Ansible à partir d’un gestionnaire de paquets, le dernier fichier ansible.cfg doit figurer dans /etc/ansible,
+    - Si vous avez installé à l'aide de pip, vous pouvez créer ce fichier afin de remplacer les paramètres par défaut dans Ansible.
 
 Télécharger le dernier fichier de configuration depuis github afin de connaitre toutes les valeurs possibles:
 
@@ -20,7 +20,7 @@ Télécharger le dernier fichier de configuration depuis github afin de connaitr
 Déplacer ce fichier dans /etc/ansible/ansible.cfg:
 `mkdir -p /etc/ansible/ && mv /work_dir/ansible.cfg /etc/ansible/ansible.cfg`{{execute T1}}
 
-Affiher le contenu du fichier de configuration
+Afficher le contenu du fichier de configuration
 `cat /etc/ansible/ansible.cfg`{{execute T1}}
 
 
