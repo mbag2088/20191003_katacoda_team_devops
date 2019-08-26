@@ -1,5 +1,5 @@
 
-I'Inventaire fournit la liste des hôtes (serveurs managés) sur lesquels Ansible exécutera les tâches.
+L'Inventaire fourni la liste des hôtes (serveurs managés) sur lesquels Ansible exécutera les tâches.
 Ansible fonctionne en se basant sur cette liste de machines qui est définie par défaut dans le fichier /etc/ansible/hosts. Ce chemin par defaut peut être modifié dans le fichier de configuration ansible.cfg.
 
 Vous pouvez spécifier aussi un fichier d'inventaire différent à l'aide de l'option -i <chemin> sur la ligne de commande.
@@ -7,7 +7,7 @@ Vous pouvez spécifier aussi un fichier d'inventaire différent à l'aide de l'o
 
 Dans un inventaire, on trouve :
 
-> Des hôtes avec leurs informations de connexion, de configuration, … (DNS, IP, utilisateur, …)
+> Des hôtes avec leur information de connexion, de configuration, … (DNS, IP, utilisateur, …)
 > Des groupes fonctionnels regroupant des instances (app, web server, bdd, …)
 
 Le fichier d'inventaire peut être dans l'un des nombreux formats : yaml, ini, etc.
@@ -27,16 +27,16 @@ jumper ansible_port=5555 ansible_host=192.0.2.50
 ```
 
 
-Comme indiqué précédemment, le fichier d'inventaire peux contenir des groupes et des hotes definis comme suit:
+Comme indiqué précédemment, le fichier d'inventaire peut contenir des groupes et des hôtes definis comme suit:
 
 ![groups and hosts format INI](/devopsteam/courses/ansible/ansible_training_part1/assets/hosts_and_groups.png)
 
 
-#### Creer votre premier fichier d'inventaire
-Créer votre premier inventaire avec 3 groupes : myself, web et db.
+#### Créer votre premier fichier d'inventaire
 Créer un fichier hosts.ini dans votre home directory
 
 `vim /work_dir/hosts.ini`{{execute T1}}
+
 
 Appuyer sur la touche i de votre clavier puis copier le contenu ci-dessous (_Pour copier faite juste un clic sur le text_)
 
