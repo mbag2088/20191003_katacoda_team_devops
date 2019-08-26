@@ -1,7 +1,7 @@
 
 
-Pour tester la connectivité vers les serveurs du groupe Web, et db définis dans le fichier hosts.ini, exécutez la commande ansible ping comme indiqué ci-dessous. 
-Ici, ping est un module qui remplit une fonction particulière pour tester si les hôtes peuvent être connectés.
+Pour tester la connectivité vers les serveurs du groupe [web], et [db] définis dans le fichier hosts.ini, exécutez la commande Ansible 'ping' comme indiqué ci-dessous. 
+Ici, ping est un module qui rempli une fonction particulière: "Tester si les hôtes peuvent être connectés"
 
 Ce n'est pas un ping ICMP, c'est juste un module de test trivial qui requiert Python sur le nœud distant.
 Pour les cibles Windows, utilisez plutôt le module win_ping.
