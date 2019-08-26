@@ -6,4 +6,4 @@ Comprendre comment tirer profit de la solution pour optimiser le pilotage d'un p
 
 #### Pré-requis
 
-Avoir des bases de connaissance sur l'administration des systèmes Linux ( package linux, commandes ssh, éditeur de text,...)
+Avoir des connaissances de base sur l'administration des systèmes Linux (packages linux, commandes ssh, éditeur de text,...)
