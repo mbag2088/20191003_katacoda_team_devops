@@ -28,6 +28,6 @@ Vérifier si la modification a été bien éffectuée sur le serveur cible et qu
 
 ##### *Remarque:*
 
-Vous pouvez toujours lancer votre playbook plusieurs fois pour tester l'idempotent(tant que le fichier config.txt n'a pas été changé sur la source, vous allez toujours avoir 0 changements après l'exécution du playbook) 
+Vous pouvez toujours lancer votre playbook plusieurs fois pour tester l'idempotence (tant que le fichier config.txt n'a pas été changé sur la source, vous allez toujours avoir 0 changement après l'exécution du playbook) 
 
 ![recap_playbook_ex02](/devopsteam/courses/ansible/ansible_training_part2/assets/recap_playbook_ex02.png)
