@@ -17,7 +17,7 @@
 
 ##### *Remarque
 
-Dans le cas ou vous voulez par exemple tester si le répertoire /work_dir/my_dir existe sur le serveur ansible avant d'exécuter d'autres taches sur le serveur cible "managed_node1", vous pouvez utiliser l'option "delegate_to: 127.0.0.1". Cette option permet d'exécuter une action sur le serveur sur lequelle le playbook est lancé.
+Dans le cas ou vous voulez par exemple tester si le répertoire /work_dir/my_dir existe sur le serveur Ansible avant d'exécuter d'autres tâches sur le serveur cible "managed_node1", vous pouvez utiliser l'option "delegate_to: 127.0.0.1". Cette option permet d'exécuter une action sur le serveur sur lequel le playbook est lancé.
 
 <pre class="file">
 ---
