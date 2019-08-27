@@ -1,21 +1,21 @@
 
 Le résultat d'un play peut souvent dépendre de la valeur d'une variable, d'un fact (information sur un système distant) ou du résultat d'une tâche précédente. Dans certains cas, les valeurs des variables peuvent dépendre d'autres variables. 
 
-La première action effectuée par ansible est de récupérer les “facts” des serveurs cibles (via le module setup)
-Cette action permettra d’utiliser de nouvelles variables dynamiques utilisables dans l’ensemble des structures de contrôle
+La première action effectuée par Ansible est de récupérer les “facts” des serveurs cibles (via le module setup).
+Cette action permettra d’utiliser de nouvelles variables dynamiques utilisables dans l’ensemble des structures de contrôle.
 Ces variables sont accessibles via le nom ansible_$nom_de_la_variable ou ansible_facts_$nom_de_la_variable.
 
-Cette rubrique explique comment les conditions sont utilisées dans les playbooks comment les variables fact peuvent êtres utiles.
+Cette rubrique explique comment les conditions sont utilisées dans les playbooks comment les variables fact peuvent être utiles.
 
 #### La condition When
 *Syntax*
 
 when: (condition)
 
-Exemple du context: 
+Exemple du contexte: 
 - Ignorer une étape particulière sur un hôte,
 - Ne pas installer un certain paquet si le système d'exploitation correspond à une version particulière, 
-- Procéder à un de nettoyage si un système de fichiers est saturé.
+- Procéder à un nettoyage si un système de fichiers est saturé.
 
 ##### Exemple1 : Condition sur les variables facts pour gérer des OS hétérogènes
 
@@ -63,11 +63,11 @@ tasks:
 </pre>
 
 ##### Exemple3 : Condition sur les variables "Register"
- exécuter une action en fonction d’une action précédente via ‘register’
+Exécuter une action en fonction d’une action précédente via ‘register’
  
-Dans un playbook, il peut être utile de stocker le résultat d'une commande donnée dans une variable et d'y accéder ultérieurement. 
+Dans un playbook, il peut être utile de stocker le résultat d'une commande dans une variable et d'y accéder ultérieurement. 
 
-Le mot clé "register" détermine la variable dans laquelle enregistrer un résultat. Les variables résultantes peuvent être utilisées dans des modèles, des actions ou des instructions when. 
+Le mot clé "register" détermine la variable dans laquelle enregistrer le résultat. Les variables résultantes peuvent être utilisées dans des modèles, des actions ou des instructions when. 
 
 <pre class="file">
 - name: test play with register
@@ -84,7 +84,7 @@ Le mot clé "register" détermine la variable dans laquelle enregistrer un résu
 
 - Dans le playbook précedent, "register" permet de stocker le résultat de l'exécution du module shell dans la variable qu'on a nommé "motd_contents".
 
-- Le playbook affichera "motd contains the word hi" si seulement le fichier  "/etc/motd" contient le caractère "hi", et pour cela nous avons utiliser le condition "when: motd_contents.stdout.find('hi') != -1"
+- Le playbook affichera "motd contains the word hi" si seulement le fichier  "/etc/motd" contient le caractère "hi", et pour cela nous avons utilisé le condition "when: motd_contents.stdout.find('hi') != -1"
 
 - Afin de comprendre comment nous avons construit cette condition, nous allons afficher le contenu de la variable "motd_contents" en utilisant le module "debug".
 
