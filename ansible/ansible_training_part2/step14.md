@@ -1,7 +1,7 @@
 
-Les rôles sont des fonctionnalités qui peuvent être utilisées indépendamment mais qui doivent être utilisées dans les Playbooks.
+Les rôles sont des fonctionnalités qui peuvent être utilisées indépendemment mais qui doivent être utilisées dans les Playbooks.
 Les rôles sont une façon d’inclure des tâches Ansible au sein d’autres tâches en déclarant des dépendances. 
-Cela permet de décomposer un Playbook complexe en plusieurs fichiers et faciliter sa réutilisation.
+Cela permet de décomposer un Playbook complexe en plusieurs fichiers et faciliter sa lecture et sa réutilisation.
 
 Chaque rôle est fondamentalement limité à une fonctionnalité particulière ou à la sortie souhaitée, avec toutes les étapes nécessaires pour fournir ce résultat dans ce rôle lui-même ou dans d'autres rôles répertoriés comme dépendances.
 
@@ -27,10 +27,10 @@ Plusieurs syntaxes sont possibles. Ci-dessous quelques unes:
 ```
 
 #### Structure du répertoire des rôles
-Les rôles sont généralement définis dans un répertoire rôles au niveau des playbooks comme ci-dessous. Ainsi, lors de l'appelle des rôles dans le playbook, Ansible saura les chercher sans spécifier le chemin complet. 
+Les rôles sont généralement définis dans un répertoire "roles" au niveau de l'arborescence des playbooks comme ci-dessous. Ainsi, lors de l'appel des rôles dans le playbook, Ansible saura les chercher sans spécifier le chemin complet. 
 
 Ansible recherchera les rôles de la manière suivante:
-- 1 - Le répertoire relatif au fichier playbook "roles/"
+- 1 - Le répertoire "/roles" relatif au fichier playbook
 - 2 - "/etc/ansible/roles"
 
 ```
@@ -71,16 +71,16 @@ Les rôles doivent inclure au moins un de ces répertoires, mais il est parfaite
   
 - files: Ce dossier regroupe les éventuels fichiers qui seront utilisés dans le rôle
   
-- handlers/main.yml: Si le rôle utilise des handlers ils seront mis dans ce fichier
+- handlers/main.yml: Si le rôle utilise des handlers, ils seront mis dans ce fichier
   
 - meta/main.yml: Contient les métadonnées du rôle, créateurs, version…
   
 - tasks/main.yml: Ce fichier est composé de l’ensemble des tâches qui constituent ce rôle
   
-- templates: Ce répertoire réservé aux templates
+- templates: Ce répertoire est réservé aux templates
 
 #### Ansible Galaxy
-L'utilisation des rôles Ansible favorise la réutilisation et le partage. Ainsi il existe un hub qui regroupe une grand nombre de rôles appelé  [Ansible galaxy](https://galaxy.ansible.com/)
+L'utilisation des rôles Ansible favorise la réutilisation et le partage. Ainsi il existe un hub qui regroupe un grand nombre de rôles appelé  [Ansible galaxy](https://galaxy.ansible.com/)
 
 C'est un site gratuit permettant de rechercher, de télécharger, d'évaluer et de revoir toutes sortes de rôles Ansible développés par la communauté. 
 
@@ -88,13 +88,13 @@ Le client ansible-galaxy est inclus dans Ansible. Le client Galaxy vous permet d
 
 *Initier votre premier rôle "monrole" avec Ansible galaxy:*
 
-Creer le répertoire roles dans votre espace de travail:
+Créer le répertoire "roles" dans votre espace de travail:
 `mkdir /work_dir/roles`{{execute T1}}
 
 Préparer l’arborescence du rôle: La commande est ansible-galaxy init <nom_du_role>
 `ansible-galaxy init roles/monrole`{{execute T1}}
 
-Afficher l'arborescence de votre role:
+Afficher l'arborescence de votre rôle:
 `ls -R /work_dir/roles`{{execute T1}}
 
 #### Dépendances des rôles
@@ -125,7 +125,7 @@ Nous allons faire un test et pour cela on vas creer un playbook test_role_dep.ym
 
 `vim /work_dir/test_role_dep.yml`{{execute T1}}
 
-copier le contenu ci-dessous dans le fichier test_role_dep.yml
+Copier le contenu ci-dessous dans le fichier test_role_dep.yml
 
 ```
 ---
@@ -137,11 +137,11 @@ copier le contenu ci-dessous dans le fichier test_role_dep.yml
     - role2
 ```
 
-- Créer les 3 répertoires et fichiers associées aux rôles 
+- Créer les 3 répertoires et fichiers associés aux rôles 
 
 `cd  /work_dir && mkdir -p roles/role1/{meta,tasks} roles/role2/{meta,tasks} roles/role3/{meta,tasks}`{{execute T1}}
 
-- Créer les fichiers de metadonnées "meta/main.yml" pour les rôles 1 et 2  (pour déclarer les dépendances):
+- Créer les fichiers de métadonnées "meta/main.yml" pour les rôles 1 et 2  (pour déclarer les dépendances):
 
 `vim /work_dir/roles/role1/meta/main.yml`{{execute T1}}
 
@@ -206,9 +206,9 @@ Vous pouvez remplacer ce comportement avec la variable allow_duplicates: true da
 
 `echo allow_duplicates: true > /work_dir/roles/role3/meta/main.yml`{{execute T1}}
 
-lancer le playbook de nouveau: `cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
+Lancer le playbook de nouveau: `cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
 
-L'ordre d'exécution résultant serait le:
+L'ordre d'exécution résultant serait le suivant:
 
 role3 -> role1 -> role3 -> role2
 
