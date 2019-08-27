@@ -27,7 +27,7 @@ de la connexion SSH.
 Cependant, dans la commande précédente nous avons utilisé l'option locale -c qui indique à Ansible de contourner le réseau afin que le client Ansible puisse exécuter des commandes locales sans avoir besoin d'une connexion SSH.
 
 #### 2) Tester la connexion à distance
-Afin de pouvoir lancer des commandes sur les hotes managés, la conexion SSH doit être fonctionnelle entre les machines managés et la vm Ansible.
+Afin de pouvoir lancer des commandes sur les hotes managés, la connexion SSH doit être fonctionnelle entre les machines managés et la vm Ansible.
 
 Vous allez tester la commande ping vers le hôte "managed_node1" du groupe [web], mais cette fois ci sans l'option "-c local"
 
