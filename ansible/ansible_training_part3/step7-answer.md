@@ -15,11 +15,11 @@ playbook_ex03.yml
     when: stat_result.stat.exists == true and stat_result.stat.isdir == true
 </pre>
 
-lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex03.yml`{{copy}}
+Lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex03.yml`{{copy}}
 
 ##### *Remarque
 
-Dans le cas ou vous voulez par exemple tester si le répertoire /work_dir/my_dir existe sur le serveur ansible avant d'exécuter d'autres taches sur le serveur cible "managed_node1", vous pouvez utiliser l'option "delegate_to: 127.0.0.1". Cette option permet d'exécuter une action sur le serveur sur lequelle le playbook est lancé.
+Dans le cas ou vous voulez tester si le répertoire /work_dir/my_dir existe sur le serveur Ansible avant d'exécuter d'autres tâches sur le serveur cible "managed_node1", vous pouvez utiliser l'option "delegate_to: 127.0.0.1". Cette option permet d'exécuter une action sur le serveur sur lequel le playbook est lancé.
 
 <pre class="file">
 ---
@@ -32,6 +32,6 @@ Dans le cas ou vous voulez par exemple tester si le répertoire /work_dir/my_dir
     delegate_to: 127.0.0.1
 
   - debug:
-      msg: "Le repertoire /work_dir/my_dir existe"
+      msg: "Le répertoire /work_dir/my_dir existe"
     when: stat_result.stat.exists == true and stat_result.stat.isdir == true
 </pre>
