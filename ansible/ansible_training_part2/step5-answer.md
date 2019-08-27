@@ -22,7 +22,7 @@ playbook_ex01.yml
       dest: "{{ remote_dir }}"
 </pre>
 
-Nous allons **externaliser** les variables d'authentifications et les définir dans le fichier d'inventaire  hosts.ini
+Nous allons **externaliser** les variables d'authentification et les définir dans le fichier d'inventaire  hosts.ini
 
 /work_dir/hosts.ini
 <pre class="file">
@@ -42,13 +42,13 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
 ##### *Remarques*
 
-- Dans le playbook, nous avons besoins d'exécuter les tâches avec l'utilisateur root car lors de la première exécution du playbook playbook_ex01.yml, le répertoire /etc/training/training.d a été créé avec cette utilisateur et les droits d'accès par defaut ( droits de lecture,ecriture que pour l'utilisateur root)
+- Dans le playbook, nous avons besoin d'exécuter les tâches avec l'utilisateur root car lors de la première exécution du playbook playbook_ex01.yml, le répertoire /etc/training/training.d a été créé avec cet utilisateur et les droits d'accès par défaut ( droits de lecture, écriture que pour l'utilisateur root)
 
-- Pour éviter de sauvegarder le mot de passe dans le fichier d'inventaire , 2 possibilitée:
+- Pour éviter de sauvegarder le mot de passe dans le fichier d'inventaire , 2 possibilités:
 
-1- Utiliser ansible vault (cette partie n'est pas détaillé dans cette formation). plus d'information dans [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
+1- Utiliser Ansible Vault (cette partie n'est pas détaillée dans cette formation). plus d'information dans [Ansible Vault](https://docs.ansible.com/ansible/latest/user_guide/vault.html)
 
-2- Echange de clé ssh: La clé publique de l'utilisateur "toto" a déja été échangée entre le serveur ansible et les 2 serveurs cibles. Tester le playbook avec ce fonctionnement:
+2- Echange de clé ssh: La clé publique de l'utilisateur "toto" a déja été échangée entre le serveur Ansible et les 2 serveurs cibles. Tester le playbook avec ce fonctionnement:
 
   Modifier l'inventaire en supprimant les 2 lignes ansible_user et ansible_ssh_pass
   
@@ -57,4 +57,4 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
   `ansible-playbook -i hosts.ini playbook_ex01.yml`{{execute T1}}
 
-**Dans les prochains exercices, vous allez creer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh**.
+**Dans les prochains exercices, vous allez créer et lancer les playbooks avec l'utilisateur toto afin de vous habituer à ne pas utiliser l'utilisateur "root" pour la connexion ssh**.
