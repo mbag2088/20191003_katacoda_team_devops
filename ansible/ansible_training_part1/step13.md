@@ -3,7 +3,7 @@
 
 Ce module 'setup' récupère des informations utiles sur les hôtes distants sous forme de variables (appelées ansible_facts). Il est automatiquement appelé par les playbooks Ansible qu'on va détailler plus tard.
 
-Il peut également être exécuté directement par la commande ansible afin de vérifier -par exemple- la disponibilitée et la valeur des variables pour un hôte.
+Il peut également être exécuté directement par la commande ansible afin de vérifier -par exemple- la disponibilité et la valeur des variables pour un hôte.
 
 Tester le module sur le node Ansible: `ansible managed_node1 -i hosts.ini -m setup`{{execute T1}}
 
@@ -46,7 +46,7 @@ managed_node1 | CHANGED => {
     "state": "file",
 </pre>
 
-Ce comportement est due au fonctionnement du module file avec l'option state=touch. "touch" permet de créer un fichier s'il n'existe pas.
+Ce comportement est du au fonctionnement du module file avec l'option state=touch. "touch" permet de créer un fichier s'il n'existe pas.
 
 Si le fichier existe, le module vas changer les 2 valeurs de fichier: date de modification + date d'accès.
 
