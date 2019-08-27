@@ -5,13 +5,13 @@ Les Playbooks définissent des variables, des configurations, des étapes de dé
 
 Les playbooks sont principalement définis pour orchestrer les étapes sur plusieurs machines et les amener à un état souhaité.
 
-Un Playbook est écrit au format YAML avec une extension de fichier ".yml". Il faut être très prudent avec le format et l'alignement, ce qui le rend très sensible.
+Un Playbook est écrit au format YAML avec une extension de fichier ".yml" ou ".yaml". Il faut être très prudent avec le format et l'alignement, ce qui le rend très sensible.
 
 Chaque playbook commence par 3 tirets '-'
 
 _Syntax d'utilisation:_
 
-Ansible-playbook [-i $INVENTORY_FILE] playbook.yaml
+$ansible-playbook [-i $INVENTORY_FILE] playbook.yaml
 
 
 #### Les sections d'un playbook
@@ -21,11 +21,11 @@ Chaque playbook est composé d’un ou de plusieurs "play" dans une liste. Le bu
 
 1- Section Host:
 
-Définit les machines cibles sur lesquelles le playbook doit être exécuté. Ceci est basé sur le fichier d'inventaire Ansible.
+Elle permet de définir les machines cibles sur lesquelles le playbook doit être exécuté. Ceci est basé sur le fichier d'inventaire Ansible précisé en ligne de commande [-i $INVENTORY_FILE] 
 
 2- Section des variables:
 
-Ceci est facultatif et permet de déclarer toutes les variables nécessaires dans le playbook. 
+Elle est facultative. Elle permet de déclarer toutes les variables nécessaires dans le playbook. Cela permet d'avoir plus de flexibilité et d'éviter les affectations en dur.
 
 3- Section Tâches:
 
@@ -33,7 +33,7 @@ Cette section répertorie toutes les tâches à exécuter sur les machines cible
 
 4- Section handler:
 
-Ceci est facultatif. Ce sont des tâches qui seront exécutés si et seulement si elles sont notifiées.
+Elle est facultative. Elle permet la définition de tâches qui seront exécutées si et seulement si elles sont notifiées.
 
 #### Exemple d'un playbook
 ##### _Objectif:_ 
@@ -44,8 +44,9 @@ Ceci est facultatif. Ce sont des tâches qui seront exécutés si et seulement s
 
 > Démarrage
 
+Avant toute chose, nous vous invitons à copier ce playbook dans un éditeur de texte pour avoir un template toujours à disposition lors de la réalisation d'exercices.
 
-Analyser bien les parties de ce playbook et vous allez identifier les sections détaillés précédemments. 
+Analyser bien les parties de ce playbook et vous allez identifier les sections détaillées précédemment. 
 ``` 
 ---
 - hosts: webservers
@@ -77,11 +78,15 @@ Analyser bien les parties de ce playbook et vous allez identifier les sections d
 
 ##### *Remarque:* 
 
-- "remote_user" est le compte qui se connecte à la machine cible. Si remote_user n'est pas défini, ansible vas utiliser le nom d'utilisateur qui lance le playbook.
+- "remote_user" est le compte qui se connecte à la machine cible. Si remote_user n'est pas défini, Ansible va utiliser le compte utilisé pour exécuter le playbook.
 
-La bonne pratique c'est d'utiliser un autre compte que l'utilisateur "root". Si cette utilisateur doit effectuer des tâches en tant que root ou autre, il doit disposer d’autorisations sudo sur la machine cible.
+La bonne pratique est d'utiliser un autre compte que "root". Si cet utilisateur doit effectuer des tâches en tant que root ou autre, il doit disposer d’autorisations sudo sur la machine cible.
 
 Vous allez comprendre le fonctionnement des utilisateurs dans la prochaine étape. 
+
+
+Comme précisé dans la section 1, les commandes suivantes nécessitent en pré-requis qu'un téléchargement de conteneurs Docker soit finalisé.
+Donc si l'exécution affiche des erreurs alors attendre 30secondes voire 1 minute et réessayer.
 
 ---
 
