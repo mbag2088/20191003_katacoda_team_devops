@@ -27,9 +27,9 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 ##### *Remarque:*
 - Dans ce playbook , vous avez remarqué que la valeur de l'option "path" est remplacée par la variable source_file_path définie au debut du playbook.
 
-- Notez que la syntax d'utilisation des variables est "{{ nom_variable }}"
+- Notez que la syntaxe d'utilisation des variables est "{{ nom_variable }}"
 
-- Lorsque vous lancez le playbook, vous avez une ligne de résultat indiquant que ansible récupère les facts sur le serveur cible. Cette tache prends un peu de temps d'exécution. 
+- Lorsque vous lancez le playbook, vous avez une ligne de résultat indiquant que Ansible récupère les "facts" sur le serveur cible. Cette tâche prend un peu de temps d'exécution. 
 
 ```
 TASK [Gathering Facts] *********************************************
