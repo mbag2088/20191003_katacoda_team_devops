@@ -4,7 +4,7 @@
   
   
   
-L'installation de l'environnement nécessite un téléchargement conséquent, merci d'attendre une minute minimum avant de lancer les commandes suivantes :
+L'installation de l'environnement nécessite un téléchargement conséquent, merci d'attendre une minute minimum avant de lancer les commandes suivantes. Si un message d'erreur apparaît alors attendre encore car selon l'horaire le téléchargement est plus ou moins long.
 
 
 `a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
