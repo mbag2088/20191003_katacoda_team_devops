@@ -1,14 +1,14 @@
-> Utilisez l'utilisateur "toto" pour créer et lancer le playbook
+> Utiliser l'utilisateur "toto" pour créer et lancer le playbook
 
 > Créer un fichier playbook_ex08.yml dans votre espace de travail /work_dir de la machine Ansible
 
 > Caractéristiques du playbook "playbook_ex08.yml:
 
-> Le groupe sur lequel s'exécuteront les taches: db
+> Le groupe sur lequel s'exécuteront les têches est : [db]
 
 > Le playbook fait appel au rôle "ntp"
 
-> Créer un role "ntp" avec l'arborescence suivante:
+> Créer un rôle "ntp" avec l'arborescence suivante:
 
 ```
  /work_dir/
@@ -26,13 +26,13 @@
                └── ntp.conf.j2
 ```
 
-> Caracteristiques du rôle "ntp":
+> Caractéristiques du rôle "ntp":
 
-> tache1: Instalation du service ntp
+> tâche1: Installation du service ntp
 
-> tache2: Creation du fichier de configuration ntp.conf à partir d'un template et affectation les droits suivants: (owner: root, group: root, mode: '0644'). Utilisez le template présent dans /work_dir/training-files/ntp.conf.j2 et copiez le dans le bon endroit.
+> tâche2: Création du fichier de configuration ntp.conf à partir d'un template et affectation les droits suivants: (owner: root, group: root, mode: '0644'). Utiliser le template présent dans /work_dir/training-files/ntp.conf.j2 et copier le dans le bon endroit.
 
-> tache2: redamarage du service ntp si seulement le fichier de configuration a été changé.
+> tache2: redémarrage du service ntp si seulement le fichier de configuration a été changé.
 
 > Déclarer les valeurs par defaut de la variable "ntp_servers" au niveau du rôle "ntp". 
 
