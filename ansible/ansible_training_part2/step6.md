@@ -1,7 +1,7 @@
 
 Ce module remplace des chaînes de caractères et des lignes dans un fichier. Il peut remplacer toutes les occurrences de plusieurs chaînes avec la même variable.
 
-Le module peux avoir plusieurs paramètres, on peux citer 
+Le module peut avoir plusieurs paramètres, on peut citer 
 
     path: le chemin du fichier sur la cible
     regexp: expression regulière qui permet d'identifier la chaine de caractère 
@@ -14,7 +14,7 @@ Le module peux avoir plusieurs paramètres, on peux citer
 
 > -Le groupe sur lequel s'exécuteront les taches: web
 
-> -Tache 1: Permet de replacer la chaine de caractère "ServerName www.example.com" par "ServerName myapp.dev.com" dans le fichier /etc/training/training.d/config.txt de la machine cible et sauvegarder le fichier avant de faire la modification
+> -Tache 1: Permet de remplacer la chaine de caractères "ServerName www.example.com" par "ServerName myapp.dev.com" dans le fichier /etc/training/training.d/config.txt de la machine cible, et sauvegarder le fichier avant de faire la modification
 
 > Lancer le playbook avec l'utilisateur toto
 
