@@ -39,13 +39,13 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
 
 ##### *Remarque:*
 
-- Dans ce playbook, vous pouvez remarquer qu'on pourra concatener une variable avec une chaine de caractère comme ci-dessous:
+- Dans ce playbook, vous pouvez remarquer qu'on pourra concaténer une variable avec une chaîne de caractères comme ci-dessous:
 
   "{{ httpd_source_path }}.httpd.conf"
 
-- L'option utilisé dans le module "service" est state=started. L'action started est **idempotent** c'est à dire qu'elle ne s'éxécute pas si le service est déja démarré.
+- L'option utilisée dans le module "service" est state=started. L'action started est **idempotent** c'est à dire qu'elle ne s'éxécute pas si le service est déja démarré.
 
-  Donc si vous changez le fichier de configuration apache2.conf sur le serveur source et relancez le playbook, vous allez remarquer que le seul changement est au niveau du module copy. Le service httpd ne sera pas redémaré.
+  Donc si vous changez le fichier de configuration apache2.conf sur le serveur source et relancez le playbook, vous allez remarquer que le seul changement est au niveau du module copy. Le service httpd ne sera pas redémarré.
   
   Pour la plupart des logiciels, toute modification apportée à leurs fichiers de configurations n’aura d’effet qu’au redémarrage du service. Il faut donc utiliser le module service avec l'option  **state=restarted**
 
@@ -58,6 +58,6 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex04.yml`{{copy}}
         enabled: yes
  </pre>
 
-  Si vous rexécutez à plusieurs reprises le playbook "playbook_ex04.yml" avec la nouvelle valeur de l'option "state", le service redémarrera à chaque exécution **même si aucune modification n'est effectué sur les fichiers de configuration**, ce qui n'est pas fiable pour une application.
+  Si vous rexécutez à plusieurs reprises le playbook "playbook_ex04.yml" avec la nouvelle valeur de l'option "state", le service redémarrera à chaque exécution **même si aucune modification n'est effectuée sur les fichiers de configuration**, ce qui n'est pas fiable pour une application.
 
-  Le service doit donc être configuré pour redémarrer **seulement après chaque modification de fichier de conf**. Pour cela on vas utiliser les **"handlers"**
+  Le service doit donc être configuré pour redémarrer **seulement après chaque modification de fichier de conf**. Pour cela on va utiliser les **"handlers"**
