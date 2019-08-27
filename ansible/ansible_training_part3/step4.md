@@ -5,7 +5,7 @@ La création de fichiers statiques pour chacune de ces configurations n’est pa
 
 Les templates sont traités par le langage de modèle **Jinja2**. La documentation sur le formatage des modèles est disponible dans [la documentation du concepteur de modèles](http://jinja.pocoo.org/docs/templates).
 
-Les templates sont de simples fichiers texte avec l'extension ".j2"  que nous utilisons dans Ansible et qui contiennent tous vos paramètres de configuration. Lors de l'exécution du playbook, les variables seront remplacées par les valeurs appropriées, en fonction de certaines conditions comme le nom du serveur sur lequelle l'opération s'exécute. 
+Les templates sont de simples fichiers texte avec l'extension ".j2"  que nous utilisons dans Ansible et qui contiennent tous vos paramètres de configuration. Lors de l'exécution du playbook, les variables seront remplacées par les valeurs appropriées, en fonction de certaines conditions comme le nom de l'hôte distant sur lequel l'opération s'exécute. 
 
 Nous pouvons faire beaucoup plus que remplacer les variables à l’aide de templates Jinj2. Nous pouvons avoir des instructions conditionnelles, des boucles, des filtres pour transformer les données, ...etc.
 
@@ -35,7 +35,7 @@ Créer un playbook template_exemple1.yml et copier le contenu ci-dessous:
         dest: /work_dir/exemple_template.txt
 </pre>
 
-Le contenue du fichier jinja exemple_template.j2 est 
+Le contenu du fichier jinja exemple_template.j2 est 
 
 <pre class="file">
 {{ variable1 }}
@@ -46,21 +46,21 @@ La mémoire disponible actuelement est : {{ ansible_memfree_mb }} MBs.
 
 lancer le playbook: `ansible-playbook -i hosts.ini template_exemple1.yml`{{execute T1}}
 
-Verifier le contenu du fichier exemple_template.txt (sur le serveur cible) après exécution du playbook:
+Vérifier le contenu du fichier exemple_template.txt (sur le serveur cible) après exécution du playbook:
 
 `cat /work_dir/exemple_template.txt`{{execute T2}}
 
-Le résultat doit ressembler à celui ci-dessous (seule la valeur 200 MBs qui varie en  fonction de votre serveur):
+Le résultat doit ressembler à celui ci-dessous (seule la valeur 200 MBs qui varie en fonction de votre serveur):
 <pre class="file">
 Bonjour tout le monde
 Ce fichier est un exemple d'un template
-La memoire disponible actuelement est : 200 MBs.
+La mémoire disponible actuelement est : 200 MBs.
 </pre>
 
 #### Utilisation des listes dans les templates
-Dans le playbook ci-dessous on utilisera une variable "list1" qui sera appelé par une "boucle for" dans le template "exemple_liste_template.j2".
+Dans le playbook ci-dessous on utilisera une variable "list1" qui sera appelée par une "boucle for" dans le template "exemple_liste_template.j2".
 
-Creer un playbook template_exemple2.yml et copier le contenu ci-dessous:
+Créer un playbook template_exemple2.yml et copier le contenu ci-dessous:
 
 <pre class="file">
 ---
@@ -74,7 +74,7 @@ Creer un playbook template_exemple2.yml et copier le contenu ci-dessous:
         dest: /work_dir/exemple_liste_template.txt
 </pre>
 
-Le contenue du fichier jinja exemple_liste_template.j2 est 
+Le contenu du fichier jinja exemple_liste_template.j2 est 
 
 <pre class="file">
 Ceci est un exemple de boucle de module de modèle avec une liste.
@@ -83,7 +83,7 @@ Ceci est un exemple de boucle de module de modèle avec une liste.
 {% endfor %}
 </pre>
 
-lancer le playbook: `ansible-playbook -i hosts.ini template_exemple2.yml`{{execute T1}}
+Lancer le playbook: `ansible-playbook -i hosts.ini template_exemple2.yml`{{execute T1}}
 
 Vérifier le contenu du fichier exemple_liste_template.txt (sur le serveur cible) après exécution du playbook:
 `cat /work_dir/exemple_liste_template.txt`{{execute T2}}
