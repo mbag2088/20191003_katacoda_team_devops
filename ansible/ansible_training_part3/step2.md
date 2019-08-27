@@ -1,11 +1,11 @@
 
-Comme nous l’avons mentionné précédemment, la plupart des modules sont idempotents et s'exécutent lorsqu’ils ont effectué un changement sur le hôte distant.
+Comme nous l’avons mentionné précédemment, la plupart des modules sont idempotents. C'est à dire que seules les actions nécessaires sont réalisées. Si des actions du playbook sont déjà réalisées sur l'hôte distant alors elles ne seront pas réalisées de nouveaux.
 
-Les Playbooks disposent d'un système **d'événements de base** pouvant êtres utilisés pour réagir aux changements.
+Les Playbooks disposent d'un système **d'événements de base** pouvant être utilisé pour réagir sur changements.
 
-les actions **notifié** sont déclenchées **à la fin de chaque play et ne seront déclenchées qu’une seule fois**, même si elles sont notifiées par plusieurs tâches différentes.
+Les actions **notifiées** sont déclenchées **à la fin de chaque play et ne seront déclenchées qu’une seule fois**, même si elles sont notifiées par plusieurs tâches différentes.
 
-Par exemple, plusieurs ressources peuvent indiquer qu'apache doit être redémarré car elles ont modifié un fichier de configuration, mais Apache ne sera redémaré qu'une seule fois afin d'éviter des redémarrages inutiles.
+Par exemple, plusieurs ressources peuvent indiquer à service Apache d'être redémarré car elles ont opéré des modification sur des fichiers de configuration, mais Apache ne sera redémaré qu'une seule fois afin d'éviter des redémarrages inutiles.
 
 ##### *Exemple*
 
@@ -24,7 +24,7 @@ Redémarrage de deux services lorsque le contenu d’un fichier est modifié, ma
 "restart memcached" et "restart apache" qui sont dans la section de notification et les noms des handlers.
 
 Ce sont des listes de tâches, pas vraiment différentes des tâches habituelles. Elles sont référencées par un nom unique.
-Un handler qui n'est notifié par aucune des taches du playbook , ne s'éxécute pas
+Un handler qui n'est notifié par aucune des tâches du playbook , ne s'éxécute pas
 
 Voici la section des handlers:
 
