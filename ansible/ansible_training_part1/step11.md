@@ -1,6 +1,6 @@
 
 
-Maintenant, puisque les h^tes cibles connaissent la clé SSH publique de l'hôte Ansible, nous sommes prêts à établir une connexion SSH.
+Maintenant, puisque les hôtes cibles connaissent la clé SSH publique de l'hôte Ansible, nous sommes prêts à établir une connexion SSH.
 
 Nous allons retester le module ping, cette fois ci vous devriez avoir une réponse "pong"
 
