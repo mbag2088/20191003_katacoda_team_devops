@@ -9,12 +9,12 @@ En tant que utilisateur "toto" :
 
 > Caractéristiques du playbook "playbook_ex01.yml":
 
-> -Le groupe sur lequel s'exécuteront les taches: web
+> -Le groupe sur lequel s'exécuteront les tâches: web
 
-> -Tache 1: Permet d'installer le package apache server (le nom du package est apache2)
+> -Tâche 1: Permet d'installer le package Apache Server (le nom du package est apache2)
 
-> -Tache 2: Permet de copier le fichier de configuration apache2.conf depuis le serveur source ansible(/work_dir/training-files) vers le serveur cible managed_node1 (/etc/apache2/apache2.conf)
+> -Tâche 2: Permet de copier le fichier de configuration apache2.conf depuis le serveur source ansible(/work_dir/training-files) vers le serveur cible managed_node1 (/etc/apache2/apache2.conf)
 
-> -Tache 3: Permet de copier le fichier de configuration index.html depuis le serveur source ansible(/work_dir/training-files) vers le serveur cible managed_node1 (/var/www/html)
+> -Tâche 3: Permet de copier le fichier de configuration index.html depuis le serveur source Ansible (/work_dir/training-files) vers le serveur cible managed_node1 (/var/www/html)
 
-> -Tache 4: Permet de démarrer le service apache2
+> -Tâche 4: Permet de démarrer le service apache2
