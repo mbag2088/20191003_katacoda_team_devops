@@ -27,7 +27,7 @@ Plusieurs syntaxes sont possibles. Ci-dessous quelques unes:
 ```
 
 #### Structure du répertoire des rôles
-Les rôles sont généralement définis dans un répertoire rôles au niveau des playbooks comme ci-dessous. Ainsi, lors de l'appelle des rôles dans le playbook, Ansible saura les chercher sans spécifier le chemin complet. 
+Les rôles sont généralement définis dans un répertoire "rôles" au niveau des playbooks comme ci-dessous. Ainsi, lors de l'appel des rôles dans le playbook, Ansible saura les chercher sans spécifier le chemin complet. 
 
 Ansible recherchera les rôles de la manière suivante:
 - 1 - Le répertoire relatif au fichier playbook "roles/"
@@ -77,10 +77,10 @@ Les rôles doivent inclure au moins un de ces répertoires, mais il est parfaite
   
 - tasks/main.yml: Ce fichier est composé de l’ensemble des tâches qui constituent ce rôle
   
-- templates: Ce répertoire réservé aux templates
+- templates: Ce répertoire est réservé aux templates
 
 #### Ansible Galaxy
-L'utilisation des rôles Ansible favorise la réutilisation et le partage. Ainsi il existe un hub qui regroupe une grand nombre de rôles appelé  [Ansible galaxy](https://galaxy.ansible.com/)
+L'utilisation des rôles Ansible favorise la réutilisation et le partage. Ainsi il existe un hub qui regroupe un grand nombre de rôles appelé  [Ansible galaxy](https://galaxy.ansible.com/)
 
 C'est un site gratuit permettant de rechercher, de télécharger, d'évaluer et de revoir toutes sortes de rôles Ansible développés par la communauté. 
 
@@ -94,7 +94,7 @@ Creer le répertoire roles dans votre espace de travail:
 Préparer l’arborescence du rôle: La commande est ansible-galaxy init <nom_du_role>
 `ansible-galaxy init roles/monrole`{{execute T1}}
 
-Afficher l'arborescence de votre role:
+Afficher l'arborescence de votre rôle:
 `ls -R /work_dir/roles`{{execute T1}}
 
 #### Dépendances des rôles
@@ -119,13 +119,13 @@ dependencies:
 
 > Les rôles dépendants sont toujours exécutés avant les rôles qui en dépendent. En outre, ils ne sont exécutés qu'une seule fois. Si deux rôles sont identiques à ceux de leur dépendance, ils ne sont exécutés que la première fois.
 
-Nous allons faire un test et pour cela on vas creer un playbook test_role_dep.yml qui va appeler 2 roles "role1" et "role2". 
+Nous allons faire un test et pour cela on va créer un playbook test_role_dep.yml qui va appeler 2 rôles "role1" et "role2". 
 
 - Créer le playbook
 
 `vim /work_dir/test_role_dep.yml`{{execute T1}}
 
-copier le contenu ci-dessous dans le fichier test_role_dep.yml
+Copier le contenu ci-dessous dans le fichier test_role_dep.yml
 
 ```
 ---
@@ -193,7 +193,7 @@ Copier et coller ce contenu dans le fichier ouvert:
     msg: "hello from role 3"
 ```
 
-- lancer le playbook: 
+- Lancer le playbook: 
 
 `cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
 
@@ -206,7 +206,7 @@ Vous pouvez remplacer ce comportement avec la variable allow_duplicates: true da
 
 `echo allow_duplicates: true > /work_dir/roles/role3/meta/main.yml`{{execute T1}}
 
-lancer le playbook de nouveau: `cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
+Lancer le playbook de nouveau: `cd /work_dir && ansible-playbook -i hosts.ini test_role_dep.yml`{{execute T1}}
 
 L'ordre d'exécution résultant serait le:
 
@@ -214,7 +214,9 @@ role3 -> role1 -> role3 -> role2
 
 ---
 
-- Dans les étapes suivantes vous allez traiter des exércices sur les rôles. Lancez les commandes suivantes afin de préparer vos environnements:
+- Dans les étapes suivantes vous allez traiter des exercices sur les rôles. 
+
+Lancez les commandes suivantes afin de préparer vos environnements. Comme précisé dans les précédents modules, un téléchargement est lancé et donc peut prendre jusqu'à deux minutes. Donc au bout de 45s voire une minute lancez la première commande ci dessous. Si une erreur apparaît alors attendre 30 secondes de plus.
 
 `a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
 
