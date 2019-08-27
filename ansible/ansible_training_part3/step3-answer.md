@@ -47,7 +47,7 @@ playbook_ex01.yml
         state: restarted
 </pre>
   
-lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
+Lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
 ###### *Remarques*
 
@@ -55,6 +55,6 @@ lancer le playbook:  `ansible-playbook -i hosts.ini playbook_ex01.yml`{{copy}}
 
 - Dans ce playbook, nous avons utilisé le fichier de configuration "apache2.conf" qu'on a copié sur le serveur web sans adaptation du contenu de ce fichier. 
 
-- Dans le cas où nous avons besoins d'adapter le contenu de ce fichier de configuration (La ligne ServerName par exemple) en fonction de la machine cible, on pourra utiliser des fichiers appelé "template" qu'on détaillera dans la section suivante.
+- Dans le cas où nous avons besoins d'adapter le contenu de ce fichier de configuration (La ligne ServerName par exemple) en fonction de la machine cible, on pourra utiliser des fichiers appelés "template" qu'on détaillera dans la section suivante.
 
 
