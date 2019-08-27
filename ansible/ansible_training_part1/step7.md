@@ -54,3 +54,7 @@ managed_node2
 ##### _Remarque:
 
 Pour sauvegarder le fichier, utiliser les touches :wq! de votre clavier
+Il est important de noter que le copier/coller entre votre terminal et par exemple un éditeur de texte externe.
+En revanche il ne fonctionnera pas entre un texte en cours de saisie dans l'éditeur VI et un éditeur externe.
+Votre session est limité à 50 min. Si la session expire vous ne pourrez plus récupérer le contenu de vos saisies.
+Par conséquent, vi un 'cat' ou 'more' fait un copier coller de vos exercices dans un éditeur externe à votre session Katacoda
