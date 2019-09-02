@@ -1,32 +1,22 @@
 {
-    "title": "Formations GIT pour le DEVOPS",
+    "title": "Formations GIT",
     "description": "Formation GIT étape par étape pour les débutants. L'essentiel pour devenir expert en Industrialisation & Versioning!",
     "icon": "fa-katacoda",
     "courses": [
       {
-        "course_id": "git_training_part1",
-        "title": "Formation GIT pour le DEVOPS: partie 1",
-        "description": "Principes de GIT et commandes de bases"
+        "course_id": "git_formation__part1",
+        "title": "Formation GIT: partie 1",
+        "description": "Le versionning et une brève histoire de Git"
       },
       {
-        "course_id": "git_training_part2",
-        "title": "Formation GIT pour le DEVOPS: partie 2",
-        "description": "Gestion des l'historique des versions, annulations commit"
+        "course_id": "git_formation__part2",
+        "title": "Formation GIT: partie 2",
+        "description": "Philosophie et rudiments de Git"
       },
       {
-        "course_id": "git_training_part3",
-        "title": "Formation GIT pour le DEVOPS: partie 3",
-        "description": "Travail Collaboratif entre équipes, avec GIT"
-      },
-      {
-        "course_id": "git_training_part4",
-        "title": "Formation GIT pour le DEVOPS: partie 4",
-        "description": "Solutions, en cas de conflits du versioning sur Repository Central"
-      },
-      {
-        "course_id": "git_training_part5",
-        "title": "Formation GIT pour le DEVOPS: partie 5",
-        "description": "Git Flow"
+        "course_id": "git_formation__part3",
+        "title": "Formation GIT: partie 3",
+        "description": "Configuration de Git"
       }
     ]
   }
