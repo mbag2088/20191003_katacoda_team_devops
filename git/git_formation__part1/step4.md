@@ -8,7 +8,7 @@ Ils sont le miroir du dépôt distant. Ainsi, si un serveur est hors d'usage et
 que les développeurs collaborent via celui-ci, n'importe quel dépôt client peut
 être copié sur un nouveau serveur pour le restaurer.
 
-![Système de contrôle de version distribué](/fmanadi/courses/git/git_formation__part1/assets/distributed-vcs.png)
+![Système de contrôle de version distribué](/devopsteam/courses/git/git_formation__part1/assets/distributed-vcs.png)
 
 Chaque copie du dépôt distant sur un client peut être vue comme une sauvegarde
 complète de toutes les données.

@@ -2,7 +2,7 @@ Un système de contrôle de version est un système de gestion _qui conserve les
 modifications enregistrées_ dans un fichier ou un ensemble de fichiers au
 fil du temps.
 
-![Timeline](/fmanadi/courses/git/git_formation__part1/assets/timeline.png)
+![Timeline](/devopsteam/courses/git/git_formation__part1/assets/timeline.png)
 
 Chaque changement est maintenu en tant que version. Les utilisateurs peuvent
 consulter des versions spécifiques ultérieurement.

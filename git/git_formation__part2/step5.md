@@ -24,7 +24,7 @@ Ceci nous mène aux trois sections principales d'un projet Git:
   dans le répertoire Git, qui stocke les informations concernant ce qui fera
   partie du prochain instantané.
 
-![File states](/fmanadi/courses/git/git_formation__part2/assets/areas.png)
+![File states](/devopsteam/courses/git/git_formation__part2/assets/areas.png)
 
 
 Un **workflow de base** sur Git, ressemble à ceci:
