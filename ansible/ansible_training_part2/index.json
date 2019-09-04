@@ -1,41 +1,33 @@
 {
   "noindex": true,
   "title": "Formation Ansible pour le DEVOPS: partie 2",
-  "description": "Utilisation des playbooks, exercices",
+  "description": "Les inventaires",
   "time": "50 minutes",
   "details": {
     "steps": [
       {
         "title": " Sommaire",
         "text": "step1.md"
-      },
+      }, 
       {
-        "title": "Les playbooks ansible",
+        "title": "Fichier d'inventaire",
         "text": "step2.md"
       },
       {
-        "title": "Exercice 1: Utilisation des modules file et copy",
-        "text": "step3.md",
-        "answer": "step3-answer.md"
+        "title": "Fichier d'inventaire: Les variables",
+        "text": "step3.md"
       },
       {
-        "title": "Ansible: Les utilisateurs et les privileges",
+        "title": "Teste de connectivité via ansible",
         "text": "step4.md"
       },
       {
-        "title": "Exercice 2: Utilisation des privileges",
-        "text": "step5.md",
-        "answer": "step5-answer.md"
+        "title": "Utilisation du SSH: Installation/Configuration SSH",
+        "text": "step5.md"
       },
       {
-        "title": "Exercice 3: Utilisation du module replace",
-        "text": "step6.md",
-        "answer": "step6-answer.md"
-      },
-      {
-        "title": "Exercice 4: Utilisation des modules yum et service",
-        "text": "step7.md",
-        "answer": "step7-answer.md"
+        "title": "Utilisation du SSH: Test de connexion",
+        "text": "step6.md"
       }
     ],
     "intro": {
@@ -65,15 +57,15 @@
           "target": "~/"
         },
         {
+          "file": "exemple_template.j2",
+          "target": "~/"
+        },
+        {
+          "file": "exemple_liste_template.j2",
+          "target": "~/"
+        },
+        {
           "file": "motd",
-          "target": "~/"
-        },
-        {
-          "file": "hosts.ini",
-          "target": "~/"
-        },
-        {
-          "file": "ntp.conf.j2",
           "target": "~/"
         } 
       ]

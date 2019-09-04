@@ -1,16 +1,102 @@
 
 
-*Plus d'informations sur utilisation des modules files: 
-[Documentation module file](https://docs.ansible.com/ansible/latest/modules/list_of_files_modules.html?highlight=file%20module)
+#### 1) Les variables d'hôte
 
-Rappel: Nous vous conseillons de sauvegarder vos playbooks dans un éditeur externe à votre session Katacoda et d'avoir en permanence un onglet de votre Browser Internet avec la documentation sur les modules Ansible ouvert.
+Comme décrit ci-dessus, les variables peuvent êtres définies pour chaque hôte comme suit:
 
-> Créer un fichier playbook_ex01.yml dans votre espace de travail /work_dir de la machine Ansible
+*fichier .INI*
+```
+[atlanta]
+host1 http_port=80 maxRequestsPerChild=808
+host2 http_port=303 maxRequestsPerChild=909
+```
 
-> Ecrire le playbook "playbook_ex01.yml"
+#### 2) Les variables du groupe
+Les variables peuvent également être appliquées à un groupe entier à la fois. Dans l'exemple ci-dessous les variables sont communes à l'host1 et host2.
 
-> -Le groupe sur lequel s'exécutera les tâches: web
+*fichier .yml*
+```
+atlanta:
+  hosts:
+    host1:
+    host2:
+  vars:
+    ntp_server: ntp.atlanta.example.com
+    proxy: proxy.atlanta.example.com
+```
 
-> -Tâche 1: Permet de créer un dossier /etc/training/training.d avec le module « file »
+#### 3) Le groupe par défaut
 
-> -Tâche 2: Permet de copier le fichier depuis /work_dir/training-files/config.txt de la machine Ansible vers /etc/training/training.d de la machine cible avec le module « copy ». Pour cela observer bien les options en entrée du module "copy"
+Il existe deux groupes par défaut:
+
+- all: contient tout les hôtes
+- ungrouped:  contient tous les hôtes qui n’ont pas d’autre groupe en dehors de tous
+
+#### 4) Organisation des inventaires
+
+Les variables d’hôte et de groupe peuvent être définies dans le fichier d’inventaire, mais il est recommandé de les externaliser dans des fichiers séparés.  
+
+Ces fichiers de variables sont au format YAML. Les extensions de fichier, valides, incluent «.yml», «.yaml», «.json» ou aucune extension de fichier. (de préference spécifier l'extention).
+
+Chaque groupe et hôte aura son propre fichier. Pour cela il faut d’abord créer deux répertoires
+
+- group_vars : pour les variables de groupe,
+- host_vars : pour les variables d’hôte.
+
+Ces 2 répertoires peuvent se situer :
+-	soit au même endroit que le fichier d’inventaire 
+-	soit à l’intérieur du répertoire contenant le Playbook (qu'on verra plus tard).
+
+La mise en page pourrait ressembler à cette arborescence :
+
+```
+inventories/
+   production/
+      inventory.yml       # fichier d'inventaire pour les serveurs de production 
+      group_vars/
+         group1.yml       # Ici, nous affectons des variables à des groupes particuliers
+         group2.yml
+      host_vars/
+         hostname1.yml    # Ici, nous affectons des variables à des hotes particuliers
+         hostname2.yml
+       	 hostname3.yml
+
+   staging/
+      inventory.yml       # fichier d'inventaire pour les serveurs de hors production
+      group_vars/
+         group1.yml       # Ici, nous affectons des variables à des groupes particuliers
+         group2.yml
+      host_vars/
+         stagehost1.yml   # Ici, nous affectons des variables à des hotes particuliers
+         stagehost2.yml
+```
+
+Exemple du contenu d’un fichier d’inventaire avec les variables host_vars et group_vars
+
+Inventory.yml
+```
+all:
+  children:
+    group1:
+      hosts:
+        hostname1:
+        hostname2:                                
+    group2:
+      hosts:
+        hostname3:
+```
+
+hostname1.yml                                 
+```
+ansible_ssh_host: s00vlhostname
+ansible_ssh_port: 1044
+```
+
+group1.yml
+```
+Path_env: /opt/app_name
+```
+
+##### _Remarque:_
+- Utilisez des noms descriptifs de variables, uniques et significatifs.
+- L’arborescence proposée ci-dessus est particulièrement adaptée aux environnements ayant un grand nombre de nœuds. D'autres arborescences sont detaillées sur le site officiel d'Ansible. Vous trouvez tous les liens à la fin de cette formation.

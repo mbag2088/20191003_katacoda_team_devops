@@ -1,47 +1,16 @@
-> Utiliser l'utilisateur "toto" pour créer et lancer le playbook
-
-> Créer un fichier playbook_ex08.yml dans votre espace de travail /work_dir de la machine Ansible
-
-> Caractéristiques du playbook "playbook_ex08.yml:
-
-> Le groupe sur lequel s'exécuteront les têches est : [db]
-
-> Le playbook fait appel au rôle "ntp"
-
-> Créer un rôle "ntp" avec l'arborescence suivante:
-
-```
- /work_dir/
-    ├── playbook_ex07.yml
-    ├── hosts.ini
-    └── roles
-        └── ntp 
-            ├── defaults
-            │   └── main.yaml  
-            ├── handlers
-            │   └── main.yaml  
-            ├── tasks
-            │   └── main.yaml  
-            └── templates
-               └── ntp.conf.j2
-```
-
-> Caractéristiques du rôle "ntp":
-
-> tâche1: Installation du service ntp
-
-> tâche2: Création du fichier de configuration ntp.conf à partir d'un template et affectation les droits suivants: (owner: root, group: root, mode: '0644'). Utiliser le template présent dans /work_dir/training-files/ntp.conf.j2 et copier le dans le bon endroit.
-
-> tache2: redémarrage du service ntp si seulement le fichier de configuration a été changé.
-
-> Déclarer les valeurs par defaut de la variable "ntp_servers" au niveau du rôle "ntp". 
-
-> Voici les valeurs:
-> ntp_servers:
->  - '0.debian.pool.ntp.org'
->  - '1.debian.pool.ntp.org'
->  - '2.debian.pool.ntp.org'
-
-> tache3: S'assurer que le service ntp est bien démarré
 
 
+*Plus d'informations sur utilisation des modules files: 
+[Documentation module file](https://docs.ansible.com/ansible/latest/modules/list_of_files_modules.html?highlight=file%20module)
+
+Rappel: Nous vous conseillons de sauvegarder vos playbooks dans un éditeur externe à votre session Katacoda et d'avoir en permanence un onglet de votre Browser Internet avec la documentation sur les modules Ansible ouvert.
+
+> Créer un fichier playbook_ex01.yml dans votre espace de travail /work_dir de la machine Ansible
+
+> Ecrire le playbook "playbook_ex01.yml"
+
+> -Le groupe sur lequel s'exécutera les tâches: web
+
+> -Tâche 1: Permet de créer un dossier /etc/training/training.d avec le module « file »
+
+> -Tâche 2: Permet de copier le fichier depuis /work_dir/training-files/config.txt de la machine Ansible vers /etc/training/training.d de la machine cible avec le module « copy ». Pour cela observer bien les options en entrée du module "copy"

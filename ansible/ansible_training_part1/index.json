@@ -1,7 +1,7 @@
 {
   "noindex": true,
   "title": "Formation Ansible pour le DEVOPS: partie 1",
-  "description": "Les principes d'Ansible",
+  "description": "Les principes d'Ansible: Installation et configuration",
   "time": "50 minutes",
   "details": {
     "steps": [
@@ -28,34 +28,6 @@
       {
         "title": "Configuration",
         "text": "step6.md"
-      },
-      {
-        "title": "Fichier d'inventaire",
-        "text": "step7.md"
-      },
-      {
-        "title": "Fichier d'inventaire: Les variables",
-        "text": "step8.md"
-      },
-      {
-        "title": "Teste de connectivité via ansible",
-        "text": "step9.md"
-      },
-      {
-        "title": "Utilisation du SSH: Installation/Configuration SSH",
-        "text": "step10.md"
-      },
-      {
-        "title": "Utilisation du SSH: Test de connexion",
-        "text": "step11.md"
-      },
-      {
-        "title": "Les modules ansible",
-        "text": "step12.md"
-      },
-      {
-        "title": "Les modules ansible: Exemples",
-        "text": "step13.md"
       }
     ],
     "intro": {

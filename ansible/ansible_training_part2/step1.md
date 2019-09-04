@@ -1,13 +1,5 @@
-
-- Les playbooks ansible
-  - Exercice 1: Utilisation des modules file et copy
-- Ansible: Les utilisateurs et les privileges
-  - Exercice 2: Utilisation des privileges
-  - Exercice 3: Utilisation du module replace
-  - Exercice 4: Utilisation des modules yum et service
-- Les Handlers: Exécuter des opérations sur changements
-  - Exercice 5: Utilisation des handlers
-- Ansible: Les templates
-  - Exercice 6: Utilisation des templates
-- Ansible: Les conditions
-  - Exercice 7: Utilisation des conditions avec when et register
+- Fichier d'inventaire
+- Fichier d'inventaire: les variables
+- Test de connectivité via ansible
+- Utilisation du SSH: installation/Configuration SSH
+- Utilisation du SSH: test de connexion

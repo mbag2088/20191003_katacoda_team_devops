@@ -1,7 +1,7 @@
 {
   "noindex": true,
-  "title": "Formation Ansible pour DEVOPS: partie 3",
-  "description": "Les handlers et les templates, exercices",
+  "title": "Formation Ansible pour le DEVOPS: partie 3",
+  "description": "Les modules ansible",
   "time": "50 minutes",
   "details": {
     "steps": [
@@ -10,31 +10,12 @@
         "text": "step1.md"
       },
       {
-        "title": "Les Handlers: Exécuter des operations sur changement",
+        "title": "Les modules Ansible",
         "text": "step2.md"
       },
       {
-        "title": "Exercice 1: Utilisation des handlers",
-        "text": "step3.md",
-        "answer": "step3-answer.md"
-      },
-      {
-        "title": "Ansible: Les templates",
-        "text": "step4.md"
-      },
-      {
-        "title": "Exercice 2: Utilisation des templates",
-        "text": "step5.md",
-        "answer": "step5-answer.md"
-      },
-      {
-        "title": "Ansible: Les conditions",
-        "text": "step6.md"
-      },
-      {
-        "title": "Exercice 3: Utilisation des conditions avec when et register",
-        "text": "step7.md",
-        "answer": "step7-answer.md"
+        "title": "Les modules Ansible: Exemples",
+        "text": "step3.md"
       }
     ],
     "intro": {
@@ -47,6 +28,10 @@
     },
     "assets": {
       "host01": [
+        {
+          "file": "config.txt",
+          "target": "~/"
+        },
         {
           "file": "apache2.conf",
           "target": "~/"
@@ -68,15 +53,11 @@
           "target": "~/"
         },
         {
-          "file": "motd",
-          "target": "~/"
-        },
-        {
           "file": "hosts.ini",
           "target": "~/"
         },
         {
-          "file": "ntp.conf.j2",
+          "file": "motd",
           "target": "~/"
         } 
       ]
