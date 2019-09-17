@@ -2,7 +2,7 @@
 
   * c'est ce que nous allons voir par la suite
   
-  ![testflow](/devopsteam/courses/git/git_formation_part10/assets/n_git-flow.png)
+  ![n_git-flow](/devopsteam/courses/git/git_formation_part10/assets/n_git-flow.png)
   
 
 
