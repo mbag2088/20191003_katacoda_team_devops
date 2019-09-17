@@ -29,14 +29,14 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  Créer un fichier script_feature.sh
  `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_feature.sh;cat script_feature.sh`{{execute T2}}
  
- Ajouter le fichier dans la "Staging Area" (cache)
+ Ajouter le fichier dans la "Staging Area" (Indexation dans la cache)
  `git add script_feature.sh `{{execute T2}}
  
  Commiter la nouvelle feature dans le Repository local 
  
  `git commit -m "ajout du sscript_feature.sh repo local "`{{execute T2}}
    
- Vérifier le nouveau commmit
+ Vérifier le nouveau commit
  `git log --oneline`{{execute T2}}
  
  Publier le Git Flow vers le repo central 
