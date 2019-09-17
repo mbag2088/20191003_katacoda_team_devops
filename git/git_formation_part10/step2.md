@@ -2,10 +2,7 @@
 - Un repository `central`, assure la cohérence de l'ensemble des repository locaux et leur synchronisations  
 - Néanmoins certains cas de conflits peuvent se poser si le repository central a évoluer, alors que l'on essaie d'y répercuter nos développements, 
   * c'est ce que nous allons voir par la suite
-  
-<img src="https://education-yh.s3-us-west-2.amazonaws.com/screenshots/vault-agent-auto-auth.png">
-
-![git_flow](/devopsteam/scenarios/git_formation_part10/assets/n_git-flow.png)
+ <img src="https://github.com/szitoun/katacoda_team_devops/blob/master/git/git_formation_part10/assets/n_git-flow.png">
 
 ##### *Remarque:*
 Cette approche décentralisée, apporte un plus par rapport au autres solutions.
