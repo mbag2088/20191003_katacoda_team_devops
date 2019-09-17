@@ -32,7 +32,7 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  Ajouter le fichier dans la "Staging Area" (cache)
  `git add script_feature.sh `{{execute T2}}
  
- Commmiter la nouvelle feature dans le Repository local 
+ Commiter la nouvelle feature dans le Repository local 
  
  `git commit -m "ajout du sscript_feature.sh repo local "`{{execute T2}}
    
