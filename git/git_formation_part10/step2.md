@@ -4,7 +4,8 @@
   * c'est ce que nous allons voir par la suite
  <img src="https://katacoda.com/devopsteam/courses/git/git_formation__part10/assets/n_git-flow.png">
 
-
+ <img src="https://katacoda.com/devopsteam/courses/git/git_formation__part10/assets/n_git-reset.png">
+ 
 ##### *Remarque:*
 Cette approche décentralisée, apporte un plus par rapport au autres solutions.
 
