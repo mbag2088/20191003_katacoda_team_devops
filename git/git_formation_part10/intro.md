@@ -14,11 +14,13 @@ Rappel:
 
 
 #### A présent, nous allons voir comment organiser les projets avec la méthode du "Git Flow": 
-Cela vous sera utile pour vous donner une démarche de travail avec GIT,
+Cela vous sera utile pour bénéficier d'une Organisation avec Git Flow, 
 
-pour le suivi, l'évolution et la maintenance de vos Releases,
+- pour une bonne stratégie de versioning
 
-Toutes les membres de votre équipe, travailleront de la même manière en suivant un workflow similaire
+- pour le suivi, l'évolution et la maintenance de vos Releases,
+
+Toutes les membres de votre équipe, travailleront de concercert en suivant un workflow similaire
 
 
 
