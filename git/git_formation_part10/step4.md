@@ -18,11 +18,11 @@ Version tag prefix? []
 Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
  
- Démarrer un Work Flow pour créer une permière Featues  (fonctionalité)
+ Démarrer un Work Flow pour créer une première Featues  (fonctionalité)
  `git flow feature start featureform`{{execute T2}}
  
  Vérifier la création de la Feature
- `git flow feature`{{execute T2}}
+ `git flow feature list`{{execute T2}}
 
 En tant que développeur, vous allez créer une nouvelle feature, puis apprendre à la publier. 
 
