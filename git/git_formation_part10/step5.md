@@ -6,7 +6,7 @@ En tant que développeur, vous allez créer une nouvelle release, puis apprendre
  Ajouter le fichier dans la "Staging Area" (cache)
  `git add script_12.sh `{{execute T2}}
  
- Commmiter la nouvelle release dans le Repository local 
+ Commiter la nouvelle release dans le Repository local 
  
  `git commit -m "ajout du sscript_12.sh repo local "`{{execute T2}}
    
