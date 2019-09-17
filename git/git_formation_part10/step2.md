@@ -2,7 +2,10 @@
 - Un repository `central`, assure la cohérence de l'ensemble des repository locaux et leur synchronisations  
 - Néanmoins certains cas de conflits peuvent se poser si le repository central a évoluer, alors que l'on essaie d'y répercuter nos développements, 
   * c'est ce que nous allons voir par la suite
- <img src="https://katacoda.com/devopsteam/courses/git/git_formation__part10/assets/n_git-flow.png">
+  ![testflow](/devopsteam/courses/git/git_formation_part10/assets/n_git-flow.png)
+  
+  suite
+ <img src="https://katacoda.com/devopsteam/courses/git/git_formation_part10/assets/n_git-flow.png">
 
  <img src="https://katacoda.com/devopsteam/courses/git/git_formation__part10/assets/n_git-reset.png">
  
