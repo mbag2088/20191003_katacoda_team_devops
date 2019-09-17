@@ -26,5 +26,5 @@ En tant que développeur, vous allez créer une nouvelle release, puis apprendre
  Terminer le Git Flow en cours 
  `git flow release finish releaseform`{{execute T2}}
 
- Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement 
+ Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
  `git flow log`{{execute T2}}
