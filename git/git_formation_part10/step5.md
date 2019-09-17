@@ -14,7 +14,7 @@ En tant que développeur, vous allez créer une nouvelle release, puis apprendre
  `git log --oneline`{{execute T2}}
  
  Publier le Git Flow 
- `git flow release publish releaseform`{{execute T2}}
+ `git flow release publish "v1.2.0"`{{execute T2}}
  
  ```
  _Répondre: yes
@@ -24,7 +24,7 @@ En tant que développeur, vous allez créer une nouvelle release, puis apprendre
  `git flow log`{{execute T2}}
  
  Terminer le Git Flow en cours 
- `git flow release finish releaseform`{{execute T2}}
+ `git flow release finish "v1.2.0"`{{execute T2}}
 
  Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
  `git flow log`{{execute T2}}
