@@ -18,7 +18,7 @@ Version tag prefix? []
 Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
  
- Démarrer le Work Flow pour créer une permière Featues  (fonctionalité)
+ Démarrer un Work Flow pour créer une permière Featues  (fonctionalité)
  `git flow feature start featureform`{{execute T2}}
  
  Vérifier la création de la Feature
@@ -49,20 +49,14 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  Regarder les logs 
  `git flow log`{{execute T2}}
  
-
-
-
-
-
-
-  
-  Lancer un Raffraichissement `push` sur le repo Distant (Central)
-   `git push origin master`{{execute T3}}
-  
-  **Sur la VM2 equiep 2  terminer la feature et la mettre dans developp 
-  
+ Terminer le Git Flow en cours 
  `git flow feature finish featureform`{{execute T2}}
+
+ Regarder les logs, vous constater que nous avons fusionné les feature -->  dans la branche de développement 
+ `git flow log`{{execute T2}}
  
- Checker la disparition de la branche feature
-  `git branch`{{execute T2}}
- 
+
+  Vous pouvez mettre à jour votre développement effectuer,  sur le repo Central, et en faire bénéficier tout le monde
+  `git push origin master`{{execute T2}}
+  
+
