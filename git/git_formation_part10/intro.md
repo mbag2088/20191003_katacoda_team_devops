@@ -20,7 +20,7 @@ Cela vous sera utile pour bénéficier d'une Organisation en Git Flow,
 
 - pour le suivi, l'évolution et la maintenance de vos Releases,
 
-Toutes les membres de votre équipe, travailleront de concercert en suivant un workflow similaire
+Toutes les membres de votre équipe, travailleront de concert en adoptant un workflow commun
 
 
 
