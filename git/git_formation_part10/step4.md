@@ -1,14 +1,12 @@
-#### (VM1)  
+#### L'équipe qui développe doit initialiser un Git Glow local
+ ```
+Prérequis pour utiliser l'outil Git Flow:  avoir au préalable installé le package linux "git-flow" 
+(commande utilisée pour ce faire: apt-get install git-flow -y)
+ ``` 
  
- Vérifier la connexion au `Repository Central GIT  (remote)`
- 
-`cd repocentral`{{execute T1}}
-
-
-#### VM2 `équipe 1` Développe sur son Repository Local et utilise le Git Glow
- 
-Initialiser le Git Flow
+A présent,  vous devez initier l'environnement Git Flow
  `git flow init`{{execute T2}}
+ 
  ```
 How to name your supporting branch prefixes?
 Feature branches? [feature/]
@@ -20,28 +18,26 @@ Version tag prefix? []
 Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
  
- Démarrer le Work Flow pour les featues
+ Démarrer le Work Flow pour créer une permière Featues  (fonctionalité)
  `git flow feature start featureform`{{execute T2}}
  
  Vérifier la création de la Feature
  `git flow feature`{{execute T2}}
 
-`En tant que première équipe`, vous allez effectuer vos développements. Et les commiter en local.  
+En tant que développeur, vous allez créer une nouvelle feature, puis apprendre à la publier. 
 
- Créer un fichier script_vm2_1.sh
- `echo "printf 'Ceci est le script 1 \n'" > script_vm2_1.sh;cat script_vm2_1.sh`{{execute T2}}
+ Créer un fichier script_feature.sh
+ `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_feature.sh;cat script_feature.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
- `git add script_vm2_1.sh `{{execute T2}}
+ `git add script_feature.sh `{{execute T2}}
  
- Commmiter `valider` le nouveau fichier: dans le Repository local 
+ Commmiter la nouvelle feature dans le Repository local 
  
- `git commit -m "ajout du script_vm2_1.sh repo local VM2"`{{execute T2}}
+ `git commit -m "ajout du sscript_feature.sh repo local "`{{execute T2}}
    
  Vérifier le nouveau commmit
  `git log --oneline`{{execute T2}}
- 
-
  
  Publier le Git Flow 
  `git flow feature publish featureform`{{execute T2}}
@@ -53,41 +49,6 @@ Hooks and filters directory? [/home/git/.git/hooks]
  Regarder les logs 
  `git flow log`{{execute T2}}
  
-  
-  
-  
- 
- #### (VM1) Constater que le développement (script n°2) n'a pas encore été "pushé" sur le `Repository Central`  
- Constater que la branche feature est bien centralisé
- `git branch`{{execute T1}}
-
-
-
-#### `Equipe 2` développe sur son Repository Local le script n°3  (VM3)
-
-Initialiser le Git Flow
- `git flow init`{{execute T3}}
- ```
-How to name your supporting branch prefixes?
-Feature branches? [feature/]
-Bugfix branches? [bugfix/]
-Release branches? [release/]
-Hotfix branches? [hotfix/]
-Support branches? [support/]
-Version tag prefix? []
-Hooks and filters directory? [/home/git/.git/hooks]
- ``` 
-
-Importer la feature
-  `git flow feature track featureform`{{execute T3}}
-
-ou Importer la feature
-  `git pull origin feature/featureform`{{execute T3}}
-
-
- 
- Regarder les logs 
-  `git flow log`{{execute T3}}
 
 
 
