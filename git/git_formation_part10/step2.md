@@ -3,7 +3,7 @@
 - Néanmoins certains cas de conflits peuvent se poser si le repository central a évoluer, alors que l'on essaie d'y répercuter nos développements, 
   * c'est ce que nous allons voir par la suite
 
-![git_users_archi](/testgitessai/scenarios/git_training_part1/assets/git_users_archi.png)
+![git_users_archi](/testgitessai/scenarios/git_formation_part10/assets/n_git-flow.png)
 
 ##### *Remarque:*
 Cette approche décentralisée, apporte un plus par rapport au autres solutions.
