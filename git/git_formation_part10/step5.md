@@ -28,3 +28,14 @@ En tant que développeur, vous allez créer une nouvelle release, puis apprendre
 
  Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
  `git flow log`{{execute T2}}
+
+
+Consulter à présent les branches actives 
+  `git branch`{{execute T2}}
+
+
+Vous pouver Tagger la Release
+ `git push --tags`{{execute T2}}
+
+Puis vous pouver la pousser sur le repo Central
+ `git push origin master`{{execute T2}}
