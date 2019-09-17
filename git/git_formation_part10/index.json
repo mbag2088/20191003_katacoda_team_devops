@@ -18,8 +18,12 @@
         "text": "step3.md"
       },
       {
-        "title": "Utilisation du Git Flow",
+        "title": "Utilisation du Git Flow: Gestion des Features (fonctionalités)",
         "text": "step4.md"
+      },
+      {
+        "title": "Utilisation du Git Flow: gestion des Releases",
+        "text": "step5.md"
       }
     ],
     "intro": {
