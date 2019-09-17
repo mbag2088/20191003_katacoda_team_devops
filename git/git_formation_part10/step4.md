@@ -18,8 +18,8 @@ Version tag prefix? []
 Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
  
- Démarrer un Work Flow pour créer une première Featues  (fonctionalité)
- `git flow feature start featureform`{{execute T2}}
+ Démarrer un Work Flow pour créer une première Features  (fonctionalité)
+ `git flow feature start feature-x`{{execute T2}}
  
  Vérifier la création de la Feature
  `git flow feature list`{{execute T2}}
@@ -40,7 +40,7 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  `git log --oneline`{{execute T2}}
  
  Publier le Git Flow vers le repo central 
- `git flow feature publish featureform`{{execute T2}}
+ `git flow feature publish feature-x`{{execute T2}}
  
  ```
      Répondre: yes
@@ -50,11 +50,7 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  `git flow log`{{execute T2}}
  
  Terminer le Git Flow en cours 
- `git flow feature finish featureform`{{execute T2}}
+ `git flow feature finish feature-x`{{execute T2}}
 
  Regarder les logs, vous constater que nous avons fusionné les feature -->  dans la branche de développement 
  `git flow log`{{execute T2}}
- 
-
-
-
