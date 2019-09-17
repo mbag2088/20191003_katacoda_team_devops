@@ -44,7 +44,7 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  
  ```
      Répondre: yes
-  ```
+ ```
  
  Vous pouvez consulter les logs 
  `git flow log`{{execute T2}}
@@ -52,5 +52,5 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  Terminer le Git Flow en cours 
  `git flow feature finish feature-x`{{execute T2}}
 
- Regarder les logs, vous constater que nous avons fusionné les feature -->  dans la branche de développement 
+ Regarder les logs, vous constater que nous avons fusionné les features -->  dans la branche de développement 
  `git flow log`{{execute T2}}
