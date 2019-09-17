@@ -14,7 +14,7 @@ Rappel:
 
 
 #### A présent, nous allons voir comment organiser les projets avec la méthode du "Git Flow": 
-Cela vous sera utile pour bénéficier d'une Organisation avec Git Flow, 
+Cela vous sera utile pour bénéficier d'une Organisation en Git Flow, 
 
 - pour une bonne stratégie de versioning
 
