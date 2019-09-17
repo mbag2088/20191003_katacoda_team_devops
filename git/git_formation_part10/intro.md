@@ -4,10 +4,10 @@
 Rappel:
 
  Lors des précédentes formation,
- - nous avons appris à cloner un repository GIT,
+ - nous avons appris à cloner un Repo GIT,
  - nous avons appris à stocker et versionner nos scripts dans GIT,
  - nous avons appris à retravailler sur l'historique, de versions déjà commitées (retours arrières),
- - nous avons vu comment deux équipes partageaient le même GIT et développaient en mode collaboratif,
+ - nous avons vu comment deux équipes peuvent se partager le même GIT, pour développer en mode collaboratif,
  - nous avons vu comment gèrer les situations de conflits,
   ```
  
