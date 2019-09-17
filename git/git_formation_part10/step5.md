@@ -32,6 +32,10 @@ En tant que développeur, vous allez créer une nouvelle release, puis apprendre
  Terminer le Git Flow en cours 
  `git flow release finish "v1.2.0"`{{execute T2}}
 
+ ```
+Renseigner la version de la Release: dans chaque fichier texte  puis enregistre et sortir du fichier
+ ``` 
+
  Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
  `git flow log`{{execute T2}}
 
