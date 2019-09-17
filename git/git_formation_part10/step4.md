@@ -56,7 +56,5 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  `git flow log`{{execute T2}}
  
 
-  Vous pouvez mettre à jour votre développement effectuer,  sur le repo Central, et en faire bénéficier tout le monde
-  `git push origin master`{{execute T2}}
-  
+
 
