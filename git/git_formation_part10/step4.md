@@ -39,14 +39,14 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  Vérifier le nouveau commmit
  `git log --oneline`{{execute T2}}
  
- Publier le Git Flow 
+ Publier le Git Flow vers le repo central 
  `git flow feature publish featureform`{{execute T2}}
  
  ```
- _Répondre: yes
+     Répondre: yes
   ```
  
- Regarder les logs 
+ Vous pouvez consulter les logs 
  `git flow log`{{execute T2}}
  
  Terminer le Git Flow en cours 
