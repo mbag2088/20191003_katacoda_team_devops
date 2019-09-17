@@ -1,5 +1,11 @@
 En tant que développeur, vous allez créer une nouvelle release, puis apprendre à la publier. 
 
+ Démarrer un Work Flow pour créer la première Release  
+ `git flow release start "v1.2.0"`{{execute T2}}
+ 
+ Vérifier la création de la Feature
+ `git flow release list`{{execute T2}}
+
  Créer un fichier script_12.sh
  `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_12.sh;cat script_12.sh`{{execute T2}}
  
