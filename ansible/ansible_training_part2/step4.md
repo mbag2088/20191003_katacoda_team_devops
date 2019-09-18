@@ -1,81 +1,48 @@
 
 
-Lorsqu'on lance un playbook sans spécifier le nom d'utilisateur de connexion vers la cible, Ansible va utiliser l'utilisateur exécutant le playbook. 
-Ansible permet de définir l'utilisateur de connexion via la variable "remote_user"           
+Pour tester la connectivité vers les serveurs du groupe [web], et [db] définis dans le fichier hosts.ini, exécutez la commande Ansible 'ping' comme indiqué ci-dessous. 
+Ici, ping est un module qui rempli une fonction particulière: "Tester si les hôtes peuvent être connectés"
+
+Ce n'est pas un ping ICMP, c'est juste un module de test trivial qui requiert Python sur le nœud distant.
+Pour les cibles Windows, utilisez plutôt le module win_ping.
+Pour les cibles réseau, utilisez plutôt le module net_ping.
+
+Nous verrons plus en détail divers modules et leurs exemples dans les sections suivantes.
+
+#### 1) Tester la connexion en local
+On utilisera la commande ansible.
+Usage: ansible <host-pattern> [options] 
+
+`ansible all -i hosts.ini -c local -m ping`{{execute T1}}
+
+    all : le hote ou le groupe de hote. Ici la commande ping s'exécute sur tout les hotes (hotes managés)
+    -i : le chemin vers l'inventaire . Ici c'est hosts.ini
+    -m : Le nom du module a exécuter. Ici "ping"
+    -c : type de connexion
+    
+
+Comme indiqué au début de la page, le module ping de Ansible n'est pas une demande ICMP. Au dela de ping/pong, il s'agit aussi d'un test
+de la connexion SSH.
+
+Cependant, dans la commande précédente nous avons utilisé l'option locale -c qui indique à Ansible de contourner le réseau afin que le client Ansible puisse exécuter des commandes locales sans avoir besoin d'une connexion SSH.
+
+#### 2) Tester la connexion à distance
+Afin de pouvoir lancer des commandes sur les hotes managés, la connexion SSH doit être fonctionnelle entre les machines managés et la vm Ansible.
+
+Vous allez tester la commande ping vers le hôte "managed_node1" du groupe [web], mais cette fois ci sans l'option "-c local"
+
+`ansible web -i hosts.ini -m ping`{{execute T1}}
+
+Cela conduira à l'erreur suivante:
+
+<pre style="color: red">
+managed_node1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "[Errno None] Unable to connect to port 22 on 172.19.0.3",
+    "unreachable": true
+}
+</pre>
 
 
-Ansible peut utiliser les systèmes d'élévation/escalade de privilèges existants afin de permettre à un utilisateur d'exécuter des tâches.
-
-Ces variables peuvent être définies dans le playbook ou dans les fichiers d'inventaire spécifiques à un hôte avec une autre syntaxe. 
-
-- become_user: Définit l'utilisateur autre que celui utilisé pour la connexion à la machine cible.
-Il sera utilisé lorsque l'utilisateur distant exécute des tâches en tant qu'utilisateur root ou autre lorsqu’il utilise             l’élévation de privilèges. La plupart des systèmes utiliseront «root» si aucun utilisateur n’est spécifié.
-- become_password: Le mot de passe nécessaire pour l’élévationde privilèges. Il peut ne pas etre nécessaire, celon la facon dont                        l'utilisateur est configuré sur la machine cible. Ansible utilise aussi 
-[Vault](https://docs.ansible.com/ansible/latest/user_guide/playbooks_vault.html) pour encrypter les mots de passe    
-- become_method: Définit la methode d'escalation (sudo, su, ...). Par défaut c'est sudo.
-
-- become: Définir à "yes" pour activer l'escalade de privilèges
-
-##### *Exemple1:*
-Démarrer le service httpd qui nécessite des privilèges root lorsqu'il est connecté en tant qu'utilisateur non root. Dans cette exemple ansible utilisera les valeurs par defaut des variables become_user et become_method
-
-```
-- name: Ensure the httpd service is running
-  service:
-    name: httpd
-    state: started
-  become: yes
-```
-
-##### *Exemple2:*
-
-```
-- name: Run a command as the Apache User
-  command: somecommand
-  become: yes
-  become_user: apache
-```
-
-#### Définition des variables d'escalade de privilèges dans les inventaire:
-Les variables peuvent être définies au niveau du groupe et/ou de l'hôte. Le nom des variabes est comme suit:
-
-ansible_become, ansible_become_method, ansible_become_user, ansible_become_pass.
-
-Exemple d'un fichier d'inventaire inventory.ini
-```
-[group_web]
-machine_1 ansible_host=machine_cible1
-
-[all:vars]
-ansible_user="<USER>"
-ansible_ssh_pass="<MOT_DE_PASSE>"
-ansible_become_method=su
-ansible_become_pass="<MOT_DE_PASSE>"
-```
-
-Exemple d'un playbook playbook.yml
-```
----
-- hosts: all
-  tasks:
-  - name: create a file as connected user
-    file:
-      path: /tmp/test_0.txt
-      state: touch
-      
-  - name: create a file as root user
-    become: yes
-    become_user: root
-    file:
-      path: /tmp/test_1.txt
-      state: touch
-      
-  - name: create a file as local technical user
-    become: yes
-    become_user: user2
-    file:
-      path: /tmp/test_2.txt
-      state: touch
-```
 
 

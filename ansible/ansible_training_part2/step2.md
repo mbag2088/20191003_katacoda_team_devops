@@ -1,99 +1,95 @@
- 
-Nous avons vu comment exécuter des tâches à l'aide de modules en ligne de commande, mais que se passe-t-il si vous devez exécuter plusieurs tâches? Les playbooks vous aident à les exécuter de manière scriptée.
 
-Les Playbooks définissent des variables, des configurations, des étapes de déploiement séquentielles effectuant plusieurs tâches. 
+L'Inventaire fourni la liste des hôtes (serveurs managés) sur lesquels Ansible exécutera les tâches.
+Ansible fonctionne en se basant sur cette liste de machines qui est définie par défaut dans le fichier /etc/ansible/hosts. Ce chemin par defaut peut être modifié dans le fichier de configuration ansible.cfg.
 
-Les playbooks sont principalement définis pour orchestrer les étapes sur plusieurs machines et les amener à un état souhaité.
-
-Un Playbook est écrit au format YAML avec une extension de fichier ".yml" ou ".yaml". Il faut être très prudent avec le format et l'alignement, ce qui le rend très sensible.
-
-Chaque playbook commence par 3 tirets '-'
-
-_Syntax d'utilisation:_
-
-$ansible-playbook [-i $INVENTORY_FILE] playbook.yaml
+Vous pouvez spécifier aussi un fichier d'inventaire différent à l'aide de l'option -i <chemin> sur la ligne de commande.
 
 
-#### Les sections d'un playbook
+Dans un inventaire, on trouve :
 
+> Des hôtes avec leur information de connexion, de configuration, … (DNS, IP, utilisateur, …)
+> Des groupes fonctionnels regroupant des instances (app, web server, bdd, …)
 
-Chaque playbook est composé d’un ou de plusieurs "play" dans une liste. Le but d'un play est de mapper un groupe d'hôtes sur des rôles bien définis, représentés par des tâches et des appels.
+Le fichier d'inventaire peut être dans l'un des nombreux formats : yaml, ini, etc.
 
-1- Section Host:
-
-Elle permet de définir les machines cibles sur lesquelles le playbook doit être exécuté. Ceci est basé sur le fichier d'inventaire Ansible précisé en ligne de commande [-i $INVENTORY_FILE] 
-
-2- Section des variables:
-
-Elle est facultative. Elle permet de déclarer toutes les variables nécessaires dans le playbook. Cela permet d'avoir plus de flexibilité et d'éviter les affectations en dur.
-
-3- Section Tâches:
-
-Cette section répertorie toutes les tâches à exécuter sur les machines cibles. Chaque task fait appel à un module. Chaque tâche a un nom qui est une petite description de ce qu’elle fera et sera listée pendant l’exécution du playbook.
-
-4- Section handler:
-
-Elle est facultative. Elle permet la définition de tâches qui seront exécutées si et seulement si elles sont notifiées.
-
-#### Exemple d'un playbook
-##### _Objectif:_ 
-
-> Installation d’un webserver
-
-> Configuration
-
-> Démarrage
-
-Avant toute chose, nous vous invitons à copier ce playbook dans un éditeur de texte pour avoir un template toujours à disposition lors de la réalisation d'exercices.
-
-Analyser bien les parties de ce playbook et vous allez identifier les sections détaillées précédemment. 
-``` 
----
-- hosts: webservers
-  vars:
-    http_port: 80
-    max_clients: 200
-  remote_user: root
-  tasks:
-  - name : ensure apache is at the latest version
-    yum:
-      name: httpd
-      state: latest
-  - name: write the apache config file
-    template:
-      src: /srv/httpd.j2
-      dest: /etc/httpd.conf
-    notify:
-    - restart apache
-  - name: ensure apache is running
-    service:
-      name: httpd
-      state: started
-  handlers:
-    - name: restart apache
-      service:
-        name: httpd
-        state: restarted
+*Format INI*
+```
+jumper ansible_port=5555 ansible_host=192.0.2.50
 ```
 
-##### *Remarque:* 
+*Format YML*
+```
+...
+  hosts:
+    jumper:
+      ansible_port: 5555
+      ansible_host: 192.0.2.50
+```
 
-- "remote_user" est le compte qui se connecte à la machine cible. Si remote_user n'est pas défini, Ansible va utiliser le compte utilisé pour exécuter le playbook.
 
-La bonne pratique est d'utiliser un autre compte que "root". Si cet utilisateur doit effectuer des tâches en tant que root ou autre, il doit disposer d’autorisations sudo sur la machine cible.
+Comme indiqué précédemment, le fichier d'inventaire peut contenir des groupes et des hôtes definis comme suit:
 
-Vous allez comprendre le fonctionnement des utilisateurs dans la prochaine étape. 
+![groups and hosts format INI](/devopsteam/courses/ansible/ansible_training_part1/assets/hosts_and_groups.png)
 
 
-Comme précisé dans la section 1, les commandes suivantes nécessitent en pré-requis qu'un téléchargement de conteneurs Docker soit finalisé.
-Donc si l'exécution affiche des erreurs alors attendre 30secondes voire 1 minute et réessayer.
+##### IMPORTANT:
 
----
+<pre style="color: orange">
+Les commandes ci-dessous permettent de préparer le Lab nécessaire 
+à la réalisation des exercices.
 
-- Dans les étapes suivantes vous allez avoir des exércices sur des playbooks. Lancez les commandes suivantes afin de préparer vos environnements:
+Une étape réalise un téléchargement entre GitHub et la plateforme
+katacoda.
+
+Des lenteurs peuvent apparaitre et la préparation du Lab prendra
+plus de temps. Donc, attendre 1 min avant de lancer la première
+commande.
+
+Si vous obtenez le message suivant :
+</pre>
+
+<pre style="color: red">
+Error : No such container
+</pre>
+<pre style="color: orange">
+alors le téléchargement des conteneurs n’est pas finalisé.
+Pour cela, attendre 30 secondes supplémentaire et 
+recommencer et ce jusqu’à ne plus avoir l’erreur.
+</pre>
+
+
+Lancez les commandes suivantes afin de préparer vos environnements. 
 
 `a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
 
 `n1() { docker exec -it managed_node1 bash -c "cd /work_dir; echo 'PS1='\''managed_node1# '\' >> /root/.bashrc; bash"; } && n1`{{execute T2}}
 
 `n2() { docker exec -it managed_node2 bash -c "cd /work_dir; echo 'PS1='\''managed_node2# '\' >> /root/.bashrc; bash"; } && n2`{{execute T3}}
+
+
+#### Créer votre premier fichier d'inventaire
+Créer un fichier hosts.ini dans votre home directory
+
+`vim /work_dir/hosts.ini`{{execute T1}}
+
+Créer les trois groupes myself, web, db. Pour cela il faut passer en mode "Insert/modification" dans l'éditeur VIM.
+
+Appuyer sur la touche 'i' de votre clavier puis copier le contenu ci-dessous (_Pour copier faite juste un clic sur le text_)
+
+`
+[myself]
+localhost
+[web]
+managed_node1
+[db]
+managed_node2
+`{{copy}}
+
+
+##### _Remarque:
+
+Pour sauvegarder le fichier, utiliser les touches :wq! de votre clavier
+Il est important de noter que le copier/coller entre votre terminal et par exemple un éditeur de texte externe.
+En revanche il ne fonctionnera pas entre un texte en cours de saisie dans l'éditeur VI et un éditeur externe.
+Votre session est limité à 50 min. Si la session expire vous ne pourrez plus récupérer le contenu de vos saisies.
+Par conséquent, nous vous conseillons d’afficher votre travail dans le terminal via la commande « cat » et ensuite faire un copier/coller vers un éditeur externe.

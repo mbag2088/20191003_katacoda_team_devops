@@ -1,24 +1,25 @@
 
-Ce module remplace des chaînes de caractères et des lignes dans un fichier. Il peut remplacer toutes les occurrences de plusieurs chaînes avec la même variable.
 
-Le module peut avoir plusieurs paramètres, on peut citer 
+Maintenant, puisque les hôtes cibles connaissent la clé SSH publique de l'hôte Ansible, nous sommes prêts à établir une connexion SSH.
 
-    path: le chemin du fichier sur la cible
-    regexp: expression regulière qui permet d'identifier la chaine de caractère 
+Nous allons retester le module ping, cette fois ci vous devriez avoir une réponse "pong"
 
-*[Documentation module replace](https://docs.ansible.com/ansible/latest/modules/replace_module.html?highlight=replace)
+`ansible web -i hosts.ini -m ping`{{execute T1}}
 
-> Créer un fichier playbook_ex03.yml dans votre espace de travail /work_dir de la machine Ansible
+`ansible db -i hosts.ini -m ping`{{execute T1}}
 
-> Caractéristiques du playbook "playbook_ex03.yml":
-
-> -Le groupe sur lequel s'exécuteront les taches: web
-
-> -Tache 1: Permet de remplacer la chaine de caractères "ServerName www.example.com" par "ServerName myapp.dev.com" dans le fichier /etc/training/training.d/config.txt de la machine cible, et sauvegarder le fichier avant de faire la modification
-
-> Lancer le playbook avec l'utilisateur toto
+<pre style="color: green">
+managed_node1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+</pre>
 
 
-##### *Remarque*
+##### _Notes:
 
-Afficher d'abord le contenu du fichier /etc/training/training.d/config.txt sur le serveur cible avant de lancer votre playbook afin de visualiser la différence après l'exécution du playbook.
+Vous pouvez utiliser l'option -v pour afficher plus de debug lors du lancement de la commande Ansible
+
+Exemple :
+
+`ansible web -i hosts.ini -m ping -vv`{{execute T1}}

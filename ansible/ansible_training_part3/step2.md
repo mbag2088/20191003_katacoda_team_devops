@@ -1,51 +1,69 @@
 
-Comme nous l’avons mentionné précédemment, la plupart des modules sont idempotents. C'est à dire que seules les actions nécessaires sont réalisées. Si des actions du playbook sont déjà réalisées sur l'hôte distant alors elles ne seront pas réalisées de nouveaux.
+Les modules sont les principaux éléments constitutifs d’Ansible. Ils sont essentiellement des scripts réutilisables. Ils sont  utilisés à partir de la ligne de commande ou dans une tâche 'tasks' par les playbooks d’Ansible qu'on verra ultérieurement. 
 
-Les Playbooks disposent d'un système **d'événements de base** pouvant être utilisé pour réagir sur changements.
+Il existe une large liste de modules Ansible, mais vous pouvez également écrire les vôtres. Vous devrez l’écrire en Python.
 
-Les actions **notifiées** sont déclenchées **à la fin de chaque play et ne seront déclenchées qu’une seule fois**, même si elles sont notifiées par plusieurs tâches différentes.
+Il est important de garder en permanence une fenêtre de votre browser internet préféré avec la documentation des modules :
 
-Par exemple, plusieurs ressources peuvent indiquer à service Apache d'être redémarré car elles ont opéré des modification sur des fichiers de configuration, mais Apache ne sera redémaré qu'une seule fois afin d'éviter des redémarrages inutiles.
+https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
 
-##### *Exemple*
+Selon votre cas et votre besoin, il faudra trouver le module adapté, comprendre les arguments d'entrée à renseigner pour votre cas de figure. 
 
-Redémarrage de deux services lorsque le contenu d’un fichier est modifié, mais uniquement si le fichier est modifié:
 
-<pre class="file">
-- name: template configuration file
-  template:
-    src: template.j2
-    dest: /etc/foo.conf
-  notify:
-     - restart memcached
-     - restart apache
+Chaque module prend en charge la prise d'arguments. Presque tous les modules prennent des arguments sous le format 'clé = valeur', délimités par des espaces. 
+
+##### _Syntax:_ 
+ansible $TARGET -m $MODULE -a $MODULE_ARGUMENTS
+
+Pour Afficher le manuel d'un module: ansible-doc $MODULE
+
+##### _Valeurs de retour_
+
+Les modules Ansible renvoient normalement une structure de données qui peut être enregistrée dans une variable ou vue directement lors de la sortie par le programme Ansible. Chaque module peut éventuellement documenter ses propres valeurs de retour uniques (visibles via ansible-doc et sur le site officiel).
+
+Sur le site officiel Ansible vous pouvez par exemple trouver les valeurs de retour du module ["archive"](https://docs.ansible.com/ansible/latest/modules/archive_module.html#archive-module) présenté comme suit:
+
+![archive_return_value](/devopsteam/courses/ansible/ansible_training_part1/assets/archive_module_return_value.png)
+
+La page disponible dans le lien suivant couvre les valeurs de retour communes à tous les modules:
+
+https://docs.ansible.com/ansible/latest/reference_appendices/common_return_values.html#common
+
+
+##### IMPORTANT:
+
+<pre style="color: orange">
+Les commandes ci-dessous permettent de préparer le Lab nécessaire 
+à la réalisation des exercices.
+
+Une étape réalise un téléchargement entre GitHub et la plateforme
+katacoda.
+
+Des lenteurs peuvent apparaitre et la préparation du Lab prendra
+plus de temps. Donc, attendre 1 min avant de lancer la première
+commande.
+
+Si vous obtenez le message suivant :
 </pre>
 
-"restart memcached" et "restart apache" qui sont dans la section de notification et les noms des handlers.
+<pre style="color: red">
+Error : No such container
+</pre>
+<pre style="color: orange">
+alors le téléchargement des conteneurs n’est pas finalisé.
+Pour cela, attendre 30 secondes supplémentaire et 
+recommencer et ce jusqu’à ne plus avoir l’erreur.
+</pre>
 
-Ce sont des listes de tâches, pas vraiment différentes des tâches habituelles. Elles sont référencées par un nom unique.
-Un handler qui n'est notifié par aucune des tâches du playbook , ne s'éxécute pas
 
-Voici la section des handlers:
-
-<pre class="file">
-handlers:
-    - name: restart memcached
-      service:
-        name: memcached
-        state: restarted
-    - name: restart apache
-      service:
-        name: apache
-        state: restarted
-</pre>        
-
----
-
-- Dans les étapes suivantes vous allez traiter des exercices sur les handlers, templates et les conditions. Lancez les commandes suivantes afin de préparer vos environnements:
+Lancez les commandes suivantes afin de préparer vos environnements.
 
 `a() { docker exec -it ansible_node bash -c "cd /work_dir; echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } && a`{{execute T1}}
 
 `n1() { docker exec -it managed_node1 bash -c "cd /work_dir; echo 'PS1='\''managed_node1# '\' >> /root/.bashrc; bash"; } && n1`{{execute T2}}
 
 `n2() { docker exec -it managed_node2 bash -c "cd /work_dir; echo 'PS1='\''managed_node2# '\' >> /root/.bashrc; bash"; } && n2`{{execute T3}}
+
+
+
+

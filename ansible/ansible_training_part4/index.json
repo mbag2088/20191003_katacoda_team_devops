@@ -1,7 +1,7 @@
 {
   "noindex": true,
   "title": "Formation Ansible pour le DEVOPS: partie 4",
-  "description": "Les rôles, exercices",
+  "description": "Utilisation des playbooks, exercices",
   "time": "50 minutes",
   "details": {
     "steps": [
@@ -9,14 +9,33 @@
         "title": " Sommaire",
         "text": "step1.md"
       },
-     {
-        "title": "Ansible: Les rôles",
+      {
+        "title": "Les playbooks Ansible",
         "text": "step2.md"
       },
       {
-        "title": "Exercice 7: Utilisation des rôles pour installer le service ntp",
+        "title": "Exercice 1: Utilisation des modules file et copy",
         "text": "step3.md",
         "answer": "step3-answer.md"
+      },
+      {
+        "title": "Ansible: Les utilisateurs et les privilèges",
+        "text": "step4.md"
+      },
+      {
+        "title": "Exercice 2: Utilisation des privilèges",
+        "text": "step5.md",
+        "answer": "step5-answer.md"
+      },
+      {
+        "title": "Exercice 3: Utilisation du module replace",
+        "text": "step6.md",
+        "answer": "step6-answer.md"
+      },
+      {
+        "title": "Exercice 4: Utilisation des modules yum et service",
+        "text": "step7.md",
+        "answer": "step7-answer.md"
       }
     ],
     "intro": {
@@ -29,6 +48,26 @@
     },
     "assets": {
       "host01": [
+        {
+          "file": "config.txt",
+          "target": "~/"
+        },
+        {
+          "file": "apache2.conf",
+          "target": "~/"
+        },
+        {
+          "file": "index.html",
+          "target": "~/"
+        },
+        {
+          "file": "vhost.j2",
+          "target": "~/"
+        },
+        {
+          "file": "motd",
+          "target": "~/"
+        },
         {
           "file": "hosts.ini",
           "target": "~/"

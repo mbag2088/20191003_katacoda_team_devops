@@ -1,7 +1,33 @@
 
-Nous allons ouvrir 3 terminaux. Chaque terminal correspond à une VM ubuntu (Conteneur docker).
+Nous allons ouvrir 3 terminaux avec les commandes ci-dessous. Chaque terminal correspond à une VM ubuntu (Conteneur docker).
 
-Chaque commande nécessite qu'un téléchargement de conteneur soit finalisé. Si la commande provoque une erreur, merci de la relancer trente secondes plus tard.
+
+##### IMPORTANT:
+
+<pre style="color: orange">
+Les commandes suivantes permettent de préparer le Lab nécessaire 
+à la réalisation des exercices.
+
+Une étape réalise un téléchargement entre GitHub et la plateforme
+katacoda.
+
+Des lenteurs peuvent apparaitre et la préparation du Lab prendra
+plus de temps. Donc, attendre 1 min avant de lancer la première
+commande.
+
+Si vous obtenez le message suivant :
+</pre>
+
+<pre style="color: red">
+Error : No such container
+</pre>
+<pre style="color: orange">
+alors le téléchargement des conteneurs n’est pas finalisé.
+Pour cela, attendre 30 secondes supplémentaire et 
+recommencer et ce jusqu’à ne plus avoir l’erreur.
+</pre>
+
+
 
 Lancer les commandes suivantes:
 
