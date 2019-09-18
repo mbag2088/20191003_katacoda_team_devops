@@ -1,10 +1,6 @@
 
   
 **A présent**
-Nous allons: 
-
-- apprendre à initier un Git Flow local,
-
-- nous utiliserons et "jonglerons" avec les différentes fonctionalités du `Git Flow`  "master","developpement","feature", "releases", "hotfix", 
+- Nous allons jongler avec les différentes branches "releases" du `Git Flow`  "master","developpement","feature", "releases", "hotfix", 
 
 
