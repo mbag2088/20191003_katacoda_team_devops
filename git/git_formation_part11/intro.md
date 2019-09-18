@@ -4,19 +4,17 @@
 Rappel:
 
  Lors de la précédente formation,
- - nous avons appris à versionner nos scripts,
- - nous avons vu comment deux équipes font pour développer en mode collaboratif
- - nous avons vu comment gèrer les situations de conflits
+ - nous avons appris à mettre en place une stratégie de développement des Release Git Flow,
+ - à présent, nous allons développer les releases en mode collaboratif pour une bonne stratégie de versioning
+ 
  ```
  
 
 
 #### A présent, nous allons voir comment organiser les projets avec la méthode Git Flow: 
 
-- installer le Git flow 
+- Créer une release, 
+- la partager à une autre équipe
 
-- Gèrer le workflow de versioning ...
-
-- Organisation  avec Git Flow, pour une bonne stratégie de versioning
 
 
