@@ -9,6 +9,19 @@
  
 En tant que développeur, vous allez créer une nouvelle release, puis apprendre à la publier. 
 
+Initialiser le Git Flow
+ `git flow init`{{execute T3}}
+ ```
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Bugfix branches? [bugfix/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
+Hooks and filters directory? [/home/git/.git/hooks]
+ ``` 
+
  Démarrer un Work Flow pour créer la première Release  
  `git flow release start "v1.2.0"`{{execute T2}}
  
