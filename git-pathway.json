@@ -17,6 +17,11 @@
         "course_id": "git_formation__part3",
         "title": "Formation GIT: partie 3",
         "description": "Configuration de Git"
+      },
+      {
+        "course_id": "git_formation__part4",
+        "title": "Formation GIT: partie 4",
+        "description": "Initialiser/Cloner un dépôt Git"
       }
     ]
   }
