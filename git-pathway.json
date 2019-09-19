@@ -4,6 +4,11 @@
     "icon": "fa-katacoda",
     "courses": [
       {
+        "course_id": "ansible_training_part0",
+        "title": "Formation Ansible pour le DEVOPS: Sommaire",
+        "description": "Ce sommaire présente les différentes parties de cette formation d'initiation à Git"
+      },
+      {
         "course_id": "git_formation__part1",
         "title": "Formation GIT: partie 1",
         "description": "Le versionning et une brève histoire de Git"
