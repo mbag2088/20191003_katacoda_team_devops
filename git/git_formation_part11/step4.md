@@ -5,7 +5,7 @@
 `cd repocentral`{{execute T1}}
 
 
-#### VM2 `équipe 1` Développe sur son Repository Local et utilise le Git Glow
+#### L'équipe n° 1 dev développe et utilise le Git Glow
  
 lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 
@@ -63,16 +63,9 @@ Vous pouver Tagger la Release
 Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
   
-  
-  
+    
  
- #### (VM1) Constater que le développement (script n°2) n'a pas encore été "pushé" sur le `Repository Central`  
- Constater que la branche feature est bien centralisé
- `git branch`{{execute T1}}
-
-
-
-#### `Equipe 2` développe sur son Repository Local le script n°3  (VM3)
+#### L'équipe n° 2 dev développe et utilise le Git Glow
 
 Initialiser le Git Flow
  `git flow init`{{execute T3}}
@@ -97,3 +90,8 @@ ou Importer la feature
  
  Regarder les logs 
   `git flow log`{{execute T3}}
+
+
+ #### `Repository Central`  
+ Constater que la branche feature est bien centralisé
+ `git branch`{{execute T1}}
