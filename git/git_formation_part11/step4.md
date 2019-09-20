@@ -65,15 +65,6 @@ Puis vous pouver la pousser sur le repo Central
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T3}}
 
-Importer la feature
-  `git flow release track v2.1.0`{{execute T3}}
-
-ou Importer la release
-  `git pull origin release/v2.1.0`{{execute T3}}
-
- 
- Regarder les logs 
-  `git flow log`{{execute T3}}
 
  consulter les tags distants 
   `git ls-remote --tags origin`{{execute T3}}
@@ -84,6 +75,15 @@ ou Importer la release
 Recupèrer les tags
   `git pull --rebase origin master`{{execute T3}}
 
+Importer la feature
+  `git flow release track v2.1.0`{{execute T3}}
+
+ou Importer la release
+  `git pull origin release/v2.1.0`{{execute T3}}
+
+ 
+ Regarder les logs 
+  `git flow log`{{execute T3}}
   
 
  #### `Repository Central`  
