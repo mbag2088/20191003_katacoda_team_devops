@@ -81,6 +81,10 @@ ou Importer la release
  Recupèrer les tags
   `git fetch origin 'refs/tags/v2.1.0`{{execute T3}}
 
+Recupèrer les tags
+  `git pull --rebase origin master`{{execute T3}}
+
+  
 
  #### `Repository Central`  
  
