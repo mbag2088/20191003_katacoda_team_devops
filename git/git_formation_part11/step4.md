@@ -70,7 +70,7 @@ Vérifier que le Git Flow est bien présent
   `git ls-remote --tags origin`{{execute T3}}
 
  Recupèrer les tags
-  `git fetch origin 'refs/tags/v2.1.0`{{execute T3}}
+  `git fetch origin 'refs/tags/v2.1.0'`{{execute T3}}
 
 Recupèrer les tags
   `git pull --rebase origin master`{{execute T3}}
