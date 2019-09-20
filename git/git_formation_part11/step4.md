@@ -72,7 +72,14 @@ Vérifier que le Git Flow est bien présent
  Recupèrer les tags
   `git fetch origin 'refs/tags/v2.1.0'`{{execute T3}}
 
-Recupèrer les tags
+Recupèrer une release dans une branche local
+  `git checkout -b branch2.1.0 v2.1.0`{{execute T3}}
+
+
+    
+
+
+Recupèrer les dev de l'autre équipe
   `git pull --rebase origin master`{{execute T3}}
 
 Importer la feature
