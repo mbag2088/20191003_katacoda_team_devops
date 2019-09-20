@@ -1,8 +1,7 @@
-- Git permet une gestion `décentralisée` et autonome des développeurs sur leurs serveurs. La centralisation du versioning permet ensuite de diffuser les développements aux autres équipes,
+- Git permet une gestion `décentralisée` et autonome des développeurs sur leurs propres serveurs, 
 - Un repository `central`, assure la cohérence de l'ensemble des repository locaux et leur synchronisations  
-- Néanmoins certains cas de conflits peuvent se poser si le repository central a évoluer, alors que l'on essaie d'y répercuter nos développements, 
-  * c'est ce que nous allons voir par la suite
-
+- Les releases gu Git Flow peuvent êtres partagées entres équipes, 
+  
 ![git_collaborative](/devopsteam/courses/git/git_formation_part10/assets/n_git-collaborative2.png)
 
 ##### *Remarque:*
