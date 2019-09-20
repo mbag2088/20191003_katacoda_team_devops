@@ -1,6 +1,6 @@
 - Git permet une gestion `décentralisée` et autonome des développeurs sur leurs propres serveurs, 
 - Un repository `central`, assure la cohérence de l'ensemble des repository locaux et leur synchronisations  
-- Les releases gu Git Flow peuvent êtres partagées entres équipes, 
+- Nous allons partage les releases via le Git Flow entres équipes, 
   
 ![git_collaborative](/devopsteam/courses/git/git_formation_part10/assets/n_git-collaborative2.png)
 
