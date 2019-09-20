@@ -52,7 +52,7 @@ Consulter à présent les branches actives
 
 
  
- Vous pouver Tagger la Release
+ A ce stade, vous pouver push le tag de la release sur le repo dsistant 
  `git push --tags`{{execute T2}}
 
 Puis vous pouver la pousser sur le repo Central
