@@ -11,10 +11,10 @@ Vérifier que le Git Flow est bien présent
  `git flow release list`{{execute T2}}
 
  Créer un fichier script_12.sh
- `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_12.sh;cat script_12.sh`{{execute T2}}
+ `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v2.1.0.sh;cat script_v2.1.0.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
- `git add script_12.sh `{{execute T2}}
+ `git add script_v2.1.0.sh `{{execute T2}}
  
  Commiter la nouvelle release dans le Repository local 
  
@@ -47,8 +47,10 @@ Vérifier que le Git Flow est bien présent
 Consulter à présent les branches actives 
   `git branch`{{execute T2}}
 
-
-Vous pouver Tagger la Release
+Lister le tag en cours
+ `git tag`{{execute T2}}
+ 
+ Vous pouver Tagger la Release
  `git push --tags`{{execute T2}}
 
 Puis vous pouver la pousser sur le repo Central
