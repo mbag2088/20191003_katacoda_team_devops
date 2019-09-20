@@ -1,12 +1,12 @@
 #### L'équipe n° 1, dev développe en utilisant le Git Glow
  
-lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
+Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 
 Vérifier que le Git Flow est bien présent
 
  `git flow config`{{execute T2}}
 
- Démarrer un Work Flow pour créer une Release  2.1.0
+ Démarrer une nouvelle Release  "2.1.0"
  `git flow release start "v2.1.0"`{{execute T2}}
  
  Vérifier la création de la Feature
