@@ -10,7 +10,8 @@ Après avoir suivi cette formation, vous serez en mesure de:
   avec Git.
 - **Partie 4:** Créer un dépôt git dans un répertoire vide ou pas, cloner un dépôt
   git disponible sur un serveur distant.
-  "..."
+  
+  ...
 - **Partie 10:** utiliser une stratégie sipmle d'utilisation de Git, 
   Suivre vos releases avec un worflow simpifié "Git Flow",
 - **Partie 11:** travailler en mode collaboratif, et partager vos Releases avec "Git Flow"
