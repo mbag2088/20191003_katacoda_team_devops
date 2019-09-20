@@ -71,10 +71,15 @@ Importer la feature
 ou Importer la release
   `git pull origin release/v2.1.0`{{execute T3}}
 
-
  
  Regarder les logs 
   `git flow log`{{execute T3}}
+
+ consulter les tags distants 
+  `git ls-remote --tags origin`{{execute T3}}
+
+ Recupèrer les tags
+  `git fetch origin 'refs/tags/v2.1.0`{{execute T3}}
 
 
  #### `Repository Central`  
