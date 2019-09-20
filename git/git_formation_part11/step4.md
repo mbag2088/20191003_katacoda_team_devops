@@ -75,8 +75,13 @@ Vérifier que le Git Flow est bien présent
 Recupèrer une release dans une branche local
   `git checkout -b branch2.1.0 v2.1.0`{{execute T3}}
 
+Consulter une release 
+  `git show v2.1.0`{{execute T3}}
 
-    
+Consulter son commit correspondant
+  `git log `{{execute T3}}
+
+aaaaaaaaaaaaaa    
 
 
 Recupèrer les dev de l'autre équipe
