@@ -5,7 +5,7 @@
 `cd repocentral`{{execute T1}}
 
 
-#### L'équipe n° 1 dev développe et utilise le Git Glow
+#### L'équipe n° 1, dev développe en utilisant le Git Glow
  
 lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 
@@ -65,7 +65,7 @@ Puis vous pouver la pousser sur le repo Central
   
     
  
-#### L'équipe n° 2 dev développe et utilise le Git Glow
+#### L'équipe n° 2 dev, développe et utilise le Git Glow
 
 Initialiser le Git Flow
  `git flow init`{{execute T3}}
