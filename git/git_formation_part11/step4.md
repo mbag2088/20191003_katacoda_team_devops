@@ -40,6 +40,9 @@ Vérifier que le Git Flow est bien présent
  * Renseigner la ligne version "v2.1.0" dans chacun des fichiers textes (touch ":wq!" pour sortir de chaque fichier)  
  ``` 
 
+Lister le tag en cours
+ `git tag`{{execute T2}}
+
  Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
  `git flow log`{{execute T2}}
 
@@ -47,8 +50,7 @@ Vérifier que le Git Flow est bien présent
 Consulter à présent les branches actives 
   `git branch`{{execute T2}}
 
-Lister le tag en cours
- `git tag`{{execute T2}}
+
  
  Vous pouver Tagger la Release
  `git push --tags`{{execute T2}}
