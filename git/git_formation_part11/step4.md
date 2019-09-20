@@ -1,10 +1,3 @@
-#### Repo Central
- 
- Vérifier la connexion au `Repository Central GIT  (remote)`
- 
-`cd repocentral`{{execute T1}}
-
-
 #### L'équipe n° 1, dev développe en utilisant le Git Glow
  
 lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
@@ -93,5 +86,10 @@ ou Importer la feature
 
 
  #### `Repository Central`  
+ 
+ Vérifier la connexion au `Repository Central GIT  (remote)`
+ 
+`cd repocentral`{{execute T1}}
+
  Constater que la branche feature est bien centralisé
  `git branch`{{execute T1}}
