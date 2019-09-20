@@ -7,23 +7,14 @@
 
 #### VM2 `équipe 1` Développe sur son Repository Local et utilise le Git Glow
  
-En tant que développeur, vous allez créer une nouvelle release, puis apprendre à la publier. 
+lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 
-Initialiser le Git Flow
- `git flow init`{{execute T3}}
- ```
-How to name your supporting branch prefixes?
-Feature branches? [feature/]
-Bugfix branches? [bugfix/]
-Release branches? [release/]
-Hotfix branches? [hotfix/]
-Support branches? [support/]
-Version tag prefix? []
-Hooks and filters directory? [/home/git/.git/hooks]
- ``` 
+Vérifier que le Git Flow est bien présent
 
- Démarrer un Work Flow pour créer la première Release  
- `git flow release start "v1.2.0"`{{execute T2}}
+ `git flow config`{{execute T2}}
+
+ Démarrer un Work Flow pour créer une Release  2.1.0
+ `git flow release start "v2.1.0"`{{execute T2}}
  
  Vérifier la création de la Feature
  `git flow release list`{{execute T2}}
@@ -42,7 +33,7 @@ Hooks and filters directory? [/home/git/.git/hooks]
  `git log --oneline`{{execute T2}}
  
  Publier le Git Flow 
- `git flow release publish "v1.2.0"`{{execute T2}}
+ `git flow release publish "v2.1.0"`{{execute T2}}
  
  ```
  _Répondre: yes
@@ -52,7 +43,7 @@ Hooks and filters directory? [/home/git/.git/hooks]
  `git flow log`{{execute T2}}
  
  Terminer le Git Flow en cours 
- `git flow release finish "v1.2.0"`{{execute T2}}
+ `git flow release finish "v2.1.0"`{{execute T2}}
 
  ```
 Renseigner la version de la Release: dans chaque fichier texte  puis enregistre et sortir du fichier
@@ -97,29 +88,12 @@ Hooks and filters directory? [/home/git/.git/hooks]
  ``` 
 
 Importer la feature
-  `git flow feature track v1.2.0`{{execute T3}}
+  `git flow feature track v2.1.0`{{execute T3}}
 
 ou Importer la feature
-  `git pull origin release/v1.2.0`{{execute T3}}
+  `git pull origin release/v2.1.0`{{execute T3}}
 
 
  
  Regarder les logs 
   `git flow log`{{execute T3}}
-
-
-
-
-
-
-  
-  Lancer un Raffraichissement `push` sur le repo Distant (Central)
-   `git push origin master`{{execute T3}}
-  
-  **Sur la VM2 equiep 2  terminer la feature et la mettre dans developp 
-  
- `git flow feature finish v1.2.0`{{execute T2}}
- 
- Checker la disparition de la branche feature
-  `git branch`{{execute T2}}
- 
