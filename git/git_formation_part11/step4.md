@@ -1,15 +1,13 @@
 #### L'équipe n° 1, dev développe en utilisant le Git Glow
  
 Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
-
 Vérifier que le Git Flow est bien présent
-
  `git flow config`{{execute T2}}
 
  Démarrer une nouvelle Release  "2.1.0"
  `git flow release start "v2.1.0"`{{execute T2}}
  
- Vérifier la création de la Feature
+ Vérifier la création de la release
  `git flow release list`{{execute T2}}
 
  Créer un fichier script_12.sh
@@ -20,7 +18,7 @@ Vérifier que le Git Flow est bien présent
  
  Commiter la nouvelle release dans le Repository local 
  
- `git commit -m "ajout du sscript_12.sh repo local "`{{execute T2}}
+ `git commit -m "ajout du script_v2.1.0.sh repo local "`{{execute T2}}
    
  Vérifier le nouveau commmit
  `git log --oneline`{{execute T2}}
@@ -60,23 +58,13 @@ Puis vous pouver la pousser sur le repo Central
  
 #### L'équipe n° 2 dev, développe et utilise le Git Glow
 
-Initialiser le Git Flow
- `git flow init`{{execute T3}}
- ```
-How to name your supporting branch prefixes?
-Feature branches? [feature/]
-Bugfix branches? [bugfix/]
-Release branches? [release/]
-Hotfix branches? [hotfix/]
-Support branches? [support/]
-Version tag prefix? []
-Hooks and filters directory? [/home/git/.git/hooks]
- ``` 
+Vérifier que le Git Flow est bien présent
+ `git flow config`{{execute T2}}
 
 Importer la feature
-  `git flow feature track v2.1.0`{{execute T3}}
+  `git flow release track v2.1.0`{{execute T3}}
 
-ou Importer la feature
+ou Importer la release
   `git pull origin release/v2.1.0`{{execute T3}}
 
 
@@ -91,5 +79,5 @@ ou Importer la feature
  
 `cd repocentral`{{execute T1}}
 
- Constater que la branche feature est bien centralisé
+ Constater que la branche release est bien centralisé
  `git branch`{{execute T1}}
