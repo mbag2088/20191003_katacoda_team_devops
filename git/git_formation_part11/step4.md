@@ -63,7 +63,7 @@ Puis vous pouver la pousser sur le repo Central
 #### L'équipe n° 2 dev, développe et utilise le Git Glow
 
 Vérifier que le Git Flow est bien présent
- `git flow config`{{execute T2}}
+ `git flow config`{{execute T3}}
 
 Importer la feature
   `git flow release track v2.1.0`{{execute T3}}
