@@ -12,6 +12,6 @@ Après avoir suivi cette formation, vous serez en mesure de:
   git disponible sur un serveur distant.
   
   ...
-- **Partie 10:** utiliser une stratégie sipmle d'utilisation de Git, 
-  Suivre vos releases avec un worflow simpifié "Git Flow",
+- **Partie 10:** Utiliser une stratégie simple pour utiliser Git, 
+  suivre vos releases à l'aide d'un worflow simpifié "Git Flow",
 - **Partie 11:** travailler en mode collaboratif, et partager vos Releases avec "Git Flow"
