@@ -37,7 +37,7 @@ Vérifier que le Git Flow est bien présent
  `git flow release finish "v2.1.0"`{{execute T2}}
 
  ```
-Renseigner la version de la Release: dans chaque fichier texte  puis enregistre et sortir du fichier
+ * Renseigner la version de la Release: dans chacun des fichiers textes (touch ":wq!" pour sortir de chaque fichier)  
  ``` 
 
  Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
