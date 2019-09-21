@@ -65,14 +65,14 @@ Puis vous pouver la pousser sur le repo Central
 
 Importer les releases  v2.1.0 etv3.1.0
   `git pull --rebase origin master`{{execute T3}}
-
+ ```
+ _Répondre: yes
+  ```
 
 consulter les tags distants 
   `git ls-remote --tags origin`{{execute T3}}
 
- ```
- _Répondre: yes
-  ```
+
 
 Recupèrer les tags développés
   `git pull origin --tags`{{execute T3}}
