@@ -69,7 +69,7 @@ Importer les releases  v2.1.0 etv3.1.0
  _Répondre: yes
   ```
 
-consulter les tags distants 
+Consulter les tags distants 
   `git ls-remote --tags origin`{{execute T3}}
 
 
@@ -82,7 +82,19 @@ Lister les tags
   `git tag`{{execute T3}}
 
 
-Listerles fichiers quecontient la release 2.1.0
+
+Lister les fichiers que contient la release 2.1.0
+pour commencer (1) relancer la liste des tags et leurs commits
+  `git ls-remote --tags origin`{{execute T3}}
+
+                (2) noter le commit id de la release v2.1.0 
+  `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
+
+                (3) lister tous les fichiers de la Release du Commit extrait
+  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'`{{execute T3}}
+
+
+Lister les fichiers que contient la release 2.1.0
   `git show v2.1.0^{tree}`{{execute T3}}
 
 Mettre la release v2.1.0  dans une branche parallèlè séparée
