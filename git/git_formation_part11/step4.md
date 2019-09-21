@@ -62,15 +62,17 @@ Puis vous pouver la pousser sur le repo Central
  
 #### L'équipe de "Production" reçoit la Release
 
- consulter les tags distants 
+
+Importer les releases  v2.1.0 etv3.1.0
+  `git pull --rebase origin master`{{execute T3}}
+
+
+consulter les tags distants 
   `git ls-remote --tags origin`{{execute T3}}
 
-Recupèrer les dev de l'autre équipe
-  `git pull --rebase origin master`{{execute T3}}
-
-
-Toutes les release ont été impotée  v2.1.0 etv3.1.0
-  `git pull --rebase origin master`{{execute T3}}
+ ```
+ _Répondre: yes
+  ```
 
 Recupèrer les tags développés
   `git pull origin --tags`{{execute T3}}
