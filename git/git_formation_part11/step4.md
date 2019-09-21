@@ -62,18 +62,28 @@ Puis vous pouver la pousser sur le repo Central
  
 #### L'équipe de "Production" reçoit la Release
 
+ consulter les tags distants 
+  `git ls-remote --tags origin`{{execute T3}}
+
+Recupèrer les dev de l'autre équipe
+  `git pull --rebase origin master`{{execute T3}}
+
+
+Recupèrer les tags dev de l'autre équipe
+  `git pull origin --tags`{{execute T3}}
+
+
+
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T3}}
 
 
- consulter les tags distants 
-  `git ls-remote --tags origin`{{execute T3}}
 
  Recupèrer les tags
   `git fetch origin 'refs/tags/v2.1.0'`{{execute T3}}
 
 Recupèrer une release dans une branche local
-  `git checkout -b branch2.1.0 v2.1.0`{{execute T3}}
+  `git checkout -b branch2.1.0 <commit id>`{{execute T3}}
 
 Consulter une release 
   `git show v2.1.0`{{execute T3}}
@@ -84,8 +94,7 @@ Consulter son commit correspondant
 aaaaaaaaaaaaaa    
 
 
-Recupèrer les dev de l'autre équipe
-  `git pull --rebase origin master`{{execute T3}}
+
 
 Importer la feature
   `git flow release track v2.1.0`{{execute T3}}
