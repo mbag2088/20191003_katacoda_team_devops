@@ -1,4 +1,4 @@
-#### L'équipe n° 1, dev développe en utilisant le Git Glow
+#### L'équipe de "Développement" utilise le Git Glow
  
 Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 Vérifier que le Git Flow est bien présent
@@ -60,7 +60,7 @@ Puis vous pouver la pousser sur le repo Central
   
     
  
-#### L'équipe n° 2 dev, développe et utilise le Git Glow
+#### L'équipe de "Production" reçoit la Release
 
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T3}}
