@@ -69,21 +69,35 @@ Recupèrer les dev de l'autre équipe
   `git pull --rebase origin master`{{execute T3}}
 
 
-Recupèrer les tags dev de l'autre équipe
+Toutes les release ont été impotée  v2.1.0 etv3.1.0
+  `git pull --rebase origin master`{{execute T3}}
+
+Recupèrer les tags développés
   `git pull origin --tags`{{execute T3}}
 
+
+Mettre la release v2.1.0  dans une branche parallèlè séparée
+  `git checkout -b branch_v2.1.0 v2.1.0`{{execute T3}}
+
+Lister la branche créée
+  `git branch`{{execute T3}}
+
+
+
+
+aaaaaaaaaaaaaaaaa
 
 
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T3}}
 
 
+  
 
  Recupèrer les tags
   `git fetch origin 'refs/tags/v2.1.0'`{{execute T3}}
 
-Recupèrer une release dans une branche local
-  `git checkout -b branch2.1.0 <commit id>`{{execute T3}}
+
 
 Consulter une release 
   `git show v2.1.0`{{execute T3}}
