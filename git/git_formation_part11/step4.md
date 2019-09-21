@@ -85,6 +85,10 @@ Lister les tags
 Mettre la release v2.1.0  dans une branche parallèlè séparée
   `git checkout -b branch_v2.1.0 v2.1.0`{{execute T3}}
 
+Lister les fichiers de la release v2.1.0 récupèrés dans la branche paralèlle
+  `ls`{{execute T3}}
+
+
 Lister la branche créée
   `git branch`{{execute T3}}
 
