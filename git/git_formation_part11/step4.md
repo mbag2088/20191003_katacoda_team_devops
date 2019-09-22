@@ -22,6 +22,9 @@ Vérifier que le Git Flow est bien présent
  Créer un fichier 'log/readmev2.1.0'
  `touch log/readmev2.1.0`{{execute T2}}
  
+  Ajouter le fichier dans la "Staging Area" (cache)
+ `git add log/readmev2.1.0`{{execute T2}}
+ 
  Commiter la nouvelle release dans le Repository local 
   `git commit -m "ajout fichiers de la v2.1.0 "`{{execute T2}}
    
@@ -84,13 +87,13 @@ pour commencer (1) lancer la liste des tags et commits des Releases
  
  Lister le contenu d'une release  v2.1.0, qui accompagera la livraison pour l'équipe de Production
 pour commencer (1) lancer la liste des tags et commits des Releases
-  `git ls-remote --tags origin`{{execute T3}}
+  `git ls-remote --tags origin`{{execute T1}}
 
                 (2) noter le commit id de la release v2.1.0 
-  `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
+  `git ls-remote --tags origin | grep v2.1.0$`{{execute T1}}
 
                 (3) La commande définitive est prête! lancez là!:
-  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
+  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T1}}
  
 #### L'équipe de "Production" reçoit la livraison des Releases
 
