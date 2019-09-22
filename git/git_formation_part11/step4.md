@@ -58,10 +58,36 @@ Consulter à présent les branches actives
 Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
   
-    
- 
-#### L'équipe de "Production" reçoit la Release
+  
+Lister le contenu d'une release  v2.1.0, qui accompagera la livraison pour l'équipe de Production
+pour commencer (1) lancer la liste des tags et commits des Releases
+  `git ls-remote --tags origin`{{execute T3}}
 
+                (2) noter le commit id de la release v2.1.0 
+  `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
+
+                (3) La commande définitive est prête! lancez là!:
+  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
+
+
+ #### `Le contenu des releases peut également être consulté sur le Repository Central avant la mise en production`  
+ 
+ Vérifier la connexion au `Repository Central GIT  (remote)`
+ 
+`cd repocentral`{{execute T1}}
+
+ 
+ Lister le contenu d'une release  v2.1.0, qui accompagera la livraison pour l'équipe de Production
+pour commencer (1) lancer la liste des tags et commits des Releases
+  `git ls-remote --tags origin`{{execute T3}}
+
+                (2) noter le commit id de la release v2.1.0 
+  `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
+
+                (3) La commande définitive est prête! lancez là!:
+  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
+ 
+#### L'équipe de "Production" reçoit la livraison des Releases
 
 Importer les releases  v2.1.0 etv3.1.0
   `git pull --rebase origin master`{{execute T3}}
@@ -90,7 +116,7 @@ pour commencer (1) relancer la liste des tags et leurs commits
                 (2) noter le commit id de la release v2.1.0 
   `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
 
-                (3) lister tous les fichiers de la Release du Commit extrait
+                (3) La commande définitive est prête! lancez là!:
   `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
 
 
