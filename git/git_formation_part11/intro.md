@@ -14,7 +14,8 @@ Rappel:
 #### A présent, nous allons voir comment organiser les projets avec la méthode Git Flow: 
 
 - Créer une release, 
-- la partager à une autre équipe
+- la partager à une autre équipe,
+- lister le contenu des release disponibles, avant de les importer localement
 
 
 
