@@ -14,11 +14,16 @@ Vérifier que le Git Flow est bien présent
  `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v2.1.0.sh;cat script_v2.1.0.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
- `git add script_v2.1.0.sh `{{execute T2}}
+ `git add script_v2.1.0.sh`{{execute T2}}
+ 
+ Créer un sous répertoire 'log'
+ `mkdir log`{{execute T2}}
+ 
+ Créer un fichier 'log/readmev2.1.0'
+ `touch log/readmev2.1.0`{{execute T2}}
  
  Commiter la nouvelle release dans le Repository local 
- 
- `git commit -m "ajout du script_v2.1.0.sh repo local "`{{execute T2}}
+  `git commit -m "ajout fichiers de la v2.1.0 "`{{execute T2}}
    
  Vérifier le nouveau commmit
  `git log --oneline`{{execute T2}}
@@ -70,7 +75,7 @@ pour commencer (1) lancer la liste des tags et commits des Releases
   `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
 
 
- #### `Le contenu des releases peut également être consulté sur le Repository Central avant la mise en production`  
+ #### Le contenu des releases peut également être consulté sur le Repository Central avant la mise en production  
  
  Vérifier la connexion au `Repository Central GIT  (remote)`
  
