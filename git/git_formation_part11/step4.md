@@ -91,7 +91,7 @@ pour commencer (1) relancer la liste des tags et leurs commits
   `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
 
                 (3) lister tous les fichiers de la Release du Commit extrait
-  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'`{{execute T3}}
+  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}|sh'`{{execute T3}}
 
 
 Lister les fichiers que contient la release 2.1.0
