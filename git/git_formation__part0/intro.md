@@ -14,4 +14,5 @@ Après avoir suivi cette formation, vous serez en mesure de:
   ...
 - **Partie 10:** Utiliser une stratégie simple pour utiliser Git, 
   suivre vos releases à l'aide d'un worflow simpifié "Git Flow",
-- **Partie 11:** travailler en mode collaboratif avec Git Flow, partager vos Releases , lister le contenu des releases avant import
+- **Partie 11:** travailler en mode collaboratif avec Git Flow, partager vos Releases , lister le contenu des releases avant leur MEP
+> lister le "Delta" qu'apporte une nouvelle version (par rapport à la version en place)
