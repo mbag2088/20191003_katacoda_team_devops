@@ -4,35 +4,35 @@ Lors du précédent cours, vous avez  appris à initier une release dans un git 
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T2}}
 
- Démarrer une nouvelle Release  "2.1.0"
- `git flow release start "v2.1.0"`{{execute T2}}
+ Démarrer une nouvelle Release  "2.0.0"
+ `git flow release start "v2.0.0"`{{execute T2}}
  
  Vérifier la création de la release
  `git flow release list`{{execute T2}}
 
  Créer un fichier script_12.sh
- `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v2.1.0.sh;cat script_v2.1.0.sh`{{execute T2}}
+ `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v200.sh;cat script_v200.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
- `git add script_v2.1.0.sh`{{execute T2}}
+ `git add script_v200.sh`{{execute T2}}
  
  Créer un sous répertoire 'log'
  `mkdir log`{{execute T2}}
  
- Créer un fichier 'log/readmev2.1.0'
- `touch log/readmev2.1.0`{{execute T2}}
+ Créer un fichier 'log/readmev200'
+ `touch log/readmev200`{{execute T2}}
  
   Ajouter le fichier dans la "Staging Area" (cache)
- `git add log/readmev2.1.0`{{execute T2}}
+ `git add log/readmev200`{{execute T2}}
  
  Commiter la nouvelle release dans le Repository local 
-  `git commit -m "ajout fichiers de la v2.1.0 "`{{execute T2}}
+  `git commit -m "ajout fichiers de la v2.0.0 "`{{execute T2}}
    
  Vérifier le nouveau commmit
  `git log --oneline`{{execute T2}}
  
  Publier le Git Flow 
- `git flow release publish "v2.1.0"`{{execute T2}}
+ `git flow release publish "v2.0.0"`{{execute T2}}
  
  ```
  _Répondre: yes
@@ -42,10 +42,10 @@ Vérifier que le Git Flow est bien présent
  `git flow log`{{execute T2}}
  
  Terminer le Git Flow en cours 
- `git flow release finish "v2.1.0"`{{execute T2}}
+ `git flow release finish "v2.0.0"`{{execute T2}}
 
  ```
- * Renseigner la ligne version "v2.1.0" dans chacun des fichiers textes (touch ":wq!" pour sortir de chaque fichier)  
+ * Renseigner la ligne version "v2.0.0" dans chacun des fichiers textes (touch ":wq!" pour sortir de chaque fichier)  
  ``` 
 
 Lister les tags en cours
@@ -70,14 +70,14 @@ Puis vous pouver la pousser sur le repo Central
 Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communiquer à l'équipe d'exploit avant la mise en Production 
 pour cela:
 
-Lister les fichiers que contient la release 2.1.0
-  `git show v2.1.0^{tree}`{{execute T2}}
+Lister les fichiers que contient la release 2.0.0
+  `git show v2.0.0^{tree}`{{execute T2}}
   
   
  
-#### L'équipe de "Production", livre la Releases "v2.1.0" en production
+#### L'équipe de "Production", livre la Releases "v2.0.0" en production
 
-Importer la releases  v2.1.0 à disposition
+Importer la releases  v2.0.0 à disposition
   `git pull --rebase origin master`{{execute T3}}
  ```
  _Répondre: yes
@@ -97,15 +97,15 @@ Lister les tags
 
 
 
-Vous pouvez à tout moment lister les fichiers de la release v2.1.0 que vous venez d'importer
+Vous pouvez à tout moment lister les fichiers de la release v2.0.0 que vous venez d'importer
 
-Lister les fichiers que contient la release 2.1.0
-  `git show v2.1.0^{tree}`{{execute T3}}
+Lister les fichiers que contient la release 2.0.0
+  `git show v2.0.0^{tree}`{{execute T3}}
 
-Vous pouvez aussi importer la release "v2.1.0"  dans une branche séparée
-  `git checkout -b branch_v2.1.0 v2.1.0`{{execute T3}}
+Vous pouvez aussi importer la release "v2.0.0"  dans une branche séparée
+  `git checkout -b branch_v2.0.0 v2.0.0`{{execute T3}}
 
-Lister les fichiers de la release "v2.1.0" importés 
+Lister les fichiers de la release "v2.0.0" importés 
   `ls`{{execute T3}}
 
 Lister la branche créée
