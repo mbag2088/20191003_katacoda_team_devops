@@ -72,7 +72,12 @@ Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communi
 pour cela:
 
 Lister les fichiers que contient la release 3.0.0
-  `git show v3.0.0^{tree}`{{execute T2}}
+   Commande n°1
+  `git show v3.0.0^{tree}`{{execute T3}}
+  
+  ou 
+  Commande n°2  (arborescence complète)
+  `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T3}}
   
   
  
@@ -101,7 +106,13 @@ Lister les tags
 Vous pouvez à tout moment lister les fichiers de la release v3.0.0 que vous venez d'importer
 
 Lister les fichiers que contient la release 3.0.0
-  `git show v3.0.0^{tree}`{{execute T3}}
+Lister les fichiers que contient la release 2.0.0
+   Commande n°1
+  `git show v3.0.0^{tree}`{{execute T2}}
+  
+  ou 
+  Commande n°2  (arborescence complète)
+  `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T2}}
 
 Vous pouvez aussi importer la release "v3.0.0"  dans une branche séparée
   `git checkout -b branch_v3.0.0 v3.0.0`{{execute T3}}
