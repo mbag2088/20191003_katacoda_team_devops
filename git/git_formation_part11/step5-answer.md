@@ -18,7 +18,7 @@ Vérifier que le Git Flow est bien présent
  `git add script_v300.sh`{{execute T2}}
  
  Créer un sous répertoire 'log'
- `mkdir log`{{execute T2}}
+ `mkdir -p log`{{execute T2}}
  
  Créer un fichier 'log/readmev300'
  `touch log/readmev300`{{execute T2}}
