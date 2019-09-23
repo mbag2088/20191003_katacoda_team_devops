@@ -1,5 +1,5 @@
 #### Correction
-#### L'équipe de "Développement" utilise le Git Glow
+#### L'équipe de "Développement" utilise le Git Flow
  
 Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 Vérifier que le Git Flow est bien présent
