@@ -10,7 +10,7 @@ Vérifier que le Git Flow est bien présent
  Vérifier la création de la release
  `git flow release list`{{execute T2}}
 
- Créer un fichier script_12.sh
+ Créer un fichier script_200.sh
  `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v200.sh;cat script_v200.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
