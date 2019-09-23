@@ -69,6 +69,7 @@ Puis vous pouver la pousser sur le repo Central
 
 Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communiquer à l'équipe d'exploit avant la mise en Production 
 pour cela:
+
                 (1) lancer la liste des tags et commits des Releases 
   `git ls-remote --tags origin`{{execute T2}}
 
