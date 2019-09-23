@@ -82,7 +82,10 @@ pour cela:
   
     `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
   
-Vous pouvez 
+ 
+ Vous pouvez aussi envoyer pour la MEP: le delta qu'apporte la nouvelle version v3.0.0 / par rapport à celle déjà en place (v2.0.0),
+   `git diff v2.0.0 v3.0.0`{{execute T2}}
+   
  
 #### L'équipe de "Production", livre la Release "v3.0.0" en production
 
