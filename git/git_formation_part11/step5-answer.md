@@ -84,7 +84,7 @@ Lister les fichiers que contient la release 3.0.0
   
   
  
-#### L'équipe de "Production", livre la Releases "v3.0.0" en production
+#### L'équipe de "Production", livre la Release "v3.0.0" en production
 
 Importer la releases  v3.0.0 à disposition
   `git pull --rebase origin master`{{execute T3}}
