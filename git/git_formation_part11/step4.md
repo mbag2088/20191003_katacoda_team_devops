@@ -100,7 +100,7 @@ Lister les fichiers que contient la release 2.0.0
  
  
  
-#### L'équipe de "Production", livre la Releases "v2.0.0" en production
+#### L'équipe de "Production", livre la Release "v2.0.0" en production
 
 Importer la releases  v2.0.0 à disposition
 
