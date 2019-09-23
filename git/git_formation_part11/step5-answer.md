@@ -1,17 +1,17 @@
 #### Correction
-#### L'équipe de "Développement" utilise le Git Flow
+#### L'équipe de "Développement" initie une nouvelle version v3.0.0
  
 Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T2}}
 
- Démarrer une nouvelle Release  "3.0.0"
+ Démarrer une nouvelle Release  "v3.0.0"
  `git flow release start "v3.0.0"`{{execute T2}}
  
  Vérifier la création de la release
  `git flow release list`{{execute T2}}
 
- Créer un fichier script_300.sh.sh
+ Créer un fichier script_v300.sh.sh
  `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v300.sh;cat script_v300.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
@@ -46,14 +46,14 @@ Vérifier que le Git Flow est bien présent
  `git flow release finish "v3.0.0"`{{execute T2}}
 
  ```
- * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichiers  
+ * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichier  
  (touche ":wq!" pour sortir de chaque fichier)  
  ``` 
 
 Lister les tags en cours
  `git tag`{{execute T2}}
 
- Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
+ Regarder les logs, vous constatez que nous avons fusionné les release -->  dans la branche de développement & dans la  master 
  `git flow log`{{execute T2}}
 
 
@@ -123,7 +123,7 @@ Vous pouvez aussi importer la release "v3.0.0"  dans une branche séparée
 
   `git checkout -b branch_v3.0.0 v3.0.0`{{execute T3}}
 
-Lister les fichiers de la release "v3.0.0" importés 
+Lister les fichiers de la release "v3.0.0"  
 
   `ls`{{execute T3}}
 
