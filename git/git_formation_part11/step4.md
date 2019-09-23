@@ -141,3 +141,7 @@ Lister la branche créée
 Après avoir consulté la release: revenir sur la branche master
 
   `git checkout branch`{{execute T3}}
+  
+  Lister la branche master en cours
+
+  `git branch`{{execute T3}}
