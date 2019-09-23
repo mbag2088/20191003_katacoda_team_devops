@@ -95,6 +95,7 @@ pour cela:
   
   ou 
   Commande n°2  (arborescence complète)
+  
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
  
 
@@ -137,7 +138,7 @@ Lister les fichiers que contient la release 2.0.0
   ou 
   Commande n°2  (arborescence complète)
   
-  `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}`|sh`{{execute T3}}
+  `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
  
 
 Vous pouvez aussi importer la release "v2.0.0"  dans une branche séparée
