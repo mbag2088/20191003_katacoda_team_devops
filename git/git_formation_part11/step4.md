@@ -15,7 +15,7 @@ Vérifier que le Git Flow est bien présent
 
  Créer un fichier script_200.sh
  
- `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_v200.sh;cat script_v200.sh`{{execute T2}}
+ `echo "printf 'Ceci est le script de la nouvelle fonctionalité v2.0.0 \n'" > script_v200.sh;cat script_v200.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
  
