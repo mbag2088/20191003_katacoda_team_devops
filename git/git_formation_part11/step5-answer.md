@@ -122,7 +122,7 @@ Pour lister les fichiers que contient la release 3.0.0
   
   `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
 
-Vous pouvez aussi importer la release "v3.0.0"  dans une branche séparée
+Vous pouvez aussi importer la release "v3.0.0"  dans une branche temporaire, paralèlle
 
   `git checkout -b branch_v3.0.0 v3.0.0`{{execute T3}}
 
