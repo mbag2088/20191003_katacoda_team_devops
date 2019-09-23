@@ -86,10 +86,10 @@ Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
   
 
-Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communiquer à l'équipe d'exploit avant la mise en Production 
+Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communiquer à l'équipe d'exploit pour sa mise en Production, 
 pour cela:
 
-Lister les fichiers que contient la release 2.0.0
+   Lister les fichiers que contient la release 2.0.0
    Commande n°1
   `git show v2.0.0^{tree}`{{execute T2}}
   
@@ -98,7 +98,9 @@ Lister les fichiers que contient la release 2.0.0
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T2}}
  
  
- 
+ Vous pouvez aussi envoyer le delta entre la version v2.0.0  et v3.0.0, à l'équipe de production
+   `git diff v2.0.0 v3.0.0`{{execute T2}}
+  
  
 #### L'équipe de "Production", livre la Release "v2.0.0" en production
 
