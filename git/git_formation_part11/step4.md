@@ -97,9 +97,7 @@ pour cela:
   Commande n°2  (arborescence complète)
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T2}}
  
- 
- Vous pouvez aussi envoyer le delta entre la version v2.0.0  et v3.0.0, à l'équipe de production
-   `git diff v2.0.0 v3.0.0`{{execute T2}}
+
   
  
 #### L'équipe de "Production", livre la Release "v2.0.0" en production
