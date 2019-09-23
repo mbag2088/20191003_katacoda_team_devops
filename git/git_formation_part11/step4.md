@@ -37,6 +37,8 @@ Vérifier que le Git Flow est bien présent
  ```
  _Répondre: yes
   ```
+                (2) noter le commit id de la release v2.1.0 
+  `git ls-remote --tags origin | grep v2.1.0$`{{execute T2}}
  
  Regarder les logs 
  `git flow log`{{execute T2}}
@@ -69,7 +71,7 @@ Puis vous pouver la pousser sur le repo Central
 
 Vous pouvez à tout moment lister le contenu d'une release, pour le communiquer à l'équipe de Mise en Production (par ex)
 pour cela:
-                `(1) lancer la liste des tags et commits des Releases
+                * (1) lancer la liste des tags et commits des Releases *
   `git ls-remote --tags origin`{{execute T2}}
 
                 (2) noter le commit id de la release v2.1.0 
