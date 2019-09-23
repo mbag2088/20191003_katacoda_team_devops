@@ -1,5 +1,5 @@
 #### Correction
-#### L'équipe de "Développement" initie une nouvelle version v3.0.0
+#### L'équipe de "Développement" initie une nouvelle version v3.0.0 et son workflow
  
 Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 Vérifier que le Git Flow est bien présent
