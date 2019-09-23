@@ -69,7 +69,7 @@ Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
   
 
-Vous pouvez -à tout moment- lister le contenu d'une release, afin d'en communiquer le contenu à l'équipe de Production pour sa MEP, 
+(Pour accompagner la MEP): Vous pouvez -à tout moment- lister le contenu d'une release, afin d'en communiquer le contenu à l'équipe de Production pour sa MEP, 
 pour cela:
 
   Lister les fichiers que contient la release 3.0.0
@@ -83,7 +83,7 @@ pour cela:
     `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
   
  
- Vous pouvez aussi envoyer pour la MEP: le delta qu'apporte la nouvelle version v3.0.0 / par rapport à celle déjà en place (v2.0.0),
+(Pour acompagner la MEP) Vous pouvez aussi envoyer: le delta qu'apporte la nouvelle version v3.0.0 / par rapport à celle déjà en place (v2.0.0),
    `git diff v2.0.0 v3.0.0`{{execute T2}}
    
  
