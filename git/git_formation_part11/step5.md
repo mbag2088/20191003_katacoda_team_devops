@@ -7,7 +7,7 @@
 
 > pusher cette release vers le repo central
 
-> envoyer le contenu de la release à l'équipe exploitation
+> lister le contenu d'une release, afin de l'envoyer à l'équipe de Mise en Production
 
 > mettre en production la Release
 
