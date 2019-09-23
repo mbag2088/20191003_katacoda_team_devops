@@ -71,7 +71,7 @@ Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communi
 pour cela:
 
 Lister les fichiers que contient la release 2.1.0
-  `git show v2.1.0^{tree}`{{execute T3}}
+  `git show v2.1.0^{tree}`{{execute T2}}
   
   
  
