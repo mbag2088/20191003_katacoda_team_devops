@@ -1,4 +1,4 @@
-[Correction]
+#### Correction
 #### L'équipe de "Développement" utilise le Git Flow
  
 Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
@@ -113,4 +113,4 @@ Lister la branche créée
   `git branch`{{execute T3}}
 
 Après avoir consulté la release: revenir sur la branche master
-  `git branch`{{execute T3}}
+  `git checkout master`{{execute T3}}
