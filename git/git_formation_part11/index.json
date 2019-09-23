@@ -20,6 +20,11 @@
       {
         "title": "Utilisation du Git Flow",
         "text": "step4.md"
+      },      
+      {
+        "title": "Exercice 1: création d'une release et livraison en prod",
+        "text": "step5.md",
+        "answer": "step5-answer.md"
       }
     ],
     "intro": {
