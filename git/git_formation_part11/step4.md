@@ -128,11 +128,14 @@ Lister les tags
 Vous pouvez à tout moment lister les fichiers de la release v2.0.0 que vous venez d'importer
 
 Lister les fichiers que contient la release 2.0.0
+
    Commande n°1
+   
   `git show v2.0.0^{tree}`{{execute T3}}
   
   ou 
   Commande n°2  (arborescence complète)
+  
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T3}}
  
 
