@@ -65,7 +65,8 @@ Vérifier que le Git Flow est bien présent
 Lister les tags en cours
 
  `git tag`{{execute T2}}
-
+ 
+####
  Regarder les logs, vous constatez que nous avons fusionné les release :  dans la branche de développement & dans la master 
  
  `git flow log`{{execute T2}}
@@ -100,10 +101,12 @@ pour cela:
  
 
   
- 
+  
+####
+#### 
 #### L'équipe de "Production", livre la Release "v2.0.0" en production
 
-Importer la releases  v2.0.0 à disposition
+Importer la release  v2.0.0 à disposition
 
   `git pull --rebase origin master`{{execute T3}}
  ```
