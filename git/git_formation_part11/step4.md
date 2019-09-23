@@ -27,7 +27,7 @@ Vérifier que le Git Flow est bien présent
  
  Créer un fichier 'log/readme_v200'
  
- `touch log/readme_v200`{{execute T2}}
+ `echo "readme v2.0.0" > log/readme_v200`{{execute T2}}
  
   Ajouter le fichier dans la "Staging Area" (cache)
   
@@ -58,7 +58,7 @@ Vérifier que le Git Flow est bien présent
  `git flow release finish "v2.0.0"`{{execute T2}}
 
  ```
- * vous devez obligatoirement renseigner la ligne version "v2.0.0" dans le second fichier
+ * vous devez obligatoirement renseigner la version "v2.0.0" dans le second fichier
  (puis touche ":wq!" pour sortir de chaque fichier)  
  ``` 
 
