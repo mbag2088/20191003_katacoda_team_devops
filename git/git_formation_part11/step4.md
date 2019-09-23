@@ -37,8 +37,6 @@ Vérifier que le Git Flow est bien présent
  ```
  _Répondre: yes
   ```
-                (2) noter le commit id de la release v2.1.0 
-  `git ls-remote --tags origin | grep v2.1.0$`{{execute T2}}
  
  Regarder les logs 
  `git flow log`{{execute T2}}
@@ -50,7 +48,7 @@ Vérifier que le Git Flow est bien présent
  * Renseigner la ligne version "v2.1.0" dans chacun des fichiers textes (touch ":wq!" pour sortir de chaque fichier)  
  ``` 
 
-Lister le tag en cours
+Lister les tags en cours
  `git tag`{{execute T2}}
 
  Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
@@ -69,9 +67,9 @@ Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
   
 
-Vous pouvez à tout moment lister le contenu d'une release, pour le communiquer à l'équipe de Mise en Production (par ex)
+Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communiquer à l'équipe d'exploit avant la mise en Production 
 pour cela:
-                * (1) lancer la liste des tags et commits des Releases *
+                (1) lancer la liste des tags et commits des Releases 
   `git ls-remote --tags origin`{{execute T2}}
 
                 (2) noter le commit id de la release v2.1.0 
@@ -83,9 +81,9 @@ pour cela:
 
  
  
-#### L'équipe de "Production" reçoit la livraison des Releases
+#### L'équipe de "Production", livre la Releases "v2.1.0" en production
 
-Importer les releases  v2.1.0 etv3.1.0
+Importer la releases  v2.1.0 à disposition
   `git pull --rebase origin master`{{execute T3}}
  ```
  _Répondre: yes
@@ -105,91 +103,19 @@ Lister les tags
 
 
 
-Lister les fichiers que contient la release 2.1.0
-pour commencer (1) relancer la liste des tags et leurs commits
-  `git ls-remote --tags origin`{{execute T3}}
-
-                (2) noter le commit id de la release v2.1.0 
-  `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
-
-                (3) La commande définitive est prête! lancez là!:
-  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
-
+Vous pouvez à tout moment lister les fichiers de la release v2.1.0 que vous venez d'importer
 
 Lister les fichiers que contient la release 2.1.0
   `git show v2.1.0^{tree}`{{execute T3}}
 
-Mettre la release v2.1.0  dans une branche parallèlè séparée
+Vous pouvez importer la release "v2.1.0"  dans une nouvelle branche séparée
   `git checkout -b branch_v2.1.0 v2.1.0`{{execute T3}}
 
-Lister les fichiers de la release v2.1.0 récupèrés dans la branche paralèlle
+Lister les fichiers de la release "v2.1.0" importés 
   `ls`{{execute T3}}
-
 
 Lister la branche créée
   `git branch`{{execute T3}}
 
-
-
-
-aaaaaaaaaaaaaaaaa
-
-
-Vérifier que le Git Flow est bien présent
- `git flow config`{{execute T3}}
-
-
-  
-
- Recupèrer les tags
-  `git fetch origin 'refs/tags/v2.1.0'`{{execute T3}}
-
-
-
-Consulter une release 
-  `git show v2.1.0`{{execute T3}}
-
-Consulter son commit correspondant
-  `git log `{{execute T3}}
-
-aaaaaaaaaaaaaa    
-
-
-
-
-Importer la feature
-  `git flow release track v2.1.0`{{execute T3}}
-
-ou Importer la release
-  `git pull origin release/v2.1.0`{{execute T3}}
-
- 
- Regarder les logs 
-  `git flow log`{{execute T3}}
-  
-
- #### `Repository Central`  
- 
- Vérifier la connexion au `Repository Central GIT  (remote)`
- 
-`cd repocentral`{{execute T1}}
-
- Constater que la branche release est bien centralisé
- `git branch`{{execute T1}}
- 
- #### Le contenu des releases peut également être consulté sur le Repository Central avant la mise en production  
- 
- Vérifier la connexion au `Repository Central GIT  (remote)`
- 
-`cd repocentral`{{execute T1}}
-
- 
- Lister le contenu d'une release  v2.1.0, qui accompagera la livraison pour l'équipe de Production
-pour commencer (1) lancer la liste des tags et commits des Releases
-  `git ls-remote --tags origin`{{execute T1}}
-
-                (2) noter le commit id de la release v2.1.0 
-  `git ls-remote --tags origin | grep v2.1.0$`{{execute T1}}
-
-                (3) La commande définitive est prête! lancez là!:
-  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T1}}
+Vous pouvez revenir sur la branche master
+  `git branch`{{execute T3}}
