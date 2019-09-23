@@ -75,12 +75,12 @@ pour cela:
   Lister les fichiers que contient la release 3.0.0
     Commande n°1
    
-   `git show v3.0.0^{tree}`{{execute T3}}
+   `git show v3.0.0^{tree}`{{execute T2}}
   
     ou 
    Commande n°2  (arborescence complète)
   
-    `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
+    `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
   
  
  Vous pouvez aussi envoyer pour la MEP: le delta qu'apporte la nouvelle version v3.0.0 / par rapport à celle déjà en place (v2.0.0),
@@ -115,12 +115,12 @@ Pour lister les fichiers que contient la release 3.0.0
 
    Commande n°1
    
-  `git show v3.0.0^{tree}`{{execute T2}}
+  `git show v3.0.0^{tree}`{{execute T3}}
   
   ou 
   Commande n°2  (arborescence complète)
   
-  `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}`|sh{{execute T2}}
+  `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}`|sh{{execute T3}}
 
 Vous pouvez aussi importer la release "v3.0.0"  dans une branche séparée
 
