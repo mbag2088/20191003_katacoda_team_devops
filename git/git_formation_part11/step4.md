@@ -97,6 +97,8 @@ Lister les fichiers que contient la release 2.0.0
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T2}}
  
  
+ 
+ 
 #### L'équipe de "Production", livre la Releases "v2.0.0" en production
 
 Importer la releases  v2.0.0 à disposition
