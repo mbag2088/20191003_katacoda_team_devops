@@ -73,18 +73,7 @@ pour cela:
 Lister les fichiers que contient la release 2.1.0
   `git show v2.1.0^{tree}`{{execute T3}}
   
-  ```
-                (1) lancer la liste des tags et commits des Releases 
-  `git ls-remote --tags origin`{{execute T2}}
-
-                (2) noter le commit id de la release v2.1.0 
-  `git ls-remote --tags origin | grep v2.1.0$`{{execute T2}}
-
-                (3) La commande définitive est prête! lancez là!:
-  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
-```
-
- 
+  
  
 #### L'équipe de "Production", livre la Releases "v2.1.0" en production
 
@@ -113,7 +102,7 @@ Vous pouvez à tout moment lister les fichiers de la release v2.1.0 que vous ven
 Lister les fichiers que contient la release 2.1.0
   `git show v2.1.0^{tree}`{{execute T3}}
 
-Vous pouvez importer la release "v2.1.0"  dans une nouvelle branche séparée
+Vous pouvez aussi importer la release "v2.1.0"  dans une branche séparée
   `git checkout -b branch_v2.1.0 v2.1.0`{{execute T3}}
 
 Lister les fichiers de la release "v2.1.0" importés 
@@ -122,5 +111,5 @@ Lister les fichiers de la release "v2.1.0" importés
 Lister la branche créée
   `git branch`{{execute T3}}
 
-Vous pouvez revenir sur la branche master
+Après avoir consulté la release: revenir sur la branche master
   `git branch`{{execute T3}}
