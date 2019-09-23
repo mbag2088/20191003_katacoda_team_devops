@@ -46,7 +46,8 @@ Vérifier que le Git Flow est bien présent
  `git flow release finish "v3.0.0"`{{execute T2}}
 
  ```
- * Renseigner la ligne version "v3.0.0" dans chacun des fichiers textes (touch ":wq!" pour sortir de chaque fichier)  
+ * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichiers  
+ (touche ":wq!" pour sortir de chaque fichier)  
  ``` 
 
 Lister les tags en cours
