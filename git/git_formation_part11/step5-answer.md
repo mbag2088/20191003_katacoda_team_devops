@@ -20,11 +20,11 @@ Vérifier que le Git Flow est bien présent
  Créer un sous répertoire 'log'
  `mkdir -p log`{{execute T2}}
  
- Créer un fichier 'log/readmev300'
- `touch log/readmev300`{{execute T2}}
+ Créer un fichier 'log/readme_v300'
+ `touch log/readme_v300`{{execute T2}}
  
   Ajouter le fichier dans la "Staging Area" (cache)
- `git add log/readmev300`{{execute T2}}
+ `git add log/readme_v300`{{execute T2}}
  
  Commiter la nouvelle release dans le Repository local 
   `git commit -m "ajout fichiers de la v3.0.0 "`{{execute T2}}
@@ -73,10 +73,12 @@ pour cela:
 
 Lister les fichiers que contient la release 3.0.0
    Commande n°1
+   
   `git show v3.0.0^{tree}`{{execute T3}}
   
   ou 
   Commande n°2  (arborescence complète)
+  
   `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T3}}
   
   
@@ -106,22 +108,28 @@ Lister les tags
 Vous pouvez à tout moment lister les fichiers de la release v3.0.0 que vous venez d'importer
 
 Lister les fichiers que contient la release 3.0.0
-Lister les fichiers que contient la release 2.0.0
+
    Commande n°1
+   
   `git show v3.0.0^{tree}`{{execute T2}}
   
   ou 
   Commande n°2  (arborescence complète)
+  
   `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T2}}
 
 Vous pouvez aussi importer la release "v3.0.0"  dans une branche séparée
+
   `git checkout -b branch_v3.0.0 v3.0.0`{{execute T3}}
 
 Lister les fichiers de la release "v3.0.0" importés 
+
   `ls`{{execute T3}}
 
 Lister la branche créée
+
   `git branch`{{execute T3}}
 
 Après avoir consulté la release: revenir sur la branche master
+
   `git checkout master`{{execute T3}}
