@@ -25,13 +25,13 @@ Vérifier que le Git Flow est bien présent
  
  `mkdir log`{{execute T2}}
  
- Créer un fichier 'log/readmev200'
+ Créer un fichier 'log/readme_v200'
  
- `touch log/readmev200`{{execute T2}}
+ `touch log/readme_v200`{{execute T2}}
  
   Ajouter le fichier dans la "Staging Area" (cache)
   
- `git add log/readmev200`{{execute T2}}
+ `git add log/readme_v200`{{execute T2}}
  
  Commiter la nouvelle release dans le Repository local 
  
@@ -65,7 +65,7 @@ Lister les tags en cours
 
  `git tag`{{execute T2}}
 
- Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
+ Regarder les logs, vous constatez que nous avons fusionné les release :  dans la branche de développement & dans la master 
  
  `git flow log`{{execute T2}}
 
