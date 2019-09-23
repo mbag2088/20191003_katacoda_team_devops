@@ -66,16 +66,16 @@ Consulter à présent les branches actives
 Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
   
-  
+
 Lister le contenu d'une release  v2.1.0, qui accompagera la livraison pour l'équipe de Production
 pour commencer (1) lancer la liste des tags et commits des Releases
-  `git ls-remote --tags origin`{{execute T3}}
+  `git ls-remote --tags origin`{{execute T2}}
 
                 (2) noter le commit id de la release v2.1.0 
-  `git ls-remote --tags origin | grep v2.1.0$`{{execute T3}}
+  `git ls-remote --tags origin | grep v2.1.0$`{{execute T2}}
 
                 (3) La commande définitive est prête! lancez là!:
-  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
+  `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
 
 
  #### Le contenu des releases peut également être consulté sur le Repository Central avant la mise en production  
