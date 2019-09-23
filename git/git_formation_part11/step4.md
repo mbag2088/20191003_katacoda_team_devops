@@ -70,6 +70,10 @@ Puis vous pouver la pousser sur le repo Central
 Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communiquer à l'équipe d'exploit avant la mise en Production 
 pour cela:
 
+Lister les fichiers que contient la release 2.1.0
+  `git show v2.1.0^{tree}`{{execute T3}}
+  
+  ```
                 (1) lancer la liste des tags et commits des Releases 
   `git ls-remote --tags origin`{{execute T2}}
 
@@ -78,7 +82,7 @@ pour cela:
 
                 (3) La commande définitive est prête! lancez là!:
   `git ls-remote --tags origin | grep v2.1.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
-
+```
 
  
  
