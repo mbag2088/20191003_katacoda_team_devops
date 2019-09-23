@@ -89,10 +89,13 @@ Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communi
 pour cela:
 
 Lister les fichiers que contient la release 2.0.0
-
+   Commande n°1
   `git show v2.0.0^{tree}`{{execute T2}}
   
-  
+  ou 
+  Commande n°2  (arborescence complète)
+  `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T2}}
+ 
  
 #### L'équipe de "Production", livre la Releases "v2.0.0" en production
 
@@ -123,8 +126,13 @@ Lister les tags
 Vous pouvez à tout moment lister les fichiers de la release v2.0.0 que vous venez d'importer
 
 Lister les fichiers que contient la release 2.0.0
-
+   Commande n°1
   `git show v2.0.0^{tree}`{{execute T3}}
+  
+  ou 
+  Commande n°2  (arborescence complète)
+  `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh{{execute T3}}
+ 
 
 Vous pouvez aussi importer la release "v2.0.0"  dans une branche séparée
 
@@ -140,7 +148,7 @@ Lister la branche créée
 
 Après avoir consulté la release: revenir sur la branche master
 
-  `git checkout branch`{{execute T3}}
+  `git checkout master`{{execute T3}}
   
   Lister la branche master en cours
 
