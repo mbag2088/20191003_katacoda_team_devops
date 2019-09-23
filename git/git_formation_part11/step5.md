@@ -9,7 +9,7 @@
 
 > lister le contenu d'une release, et l'envoyer à l'équipe de Mise en Production
 
-> lister le Delta qu'apporte la v3.0.0: depuis la dernière version (v2.0.0)
+> lister le Delta qu'apporte la v3.0.0: par rapport à la release en place (v2.0.0)
 
-> mettre en production la Release v3.0.0
+> mettre en production la nouvelle Release v3.0.0
 
