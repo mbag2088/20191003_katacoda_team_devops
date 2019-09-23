@@ -21,7 +21,7 @@ Vérifier que le Git Flow est bien présent
  `mkdir -p log`{{execute T2}}
  
  Créer un fichier 'log/readme_v300'
- `touch log/readme_v300`{{execute T2}}
+ `echo "readme v3.0.0" > log/readme_v300`{{execute T2}}
  
   Ajouter le fichier dans la "Staging Area" (cache)
  `git add log/readme_v300`{{execute T2}}
