@@ -61,7 +61,7 @@ Vérifier que le Git Flow est bien présent
 
 A présent vous allez importer "tracker" (importer) la release  développée par l'autre équipe, et la faire évoluer
 
-Importer la release v4.0.0
+Tracker et Importer la release v4.0.0
 
   `git flow release track "v4.0.0"`{{execute T3}}
 
@@ -77,11 +77,11 @@ Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
   `git flow log`{{execute T3}}
 
  Ajout fichier  
- `git add script_new_v400.sh `{{execute T3}}
+ `git add script_new_equipe_2.sh `{{execute T3}}
  
  Commiter la nouvelle release dans le Repository local 
  
-  `git commit -m "ajout fichiers script_new_v400.sh "`{{execute T3}}
+  `git commit -m "ajout fichiers script_new_equipe_2.sh "`{{execute T3}}
 
 
  Publier le Git Flow 
@@ -89,13 +89,21 @@ Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
  `git flow release publish "v4.0.0"`{{execute T3}}
 
 
-#### L'équipe de "Développement" (1), track a son tour le nouveau fichier 
+#### L'équipe de "Développement" (1), raffrachit son tour, les modifications effectuées par la seconde équipe 
 
-Importer la release v4.0.0
+Importer les modifications effectuées sur la release v4.0.0
 
-  `git flow release track "v4.0.0"`{{execute T2}}
+  `git pull origin release/v4.0.0`{{execute T2}}
+
+Constater les modifications créé par l'autre equipe,
+
+   `ls `{{execute T2}}
 
 
+Lister la branch en cours
+  `git branch`{{execute T3}}
+  
+  
 aaaaaaaaaaaaa
 
 Importer la releases  v4.0.0 à disposition
