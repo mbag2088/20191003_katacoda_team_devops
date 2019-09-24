@@ -99,11 +99,8 @@ pour cela:
   
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
  
-
+ 
   
-  
-####
-#### 
 #### L'équipe de "Production", livre la Release "v2.0.0" en production
 
 Importer la release  v2.0.0 à disposition
