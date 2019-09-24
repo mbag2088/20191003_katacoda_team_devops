@@ -91,11 +91,13 @@ Vous pouvez -à tout moment- lister le contenu d'une release, afin de le communi
 pour cela:
 
    Lister les fichiers que contient la release 2.0.0
-   Commande n°1
+  
+  Première solution
+  
   `git show v2.0.0^{tree}`{{execute T2}}
   
   ou 
-  Commande n°2  (arborescence complète)
+  Seconde solution
   
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
  
@@ -103,7 +105,7 @@ pour cela:
   
 #### L'équipe de "Production", livre la Release "v2.0.0" en production
 
-Importer la release  v2.0.0 à disposition
+Importer la release  v2.0.0 à disposition sur le Repo Central
 
   `git pull --rebase origin master`{{execute T3}}
  ```
@@ -131,12 +133,12 @@ Vous pouvez à tout moment lister les fichiers de la release v2.0.0 que vous ven
 
 Lister les fichiers que contient la release 2.0.0
 
-   Commande n°1
+   Première solution
    
   `git show v2.0.0^{tree}`{{execute T3}}
   
   ou 
-  Commande n°2  (arborescence complète)
+  Seconde solution
   
   `git ls-remote --tags origin | grep v2.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
  
