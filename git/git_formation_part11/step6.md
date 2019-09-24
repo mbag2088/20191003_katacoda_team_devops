@@ -57,7 +57,7 @@ Vérifier que le Git Flow est bien présent
  
  
  
-#### L'équipe de développement (2), récupère votre release "v4.0.0" pour la faire évoluer
+#### L'équipe de développement (2), peut suivre une release distante "v4.0.0" et la faire évoluer
 
 A présent vous allez importer "tracker" (importer) la release  développée par l'autre équipe, et la faire évoluer
 
@@ -90,7 +90,22 @@ Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
  Publier le Git Flow 
  
  `git flow release publish "v4.0.0"`{{execute T3}}
+ 
+ 
+ Lister la branche en cours 
+ 
+ `git branch`{{execute T3}}
+ 
+ 
+  Revenir à la branche master 
+ 
+ `git checkout master`{{execute T3}}
+ 
 
+  Supprimer la copie distante de branche release/v4.0.0 
+ 
+ `git branch -d release/v4.0.0`{{execute T3}}
+ 
 
 #### L'équipe de "Développement" (1), raffrachit son tour, les modifications effectuées par la seconde équipe 
 
@@ -127,10 +142,13 @@ Lister les tags en cours
 Consulter à présent les branches actives 
   `git branch`{{execute T2}}
 
-
  
  A ce stade, vous pouver push le tag de la release sur le repo dsistant 
  `git push --tags`{{execute T2}}
 
 Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
+
+
+Consulter à présent les branches actives 
+  `git branch`{{execute T2}}
