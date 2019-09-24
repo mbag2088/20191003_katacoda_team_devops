@@ -1,14 +1,14 @@
 
   
 **A présent**
-- Nous allons développer des "releases" à l'aide du `Git Flow` 
+- Nous allons créer une release de dev en utilisant un `Git Flow` 
 
-- les "pusher" en production, 
+- lister le contenu de la release
+>  afin de le transmettre à l'équipe de Mise en Production,
 
-- lister leur contenus
->  pour le transmettre à l'équipe de Mise en Production,
+> lister le "Delta" qu'apporte la nouvelle version (par rapport l'actuelle en prod) 
 
-> lister le "Delta" qu'apporte une nouvelle version (par rapport l'actuelle en place) afin de le transmettre à l'équipe de Mise en Production
+- "pusher" la release en production, 
 
 
 
