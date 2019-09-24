@@ -1,7 +1,9 @@
 #### L'équipe de "Développement" (1), créé une nouvelle version v4.0.0 et permet à une autre équipe l'importer (track)
  
 Lors du précédent cours, vous avez  appris à initier une release, puis la livrer en production,
-A présent vous allez importe une release déjà créée par une autre équipe, pour la faire évoluer
+
+A présent vous allez importer "tracker" (importer) la release  d'une autre équipe, pour la faire évoluer
+
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T2}}
 
