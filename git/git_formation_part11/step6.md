@@ -46,6 +46,23 @@ Vérifier que le Git Flow est bien présent
  
 #### L'équipe de développement (2), récupère votre release "v4.0.0" pour la faire évoluer
 
+
+Importer la feature
+  `git flow feature track featureform`{{execute T3}}
+
+ou Importer la feature
+  `git pull origin feature/featureform`{{execute T3}}
+
+
+ 
+ Regarder les logs 
+  `git flow log`{{execute T3}}
+
+
+
+
+
+
 Importer la releases  v4.0.0 à disposition
   `git pull --rebase origin master`{{execute T3}}
  ```
