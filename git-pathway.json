@@ -29,13 +29,13 @@
         "description": "Initialiser & Cloner dépôt GIT"
       },
       {
-        "course_id": "git_formation_part10",
-        "title": "Formation GIT: partie 10",
+        "course_id": "git_formation_part9",
+        "title": "Formation GIT: partie 9",
         "description": "Git Flow pour le suivi et l'évolution des Releases"
       },
       {
-        "course_id": "git_formation_part11",
-        "title": "Formation GIT: partie 11",
+        "course_id": "git_formation_part10",
+        "title": "Formation GIT: partie 10",
         "description": "Git Flow multi équipes"
       }
     ]
