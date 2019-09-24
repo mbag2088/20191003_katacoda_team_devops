@@ -6,7 +6,7 @@
 - lister le contenu de la release
    afin de le transmettre à l'équipe de Mise en Production,
 
-  lister le "Delta" qu'apporte la nouvelle version (par rapport l'actuelle en prod) 
+- lister le "Delta" qu'apporte la nouvelle version (par rapport l'actuelle en prod) 
 
 - "pusher" la release en production, 
 
