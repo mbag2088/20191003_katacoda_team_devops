@@ -108,7 +108,7 @@ Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
  `git branch -d release/v4.0.0`{{execute T3}}
  
 
-#### L'équipe de "Développement" (1), raffrachit son tour, les modifications effectuées par la seconde équipe 
+#### L'équipe de "Développement" (1), raffraichit -à son tour- les modifications effectuées par la seconde équipe 
 
 Importer les modifications effectuées sur la release v4.0.0
 
@@ -152,4 +152,4 @@ Puis vous pouver la pousser sur le repo Central
 
   
 la release v4.0.0 a été pushée sur le Repo Remote :  lister sont contenu à distance
-  `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
+  `git ls-remote --tags origin | grep v4.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
