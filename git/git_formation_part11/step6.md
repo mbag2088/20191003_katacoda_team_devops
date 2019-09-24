@@ -65,20 +65,38 @@ Importer la release v4.0.0
 
   `git flow release track "v4.0.0"`{{execute T3}}
 
-ou seconde méhthode pour Importer la release
 
-  `git pull origin release/v4.0.0`{{execute T3}}
+Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
 
+  `git branch`{{execute T3}}
 
- 
+   `git ls`{{execute T3}}
+   
  Regarder les logs 
  
   `git flow log`{{execute T3}}
 
+ Ajout fichier  
+ `git add script_new_v400.sh `{{execute T3}}
+ 
+ Commiter la nouvelle release dans le Repository local 
+ 
+  `git commit -m "ajout fichiers script_new_v400.sh "`{{execute T3}}
 
 
+ Publier le Git Flow 
+ 
+ `git flow release publish "v4.0.0"`{{execute T3}}
 
 
+#### L'équipe de "Développement" (1), track a son tour le nouveau fichier 
+
+Importer la release v4.0.0
+
+  `git flow release track "v4.0.0"`{{execute T2}}
+
+
+aaaaaaaaaaaaa
 
 Importer la releases  v4.0.0 à disposition
 
