@@ -103,55 +103,28 @@ Constater les modifications créé par l'autre equipe,
 Lister la branch en cours
   `git branch`{{execute T3}}
   
-  
-aaaaaaaaaaaaa
+ Terminer le Git Flow en cours 
+ `git flow release finish "v3.0.0"`{{execute T2}}
 
-Importer la releases  v4.0.0 à disposition
-
-  `git pull --rebase origin master`{{execute T3}}
  ```
- _Répondre: yes
-  ```
+ * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichier  
+ (touche ":wq!" pour sortir de chaque fichier)  
+ ``` 
 
-Consulter les tags distants 
-  `git ls-remote --tags origin`{{execute T3}}
+Lister les tags en cours
+ `git tag`{{execute T2}}
 
-
-
-Recupèrer les tags développés
-  `git pull origin --tags`{{execute T3}}
-
-
-Lister les tags
-  `git tag`{{execute T3}}
+ Regarder les logs, vous constatez que nous avons fusionné les release -->  dans la branche de développement & dans la  master 
+ `git flow log`{{execute T2}}
 
 
+Consulter à présent les branches actives 
+  `git branch`{{execute T2}}
 
-Vous pouvez à tout moment lister les fichiers de la release v4.0.0 que vous venez d'importer
 
-Pour lister les fichiers que contient la release 3.0.0
+ 
+ A ce stade, vous pouver push le tag de la release sur le repo dsistant 
+ `git push --tags`{{execute T2}}
 
-   Commande n°1
-   
-  `git show v4.0.0^{tree}`{{execute T3}}
-  
-  ou 
-  Commande n°2  (arborescence complète)
-  
-  `git ls-remote --tags origin | grep v4.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
-
-Vous pouvez aussi importer la release "v4.0.0"  dans une branche temporaire, paralèlle
-
-  `git checkout -b branch_v4.0.0 v4.0.0`{{execute T3}}
-
-Lister les fichiers de la release "v4.0.0"  
-
-  `ls`{{execute T3}}
-
-Lister la branche créée
-
-  `git branch`{{execute T3}}
-
-Après avoir consulté la release: revenir sur la branche master
-
-  `git checkout master`{{execute T3}}
+Puis vous pouver la pousser sur le repo Central
+ `git push origin master`{{execute T2}}
