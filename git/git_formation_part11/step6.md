@@ -76,8 +76,11 @@ Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
  
   `git flow log`{{execute T3}}
 
+ Créer le nouveau fichier de la seconde 
+ `echo "script seconde equipe" > script_new_equipe_2.sh `{{execute T3}}
+
  Ajout fichier  
- `git add script_new_equipe_2.sh `{{execute T3}}
+  `git add script_new_equipe_2.sh `{{execute T3}}
  
  Commiter la nouvelle release dans le Repository local 
  
