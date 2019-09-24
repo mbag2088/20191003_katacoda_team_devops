@@ -107,13 +107,16 @@ Lister la branch en cours
   `git branch`{{execute T3}}
   
  Terminer le Git Flow en cours 
- `git flow release finish "v3.0.0"`{{execute T2}}
+ `git flow release finish "v4.0.0"`{{execute T2}}
 
  ```
  * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichier  
  (touche ":wq!" pour sortir de chaque fichier)  
  ``` 
 
+Lister la branch en cours
+  `git branch`{{execute T3}}
+  
 Lister les tags en cours
  `git tag`{{execute T2}}
 
