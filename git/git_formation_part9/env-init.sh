@@ -25,16 +25,11 @@ docker exec -it  dev2_local bash -c "cat /tmp/tempo_hosts >>/etc/hosts"
 docker exec git_remote bash -c "su - git -c \"mkdir repocentral;cd repocentral;git init --bare\"";
 docker exec git_remote bash -c "service ssh restart";
 # VM2création repo local connecte au remote distant
-docker exec dev1_local bash -c "su - git -c \"git init;git config --global user.email \"gitd@example.com\";git config --global user.name \"gitd Name\"\"";
+docker exec dev1_local bash -c "su - git -c \"git init;git config --global user.email \"git@example.com\";git config --global user.name \"git Name\"\"";
 docker exec dev1_local bash -c "su - git -c \"git remote add origin ssh://git@git_remote/home/git/repocentral\"";
 # commit fic
 docker exec dev1_local bash -c "su - git -c \"echo hello > readme.txt;git add readme.txt; git commit -a -m "readme.txt"\"";
-docker exec dev1_local bash -c "su - git -c \"git flow init -fd\""; 
-
 #docker exec dev1_local bash -c "su - git -c \"echo Hello > README.txt;git pull origin master; git add --all; git push origin master\"";
-
-
 # VM3 création repo local connecte au remote distant
-docker exec dev2_local bash -c "su - git -c \"git init;git config --global user.email \"git@example.com\";git config --global user.name \"git Name\"\"";
-docker exec dev2_local bash -c "su - git -c \"git remote add origin ssh://git@git_remote/home/git/repocentral\"";
-docker exec dev2_local bash -c "su - git -c \"git flow init -fd\""; 
+#docker exec dev2_local bash -c "su - git -c \"git init;git config --global user.email \"git@example.com\";git config --global user.name \"git Name\"\"";
+#docker exec dev2_local bash -c "su - git -c \"git remote add origin ssh://git@git_remote/home/git/repocentral\"";

@@ -1,6 +1,6 @@
 {
   "noindex": true,
-  "title": "Formation GIT pour le DEVOPS: partie 5",
+  "title": "Formation GIT pour le DEVOPS: partie 11",
   "description": "Git Flow ",
   "time": "50 minutes",
   "details": {
@@ -18,12 +18,17 @@
         "text": "step3.md"
       },
       {
-        "title": "Utilisation du Git Flow: Gestion des Features (fonctionalités)",
+        "title": "Utilisation du Git Flow",
         "text": "step4.md"
+      },      
+      {
+        "title": "Exercice 1: création d'une release et livraison en prod",
+        "text": "step5.md",
+        "answer": "step5-answer.md"
       },
       {
-        "title": "Utilisation du Git Flow: gestion des Releases",
-        "text": "step5.md"
+        "title": "partage de release 'track', entre équipe ",
+        "text": "step6.md"
       }
     ],
     "intro": {

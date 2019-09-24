@@ -1,51 +1,15 @@
-En tant que développeur, vous allez créer une nouvelle release, puis apprendre à la publier. 
+*Exercice: 
 
- Démarrer un Work Flow pour créer la première Release  
- `git flow release start "v1.0.0"`{{execute T2}}
- 
- Vérifier la création de la Feature
- `git flow release list`{{execute T2}}
+> Créer une nouvelle release "v3.0.0"
 
- Créer un fichier script_100.sh
- `echo "printf 'Ceci est le script de la nouvelle fonctionalité \n'" > script_100.sh;cat script_100.sh`{{execute T2}}
- 
- Ajouter le fichier dans la "Staging Area" (cache)
- `git add script_100.sh `{{execute T2}}
- 
- Commiter la nouvelle release dans le Repository local 
- 
- `git commit -m "ajout du sscript_100.sh repo local "`{{execute T2}}
-   
- Vérifier le nouveau commmit
- `git log --oneline`{{execute T2}}
- 
- Publier le Git Flow 
- `git flow release publish "v1.0.0"`{{execute T2}}
- 
- ```
- _Répondre: yes
-  ```
- 
- Regarder les logs 
- `git flow log`{{execute T2}}
- 
- Terminer le Git Flow en cours 
- `git flow release finish "v1.0.0"`{{execute T2}}
+> - contenant le "script_v300.sh"  
+> - et le fichier "log/readme_v300.txt"
 
- ```
-Renseigner la version de la Release: dans chaque fichier texte  puis enregistre et sortir du fichier
- ``` 
+> pusher cette release vers le repo central
 
- Regarder les logs, vous constater que nous avons fusionné les release -->  dans la branche de développement & master 
- `git flow log`{{execute T2}}
+> lister le contenu d'une release, et l'envoyer à l'équipe de Mise en Production
 
+> lister le Delta qu'apporte la v3.0.0: par rapport à la release en place (v2.0.0)
 
-Consulter à présent les branches actives 
-  `git branch`{{execute T2}}
+> mettre en production la nouvelle Release v3.0.0
 
-
-Vous pouver Tagger la Release
- `git push --tags`{{execute T2}}
-
-Puis vous pouver la pousser sur le repo Central
- `git push origin master`{{execute T2}}

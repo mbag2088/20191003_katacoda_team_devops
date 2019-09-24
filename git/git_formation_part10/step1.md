@@ -1,12 +1,14 @@
 
   
 **A présent**
-Nous allons: 
+- Nous allons créer une release de dev en utilisant un `Git Flow` 
 
-- apprendre à initier un Git Flow local,
+- Lister le contenu de la release
+   afin de le transmettre à l'équipe de Mise en Production,
 
-- créer les branch du `Git Flow`  "master","developpement","feature", "releases", "hotfix", 
+- Lister le "Delta" qu'apporte la nouvelle version (par rapport l'actuelle en prod) 
 
-- créé des release et les échanger avec le Git Flow
+- "pusher" la release en production, 
+
 
 

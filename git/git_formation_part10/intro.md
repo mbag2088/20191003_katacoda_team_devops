@@ -3,24 +3,22 @@
 ```
 Rappel:
 
- Lors des précédentes formation,
- - nous avons appris à cloner un Repo GIT,
- - nous avons appris à stocker et versionner nos scripts dans GIT,
- - nous avons appris à travailler sur l'historique des versions commitées (retours arrières),
- - nous avons vu comment deux équipes peuvent échanger avec le même GIT, pour développer en mode collaboratif,
- - nous avons vu comment gèrer les situations de conflits,
-  ```
+ Lors de la précédente formation,
+ 
+ - appris à créé des Releases,
+ - nous avons appris à utiliser une stratégie de développement Git Flow,
+ - à présent, nous allons utiliser les releases en mode collaboratif avec une stratégie de versioning
+ 
+ ```
  
 
 
-#### A présent, nous allons voir comment organiser les projets avec la méthode du "Git Flow": 
+#### A présent, nous allons voir comment organiser les projets avec la méthode Git Flow: 
 
-- pour une bonne stratégie de versioning
-
-- pour le suivi de vos Releases,
-
-
-Toutes les membres de votre équipe, seront en mesure de communiquer autour d'un workflow commun
+- Créer une release, 
+- la mettre à disposition de l'équipe d'exploit,
+- lister le contenu des releases, avant leur mise en production,
+- consulter ce qu'apporte une release, avant de la mettre en production
 
 
 
