@@ -70,7 +70,7 @@ Lister, puis observer la nouvelle branche  qui a été créée "release/v4.0.0",
 
   `git branch`{{execute T3}}
 
-   `git ls`{{execute T3}}
+   `ls`{{execute T3}}
    
  Regarder les logs 
  
