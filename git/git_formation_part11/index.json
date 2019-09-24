@@ -25,6 +25,10 @@
         "title": "Exercice 1: création d'une release et livraison en prod",
         "text": "step5.md",
         "answer": "step5-answer.md"
+      },
+      {
+        "title": "partage de release 'track', entre équipe ",
+        "text": "step4.md"
       }
     ],
     "intro": {
