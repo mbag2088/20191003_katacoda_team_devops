@@ -128,9 +128,9 @@ Lister la branch en cours
  * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichier  
  (touche ":wq!" pour sortir de chaque fichier)  
  ``` 
+Consulter à présent les branches: la release v4.0.0 a été fusionné dans les branches master & développement
+  `git branch`{{execute T2}}
 
-Lister la branch en cours
-  `git branch`{{execute T3}}
   
 Lister les tags en cours
  `git tag`{{execute T2}}
@@ -149,6 +149,6 @@ Consulter à présent les branches actives
 Puis vous pouver la pousser sur le repo Central
  `git push origin master`{{execute T2}}
 
-
-Consulter à présent les branches actives 
-  `git branch`{{execute T2}}
+  
+la release v4.0.0 a été pushée sur le Repo Remote :  lister sont contenu à distance
+  `git ls-remote --tags origin | grep v3.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
