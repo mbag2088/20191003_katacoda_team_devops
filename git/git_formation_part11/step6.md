@@ -49,11 +49,11 @@ Vérifier que le Git Flow est bien présent
 
 A présent vous allez importer "tracker" (importer) la release  développée par l'autre équipe, et la faire évoluer
 
-Importer la feature
-  `git flow feature track featureform`{{execute T3}}
+Importer la release v4.0.0
+  `git flow release track "v4.0.0"`{{execute T3}}
 
-ou Importer la feature
-  `git pull origin feature/featureform`{{execute T3}}
+ou seconde méhthode pour Importer la release
+  `git pull origin release/v4.0.0`{{execute T3}}
 
 
  
