@@ -7,7 +7,7 @@ Rappel:
  
  - appris à créé des Releases,
  - nous avons appris à utiliser une stratégie de développement Git Flow,
- - à présent, nous allons utiliser les releases en mode collaboratif pour une bonne stratégie de versioning
+ - à présent, nous allons utiliser les releases en mode collaboratif avec une stratégie de versioning
  
  ```
  
