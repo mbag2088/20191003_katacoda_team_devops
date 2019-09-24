@@ -1,6 +1,7 @@
-#### L'équipe de "Développement" initie une nouvelle version v4.0.0 et son workflow
+#### L'équipe de "Développement" (1), créé une nouvelle version v4.0.0 et permet à une autre équipe l'importer (track)
  
-Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
+Lors du précédent cours, vous avez  appris à initier une release, puis la livrer en production,
+A présent vous allez importe une release déjà créée par une autre équipe, pour la faire évoluer
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T2}}
 
@@ -41,52 +42,9 @@ Vérifier que le Git Flow est bien présent
  Regarder les logs 
  `git flow log`{{execute T2}}
  
- Terminer le Git Flow en cours 
- `git flow release finish "v4.0.0"`{{execute T2}}
-
- ```
- * Vous devez obligatoirement Renseigner la ligne version "v4.0.0" dans le second fichier  
- (touche ":wq!" pour sortir de chaque fichier)  
- ``` 
-
-Lister les tags en cours
- `git tag`{{execute T2}}
-
- Regarder les logs, vous constatez que nous avons fusionné les release -->  dans la branche de développement & dans la  master 
- `git flow log`{{execute T2}}
-
-
-Consulter à présent les branches actives 
-  `git branch`{{execute T2}}
-
-
  
- A ce stade, vous pouver push le tag de la release sur le repo dsistant 
- `git push --tags`{{execute T2}}
-
-Puis vous pouver la pousser sur le repo Central
- `git push origin master`{{execute T2}}
-  
-
-(Pour accompagner la MEP): Vous pouvez -à tout moment- lister le contenu d'une release, afin d'en communiquer le contenu à l'équipe de Production pour sa MEP, 
-pour cela:
-
-  Lister les fichiers que contient la release 3.0.0
-    Commande n°1
-   
-   `git show v4.0.0^{tree}`{{execute T2}}
-  
-    ou 
-   Commande n°2  (arborescence complète)
-  
-    `git ls-remote --tags origin | grep v4.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T2}}
-  
  
-(Pour acompagner la MEP) Vous pouvez aussi envoyer: le delta qu'apporte la nouvelle version v4.0.0 / par rapport à celle déjà en place (v2.0.0),
-   `git diff v2.0.0 v4.0.0`{{execute T2}}
-   
- 
-#### L'équipe de "Production", livre la Release "v4.0.0" en production
+#### L'équipe de développement (2), récupère votre release "v4.0.0" pour la faire évoluer
 
 Importer la releases  v4.0.0 à disposition
   `git pull --rebase origin master`{{execute T3}}
