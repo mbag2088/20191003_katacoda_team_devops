@@ -11,7 +11,7 @@ Vérifier que le Git Flow est bien présent
  Vérifier la création de la release
  `git flow release list`{{execute T2}}
 
- Créer un fichier script_v300.sh.sh
+ Créer un fichier script_v300.sh
  `echo "printf 'Ceci est le script de la nouvelle fonctionalité v3.0.0  \n'" > script_v300.sh;cat script_v300.sh`{{execute T2}}
  
  Ajouter le fichier dans la "Staging Area" (cache)
