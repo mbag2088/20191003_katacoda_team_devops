@@ -10,29 +10,25 @@
         "text": "step1.md"
       },
       {
-        "title": "Outil GIT",
+        "title": "Architecture utilisée",
         "text": "step2.md"
       },
       {
-        "title": "Principe de Git",
+        "title": "Préparation des environnements",
         "text": "step3.md"
       },
       {
-        "title": "Préparation des environnements",
+        "title": "Repository Local GIT",
         "text": "step4.md"
       },
       {
-        "title": "Repository Local GIT",
+        "title": "Clonage",
         "text": "step5.md"
       },
       {
-        "title": "Clonage",
-        "text": "step6.md"
-      },
-      {
         "title": "Exercice 1: Création branche, ajout Fichier, commit",
-        "text": "step7.md",
-        "answer": "step7-answer.md"
+        "text": "step6.md",
+        "answer": "step6-answer.md"
       }
     ],
     "intro": {
