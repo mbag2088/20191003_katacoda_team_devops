@@ -8,7 +8,6 @@
 Cette approche décentralisée, apporte un plus par rapport au autres solutions.
 En effet, les programmeurs peuvent continuer à travailler localement en toute autonomie, puis mettre à jour le Repository distant au timing souhaité. Cela permet de diffuser leurs programmes aux autres équipes.
 
-#### Architecture utilisée pour ce chapitre
 Afin d'optimiser les ressources nous avons choisi d'utiliser des images docker avec un système Ubuntu. 
 Nous avons créé un conteneurs docker. Il permet de se familiariser aux commandes de bases
 
