@@ -12,7 +12,7 @@ Rappel:
  
 #### Objectifs de cette formation:
 
-#### A présent, nous allons voir comment organiser les projets avec la méthode "Git Flow": 
+A présent, nous allons voir comment organiser les projets avec la méthode "Git Flow": 
 
 - pour une bonne stratégie de versioning
 
