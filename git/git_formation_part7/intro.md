@@ -3,7 +3,7 @@ Objectifs de cette formation:
 
 - se servir de GIT en phase de développement,
 
-- Travailler en mode collaboraif avec les autres équipes de Développements
+- Travailler en mode collaboratif avec les autres équipes de Développements
 
 ```
 Dans cette première partie, 
