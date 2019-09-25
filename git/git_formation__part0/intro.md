@@ -14,7 +14,7 @@ Après avoir suivi cette formation, vous serez en mesure de:
 - **Partie 6:** Revenir sur les modification & gestion des l'historique des versions (annulations, commit,...),
 - **Partie 7:** Partage de code et travail Collaboratif entre équipes avec GIT,
 - **Partie 8:** Solutions, pour collecter et consolider les travaux répartis, 
-- **Partie 9:** Utiliser une stratégie simple pour utiliser Git, 
-  & suivre vos releases à l'aide du worflow simpifié "Git Flow",
+- **Partie 9:** Processus de livraison jusqu'à la Production, 
+  & suivi de vos releases à l'aide du worflow simpifié,
 - **Partie 10:** Travailler en mode collaboratif avec Git Flow & partager vos Releases - lister le contenu des releases avant leur MEP -
   lister le "Delta" qu'apporte une nouvelle version (par rapport à celle en place)
