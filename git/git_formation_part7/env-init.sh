@@ -19,6 +19,8 @@ docker exec -it  git_remote bash -c "cat /tmp/tempo_hosts >>/etc/hosts"
 docker exec -it  dev1_local bash -c "cat /tmp/tempo_hosts >>/etc/hosts"
 docker exec -it  dev2_local bash -c "cat /tmp/tempo_hosts >>/etc/hosts"
 
+docker exec git_remote bash -c "service ssh restart";
+
 # creation remote repository 
 # docker exec git_remote bash -c "su - git -c \"mkdir formteam;cd formteam;git init --bare\"";
 # création repo local connecte au remote distant
