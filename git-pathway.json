@@ -29,6 +29,26 @@
         "description": "Initialiser & Cloner dépôt GIT"
       },
       {
+        "course_id": "git_formation__part5",
+        "title": "Formation GIT: partie 5",
+        "description": "Commandes de basespour le versioning  GIT"
+      },
+      {
+        "course_id": "git_formation__part6",
+        "title": "Formation GIT: partie 6",
+        "description": "Gestion des l'historique des versions (annulations, commit,...)"
+      },
+      {
+        "course_id": "git_formation__part7",
+        "title": "Formation GIT: partie 7",
+        "description": "Travail Collaboratif entre équipes, avec GIT"
+      },
+      {
+        "course_id": "git_formation__part8",
+        "title": "Formation GIT: partie 8",
+        "description": "Solutions, en cas de conflits du versioning sur Repository Central"
+      },
+      {
         "course_id": "git_formation_part9",
         "title": "Formation GIT: partie 9",
         "description": "Git Flow pour le suivi et l'évolution des Releases"
