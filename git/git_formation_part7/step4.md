@@ -9,7 +9,7 @@ Créer  le Repository Central
   `git init --bare`{{execute T1}}
 
 
-#### VM2 `première équipe` Créer un Repository Local, afin de versionner les développements sur la VM
+#### Première équipe: créée un Repository Local, afin de versionner ses développements 
    
  Lancer l'installation du premier Repository 'local':
  `git init `{{execute T2}}
@@ -57,14 +57,14 @@ Créer  le Repository Central
  
  
  
-#### VM1 `Repo Central` Constater que le développement a bien été "pushé" sur le Repository distant (central) 
+#### Sur le Remote Repo "Central", constater que le développement a bien été "pushé" 
  Constater que le script et sont commit a bien été pushé sur le repo distant
  `git log --oneline`{{execute T1}}
 
 
 
 
-#### VM3 `seconde équipe` Créer un second Repository 'local': pour la seconde équipe de développement sur cette VM
+#### Seconde équipe: créée un second Repository 'local' afin de versionner ses développements 
 
  Lancer l'installation du second Repository 'local':
  `git init `{{execute T3}}
@@ -115,8 +115,7 @@ Créer  le Repository Central
  
  
  
-#### VM1 `Repo Central` Constater que le second développement (seconde équipe) a bien été "pushé" sur le Repository distant (central) 
-
+#### Sur le Remote Repo "Central": constater que la seconde équipe de dev, a également bien "pushé" son code
  Constater que le script et sont commit ont bien été pushé sur le repo distant
  `git log --oneline`{{execute T1}}
  
