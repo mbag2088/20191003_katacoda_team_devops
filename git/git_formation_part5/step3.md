@@ -1,6 +1,6 @@
 
  
-##### Planning première partie, 
+##### Planning 
 
      - Nous Créerons un nouveau `repository local` GIT,
      - Nous apprendrons à `cloner` (un Repository Distant existant),
