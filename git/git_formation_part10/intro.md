@@ -12,7 +12,7 @@ Rappel:
  ```
  
 #### Objectifs de cette formation:
-#### A présent, nous allons voir comment organiser les projets avec la méthode Git Flow: 
+#### A présent, nous allons voir comment organiser les projets avec la méthode Git Flow
 
 - Créer une release, 
 - la mettre à disposition de l'équipe d'exploit,
