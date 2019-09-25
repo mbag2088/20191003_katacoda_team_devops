@@ -2,16 +2,18 @@ Dans cette formation vous allez être initier à la gestion de versions via l'ou
 Après avoir suivi cette formation, vous serez en mesure de:
 
 - **Partie 1:** Comprendre les fondements du versionning, ses débuts historiques,
-  ses modèles et les avantages qu'il vous apportera en l'adoptant dans vos projets.
+  ses modèles et les avantages qu'il vous apportera en l'adoptant dans vos projets,
 - **Partie 2:** Appréhender les rudiments et les notions de base de Git afin de bien
-  démarrer la formation.
+  démarrer la formation,
 - **Partie 3:** Apprendre à gérer la configuration de Git, l'ajuster
   à vos besoins et connaître la configuration minimale requise pour travailler
-  avec Git.
+  avec Git,
 - **Partie 4:** Créer un dépôt git dans un répertoire vide ou pas, cloner un dépôt
-  git disponible sur un serveur distant.
-  
-  ...
+  git disponible sur un serveur distant,
+- **Partie 5:** Commandes de bases pour démarrer le versioning,
+- **Partie 6:** Revenir sur les modification & gestion des l'historique des versions (annulations, commit,...),
+- **Partie 7:** Partage de code et travail Collaboratif entre équipes avec GIT,
+- **Partie 8:** Solutions, pour collecter et consolider les travaux répartis, 
 - **Partie 9:** Utiliser une stratégie simple pour utiliser Git, 
   & suivre vos releases à l'aide du worflow simpifié "Git Flow",
 - **Partie 10:** Travailler en mode collaboratif avec Git Flow & partager vos Releases - lister le contenu des releases avant leur MEP -
