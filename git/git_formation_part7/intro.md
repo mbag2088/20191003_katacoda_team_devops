@@ -5,8 +5,8 @@ Objectifs de cette formation:
 
 - Travailler en mode collaboraif avec les autres équipes de Développements
 
-Dans cette première partie, 
 ```
+Dans cette première partie, 
     - nous allons apprendre à Installer une architecture complète  (Repository Central,  Repository Locaux x2)
     - nous allons faire développer deux équipes, dans deux VMs différentes
     - les équipes vont développer en mode collaboratif, puis fusionner leur travail
