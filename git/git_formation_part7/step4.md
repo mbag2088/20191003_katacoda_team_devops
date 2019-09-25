@@ -1,6 +1,7 @@
 
  
-#### (VM1) Installer un `Remote Repository Central` GIT  (manips à faire, juste pour info: car en réalité, vous aurez toujours un GIT central disponible))
+#### Installer un `Remote Repository Central` GIT  
+(manips à faire, pour info: car en réalité vous aurez toujours un GIT central disponible)
 
 Créer  le Repository Central
   `mkdir repocentral; cd repocentral`{{execute T1}}
