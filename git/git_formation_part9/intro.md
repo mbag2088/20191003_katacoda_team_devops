@@ -1,5 +1,4 @@
 
-#### Objectifs de cette formation:
 ```
 Rappel:
 
@@ -11,7 +10,7 @@ Rappel:
  - nous avons vu comment gèrer les situations de conflits,
   ```
  
-
+#### Objectifs de cette formation:
 
 #### A présent, nous allons voir comment organiser les projets avec la méthode du "Git Flow": 
 
