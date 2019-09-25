@@ -10,7 +10,7 @@ Objectifs de cette `formation`:
 - Utiliser la `méthode d'Organisation` d'un projet dîte `Git Flow`, pour une meilleure gestion des release en Production (feature, release, hotfix,...)
 
   
-Pré-requis
-
-Avoir des notions de développement, de bonnes bases de connaissance Linux ( package linux, commandes ssh, editeur de texte,...)
+> Pré-requis
+> 
+> Avoir des notions de développement, de bonnes bases de connaissance Linux ( package linux, commandes ssh, editeur de texte,...)
 
