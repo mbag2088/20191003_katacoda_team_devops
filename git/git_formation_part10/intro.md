@@ -1,5 +1,5 @@
 
-#### Objectifs de cette formation:
+
 ```
 Rappel:
 
@@ -11,8 +11,7 @@ Rappel:
  
  ```
  
-
-
+#### Objectifs de cette formation:
 #### A présent, nous allons voir comment organiser les projets avec la méthode Git Flow: 
 
 - Créer une release, 
