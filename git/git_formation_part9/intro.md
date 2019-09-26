@@ -16,10 +16,9 @@ A présent, nous allons voir comment organiser les projets avec la méthode "Git
 
 - pour une bonne stratégie de versioning
 
-- pour le suivi des Releases,
+- pour le suivi de vos Releases,
 
-
-Ainsi touts les membres de votre équipe, seront en mesure de communiquer autour d'un workflow commun
+- les membres de votre équipe, apprendrons à échanger autour d'un workflow de Releases commun
 
 
 
