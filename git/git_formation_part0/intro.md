@@ -10,7 +10,7 @@ Après avoir suivi cette formation, vous serez en mesure de:
 - [Partie 4: Créer un dépôt git dans un répertoire vide ou pas, cloner un dépôt
   git disponible sur un serveur distant,](https://katacoda.com/devopsteam/courses/git/git_formation_part4)
 - [Partie 5: Commandes de bases pour démarrer le versioning,](https://katacoda.com/devopsteam/courses/git/git_formation_part5)
-- [Partie 6: Accèder aux transactions (commit)  ayant conostitué une version, réorganiser et annuler ces transactions,](https://katacoda.com/devopsteam/courses/git/git_formation_part6)
+- [Partie 6: Accèder aux transactions (commit)  ayant conostitué une version, réorganiser ou annuler ces transactions,](https://katacoda.com/devopsteam/courses/git/git_formation_part6)
 - [Partie 7: Partage de code entre équipes et travail Collaboratif avec GIT,](https://katacoda.com/devopsteam/courses/git/git_formation_part7)
 - [Partie 8: Apprendre à gérer la situation en cas de mises à jour conflictuelles, sur le Repo central,](https://katacoda.com/devopsteam/courses/git/git_formation_part8)
 - [Partie 9: Apprendre une Stratégie efficace pour suivre vos releases, à l'aide du workflow Git Flow](https://katacoda.com/devopsteam/courses/git/git_formation_part9)
