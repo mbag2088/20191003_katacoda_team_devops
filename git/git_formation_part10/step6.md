@@ -119,9 +119,11 @@ Constater les modifications créé par l'autre equipe,
 
 
 Lister la branch en cours
+
   `git branch`{{execute T3}}
   
  Terminer le Git Flow en cours 
+ 
  `git flow release finish "v4.0.0"`{{execute T2}}
 
  ```
@@ -133,22 +135,28 @@ Consulter à présent les branches: la release v4.0.0 a été fusionné dans les
 
   
 Lister les tags en cours
+
  `git tag`{{execute T2}}
 
  Regarder les logs, vous constatez que nous avons fusionné les release -->  dans la branche de développement & dans la  master 
+ 
  `git flow log`{{execute T2}}
 
 
 Consulter à présent les branches actives 
+
   `git branch`{{execute T2}}
 
  
  A ce stade, vous pouver push le tag de la release sur le repo dsistant 
+ 
  `git push --tags`{{execute T2}}
 
 Puis vous pouver la pousser sur le repo Central
+
  `git push origin master`{{execute T2}}
 
   
 la release v4.0.0 a été pushée sur le Repo Remote :  lister sont contenu à distance
+
   `git ls-remote --tags origin | grep v4.0.0$ | awk '{print "git ls-tree --name-only -r "$1}'|sh`{{execute T3}}
