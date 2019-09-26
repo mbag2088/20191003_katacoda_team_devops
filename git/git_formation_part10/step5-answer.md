@@ -1,7 +1,6 @@
 #### Correction
 #### L'équipe de "Développement" initie une nouvelle version v3.0.0 et son workflow
  
-Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
 Vérifier que le Git Flow est bien présent
  `git flow config`{{execute T2}}
 
@@ -47,7 +46,7 @@ Vérifier que le Git Flow est bien présent
 
  ```
  * Vous devez obligatoirement Renseigner la ligne version "v3.0.0" dans le second fichier  
- (touche ":wq!" pour sortir de chaque fichier)  
+ (touche ":wq!" pour sortir)  
  ``` 
 
 Lister les tags en cours
