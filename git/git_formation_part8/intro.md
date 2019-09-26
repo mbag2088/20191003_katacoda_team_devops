@@ -12,7 +12,9 @@ Rappel:
 
 #### A présent, nous allons voir comment gèrer les conflits: 
 
-Exemples:  
+Uses Cases:
+
   - une équipe oublie de repartir de la dernière version du Repository Central, et souhaites se resynchroniser après coup
+  
   - modifications effectuées en paralèlle par plusieurs équipes et entrainant des conflits à règler.
 
