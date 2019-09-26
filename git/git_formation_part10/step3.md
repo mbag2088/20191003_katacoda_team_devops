@@ -14,11 +14,11 @@ Puis, lancer les commandes suivantes:
 
 `d2() { docker exec -it dev2_local bash -c "cd /work_dir; echo 'PS1='\''dev2_gitlocal# '\' >> /root/.bashrc; su - git"; } && d2`{{execute T3}}
 
-##### _Remarque_:
+```##### Remarque:
 Le prompt git_remote#, dev1_gitlocal# et dev2_gitlocal# vous aidera à repèrer la machine sur laquelle vous êtes connecté.
 
 Si toutes fois vous êtes sortie avec un exit , vous pouvez taper les commandes suivantes:
 
 - g  => Pour se connecter à la VM 'git_remote'.
 - d1 => Pour se connecter à la VM 'dev1_gitlocal'.
-- d2 => Pour se connecter à la VM 'dev2_gitlocal'.
+- d2 => Pour se connecter à la VM 'dev2_gitlocal'.```
