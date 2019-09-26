@@ -3,7 +3,6 @@
  
 Initier la version v4.0.0
 
-
 Vérifier que le Git Flow est bien présent
 
  `git flow config`{{execute T2}}
