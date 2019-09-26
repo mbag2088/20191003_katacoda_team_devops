@@ -1,7 +1,6 @@
 #### L'équipe de "Développement" initie le workflow d'une nouvelle release v2.0.0
  
-Lors du précédent cours, vous avez  appris à initier une release dans un git Flow,
-Vérifier que le Git Flow est bien présent
+Vérifier que l'outil Git Flow est présent et bien configuré
 
  `git flow config`{{execute T2}}
 
@@ -59,15 +58,14 @@ Vérifier que le Git Flow est bien présent
 
  ```
  * vous devez obligatoirement renseigner la version "v2.0.0" dans le second fichier
- (puis touche ":wq!" pour sortir de chaque fichier)  
+ (puis touche ":wq!" pour sortir)  
  ``` 
 
 Lister les tags en cours
 
  `git tag`{{execute T2}}
  
-####
- Regarder les logs, vous constatez que nous avons fusionné les release :  dans la branche de développement & dans la master 
+* En regardant les logs, vous constatez que nous avons fusionné les releases:  dans les branches de développement & dans la master 
  
  `git flow log`{{execute T2}}
 
