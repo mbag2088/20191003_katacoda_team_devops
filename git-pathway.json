@@ -4,27 +4,27 @@
     "icon": "fa-katacoda",
     "courses": [
       {
-        "course_id": "git_formation__part0",
+        "course_id": "git_formation_part0",
         "title": "Formation Git: Sommaire",
         "description": "Ce sommaire présente les différentes parties de cette formation d'initiation à Git"
       },
       {
-        "course_id": "git_formation__part1",
+        "course_id": "git_formation_part1",
         "title": "Formation GIT: partie 1",
         "description": "Le versionning et une brève histoire de Git"
       },
       {
-        "course_id": "git_formation__part2",
+        "course_id": "git_formation_part2",
         "title": "Formation GIT: partie 2",
         "description": "Philosophie et rudiments de Git"
       },
       {
-        "course_id": "git_formation__part3",
+        "course_id": "git_formation_part3",
         "title": "Formation GIT: partie 3",
         "description": "Configuration de Git"
       },
       {
-        "course_id": "git_formation__part4",
+        "course_id": "git_formation_part4",
         "title": "Formation GIT: partie 4",
         "description": "Initialiser & Cloner dépôt GIT"
       },
