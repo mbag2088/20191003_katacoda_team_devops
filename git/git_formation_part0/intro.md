@@ -6,7 +6,7 @@ Après avoir suivi cette formation, vous serez en mesure de:
 - [Partie 2: Appréhender les rudiments et les notions de base de Git afin de bien
   démarrer la formation,](https://katacoda.com/devopsteam/courses/git/git_formation_part2)
 - [Partie 3: Apprendre à gérer la configuration de Git, l'ajuster
-  à vos besoins et connaître la configuration minimale requise pour travailler avec Git,](https://katacoda.com/devopsteam/courses/git/git_formation_par3)
+  à vos besoins et connaître la configuration minimale requise pour travailler avec Git,](https://katacoda.com/devopsteam/courses/git/git_formation_part3)
 - [Partie 4: Créer un dépôt git dans un répertoire vide ou pas, cloner un dépôt
   git disponible sur un serveur distant,](https://katacoda.com/devopsteam/courses/git/git_formation_part4)
 - [Partie 5: Commandes de bases pour démarrer le versioning,](https://katacoda.com/devopsteam/courses/git/git_formation_part5)
