@@ -40,7 +40,7 @@ En tant que développeur, vous allez créer une nouvelle feature, puis apprendre
  
  Commiter la nouvelle feature dans le Repository local 
  
- `git commit -m "ajout du sscript_feature.sh repo local "`{{execute T2}}
+ `git commit -m "ajout du script_feature.sh repo local "`{{execute T2}}
    
  Vérifier le nouveau commit
  
