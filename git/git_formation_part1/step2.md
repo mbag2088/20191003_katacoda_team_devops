@@ -12,4 +12,4 @@ Pour résoudre ce problème, les développeurs ont depuis longtemps développé 
 qui gardait toutes les modifications apportées aux fichiers sous contrôle de
 version.
 
-![Système de contrôle de version local](/devopsteam/courses/git/git_formation__part1/assets/local-vcs.png)
+![Système de contrôle de version local](/devopsteam/courses/git/git_formation_part1/assets/local-vcs.png)
