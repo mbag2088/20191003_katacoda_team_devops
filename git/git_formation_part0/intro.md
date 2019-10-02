@@ -1,4 +1,4 @@
-Dans cette formation vous allez être initier à la gestion de versions via l'outil Git.
+Dans cette formation vous allez être initié à la gestion de versions via l'outil Git.
 Après avoir suivi cette formation, vous serez en mesure de:
 
 - [Partie 1: Comprendre les fondements du versionning, ses débuts historiques, 
