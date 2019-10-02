@@ -8,7 +8,7 @@ forme de liste de modifications basées sur des fichier. Ces systèmes (`CVS`,
 comme une liste de fichiers et les modifications effectuées sur chaque fichier
 dans le temps.
 
-![Deltas](/devopsteam/courses/git/git_formation__part2/assets/deltas.png)
+![Deltas](/devopsteam/courses/git/git_formation_part2/assets/deltas.png)
 
 ## La vision de Git
 **Git** a une toute autre philosophie. Au lieu de cela, les données sur **Git**
@@ -22,7 +22,7 @@ changé, **Git** ne stocke pas le fichier à nouveau, juste une référence vers
 fichier original qu'il a déjà enregistré. **Git** pense ses données plus à la
 manière d'un **flux d'instantanés**.
 
-![Snapshots](/devopsteam/courses/git/git_formation__part2/assets/snapshots.png)
+![Snapshots](/devopsteam/courses/git/git_formation_part2/assets/snapshots.png)
 
 
 > C'est une distinction importante entre **Git** et presque tous les autres **VCS**.
