@@ -10,7 +10,7 @@ de la commande `git clone <repository-url>`.
 
 Une `url` git, est donnée par l'expression régulière suivante:
 
-![Git url](/deopsteam/courses/git/git_formation__part4/assets/git-regex.png)
+![Git url](/deopsteam/courses/git/git_formation_part4/assets/git-regex.png)
 
 
 **Exercice:**
