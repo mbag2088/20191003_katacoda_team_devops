@@ -8,7 +8,7 @@ développeurs sur leurs propres machines_) qui extraient les fichiers de ce
 serveur central. Pour de nombreuses années, cela a été le standard pour le
 contrôle de version.
 
-![Système de contrôle de version centralisé](/devopsteam/courses/git/git_formation__part1/assets/centralized-vcs.png)
+![Système de contrôle de version centralisé](/devopsteam/courses/git/git_formation_part1/assets/centralized-vcs.png)
 
 
 ## Avantages d'un tel système comparé à système de contrôle de version local:
