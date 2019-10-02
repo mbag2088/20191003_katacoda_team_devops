@@ -34,6 +34,6 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running"
+    "course_id": "ansible_training_part1"
   }
 }
